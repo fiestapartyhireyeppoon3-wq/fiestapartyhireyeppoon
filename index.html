@@ -1559,6 +1559,229 @@
         box-shadow:none !important;
       }
     }
+  
+    .lightbox-shell{
+      width:min(1180px, 100%);
+      display:grid;
+      gap:18px;
+      align-items:start;
+      justify-items:center;
+    }
+    .lightbox-info{
+      width:min(980px, 100%);
+      padding:18px 20px;
+      border-radius:24px;
+      background:rgba(10,10,20,0.6);
+      border:1px solid rgba(255,255,255,0.12);
+      color:#fff;
+    }
+    .lightbox-info h3{
+      margin:12px 0 8px;
+      font-size:1.35rem;
+    }
+    .lightbox-info p{
+      margin:0;
+      line-height:1.75;
+      color:rgba(255,255,255,0.84);
+    }
+    .lightbox-meta{
+      margin-top:12px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      color:rgba(255,255,255,0.84);
+      font-size:.92rem;
+    }
+    .admin-modal .modal-card{
+      width:min(1240px, 100%);
+      max-height:min(92vh, 980px);
+      overflow:auto;
+    }
+    .admin-header-block{
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      align-items:flex-start;
+      flex-wrap:wrap;
+      margin-right:52px;
+    }
+    .admin-tab-row{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:18px;
+      padding-bottom:4px;
+    }
+    .admin-tab-btn{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,0.05);
+      color:var(--muted);
+      padding:12px 16px;
+      border-radius:999px;
+      cursor:pointer;
+      font-weight:700;
+      transition:.25s ease;
+    }
+    .admin-tab-btn.active,
+    .admin-tab-btn:hover{
+      background:rgba(255,95,162,0.14);
+      color:var(--text);
+      border-color:rgba(255,95,162,0.26);
+      transform:translateY(-1px);
+    }
+    .admin-tab-panel{
+      display:none;
+      margin-top:20px;
+    }
+    .admin-tab-panel.active{display:block}
+    .admin-split{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:18px;
+      align-items:start;
+    }
+    .admin-stack{
+      display:grid;
+      gap:18px;
+    }
+    .admin-summary-grid,
+    .admin-analytics-grid{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:14px;
+    }
+    .admin-inline-meta{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    .admin-inline-meta span{
+      padding:8px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,0.06);
+      border:1px solid var(--line);
+      color:var(--muted);
+      font-size:.84rem;
+    }
+    .admin-booking-grid,
+    .manager-shell{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:18px;
+      align-items:start;
+    }
+    .manager-list{
+      display:grid;
+      gap:12px;
+    }
+    .manager-card,
+    .admin-row-card{
+      padding:16px;
+      border-radius:20px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,0.05);
+      display:grid;
+      gap:12px;
+    }
+    .muted-card{opacity:.72}
+    .inline-actions{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+    }
+    .admin-row-card{
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      align-items:start;
+    }
+    .admin-panel-card{
+      padding:18px;
+      border-radius:22px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,0.04);
+    }
+    .admin-toolbar-wide{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:12px;
+      margin-top:16px;
+    }
+    .backup-grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:12px;
+      margin-top:18px;
+    }
+    .settings-grid,
+    .cms-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:14px;
+    }
+    .settings-grid .field.full,
+    .cms-grid .field.full{
+      grid-column:1/-1;
+    }
+    .admin-empty{
+      padding:18px;
+      border:1px dashed var(--line);
+      border-radius:18px;
+    }
+    .admin-subtle{
+      color:var(--muted);
+      line-height:1.7;
+      font-size:.95rem;
+    }
+    .admin-note-list{
+      list-style:none;
+      padding:0;
+      margin:0;
+      display:grid;
+      gap:10px;
+    }
+    .admin-note-list li{
+      padding:12px 14px;
+      border-radius:16px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,0.05);
+      color:var(--muted);
+      line-height:1.65;
+    }
+    .lightbox img{
+      max-width:min(980px, 100%);
+      width:100%;
+      object-fit:cover;
+    }
+    @media (max-width: 980px){
+      .admin-split,
+      .admin-booking-grid,
+      .manager-shell{
+        grid-template-columns:1fr;
+      }
+      .backup-grid,
+      .admin-toolbar-wide,
+      .settings-grid,
+      .cms-grid,
+      .admin-summary-grid,
+      .admin-analytics-grid{
+        grid-template-columns:1fr;
+      }
+    }
+    @media (max-width: 760px){
+      .lightbox-info{
+        padding:16px;
+      }
+      .admin-header-block{
+        margin-right:0;
+      }
+      .admin-tab-btn{
+        width:100%;
+      }
+      .admin-row-card{
+        grid-template-columns:1fr;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -2201,11 +2424,17 @@
     </div>
   </div>
 
+
   <div class="modal admin-modal" id="adminModal" aria-hidden="true">
     <div class="modal-card glass">
       <button class="close-btn" id="closeAdmin" aria-label="Close admin modal">✕</button>
-      <h3 style="margin-top:0; font-size:1.5rem;">Admin Booking Dashboard</h3>
-      <p style="color:var(--muted); line-height:1.75; margin-bottom:0;">Manage locally saved bookings, export records, and review light inventory usage.</p>
+      <div class="admin-header-block">
+        <div>
+          <h3 style="margin:0; font-size:1.5rem;">Admin Business Dashboard</h3>
+          <p style="color:var(--muted); line-height:1.75; margin:10px 0 0;">Manage bookings, editable CMS content, gallery items, packages, testimonials, analytics, backups, and local settings without breaking the public site.</p>
+        </div>
+        <span class="status-pill ok" id="adminModeBadge">Admin tools ready</span>
+      </div>
 
       <div class="admin-session-row">
         <div class="admin-session-meta">
@@ -2232,225 +2461,1572 @@
           <h4 style="margin:0 0 6px;">Inventory Left</h4>
           <p id="adminInventoryLeft" style="margin:0;">Chairs -- • Tables -- • Decor --</p>
         </div>
+        <div class="mini-card">
+          <h4 style="margin:0 0 6px;">Estimated Revenue</h4>
+          <p id="adminEstimatedRevenue" style="margin:0;">$0 AUD</p>
+        </div>
+        <div class="mini-card">
+          <h4 style="margin:0 0 6px;">Paid Collected</h4>
+          <p id="adminPaidCollected" style="margin:0;">$0 AUD</p>
+        </div>
+        <div class="mini-card">
+          <h4 style="margin:0 0 6px;">Cancelled</h4>
+          <p id="adminCancelledCount" style="margin:0;">0 cancelled</p>
+        </div>
       </div>
 
-      <div class="admin-toolbar" style="grid-template-columns:repeat(3,minmax(0,1fr)); margin-top:18px;">
-        <button class="btn btn-primary" id="exportAdminJson" type="button">Export JSON</button>
+      <div class="admin-toolbar-wide">
+        <button class="btn btn-primary" id="exportAdminJson" type="button">Export Bookings JSON</button>
+        <button class="btn btn-secondary" id="exportAdminCsv" type="button">Export Bookings CSV</button>
         <button class="btn btn-secondary" id="resetInventoryBtn" type="button">Reset Inventory</button>
         <button class="btn btn-secondary" id="clearBookingsBtn" type="button">Delete All Bookings</button>
       </div>
 
-      <div class="admin-table-wrap">
-        <table class="admin-table">
-          <thead>
-            <tr>
-              <th>Client</th>
-              <th>Date</th>
-              <th>Package</th>
-              <th>Total</th>
-              <th>Event</th>
-              <th>Venue</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody id="adminBookingsTableBody"></tbody>
-        </table>
-        <div class="admin-empty" id="adminEmptyState">No bookings saved yet.</div>
+      <div class="admin-tab-row" id="adminTabRow">
+        <button class="admin-tab-btn active" type="button" data-admin-tab="overview">Overview</button>
+        <button class="admin-tab-btn" type="button" data-admin-tab="bookings">Bookings</button>
+        <button class="admin-tab-btn" type="button" data-admin-tab="cms">CMS Content</button>
+        <button class="admin-tab-btn" type="button" data-admin-tab="gallery">Gallery Manager</button>
+        <button class="admin-tab-btn" type="button" data-admin-tab="packages">Packages Manager</button>
+        <button class="admin-tab-btn" type="button" data-admin-tab="testimonials">Testimonials Manager</button>
+        <button class="admin-tab-btn" type="button" data-admin-tab="analytics">Analytics</button>
+        <button class="admin-tab-btn" type="button" data-admin-tab="backup">Backup / Restore</button>
+        <button class="admin-tab-btn" type="button" data-admin-tab="settings">Settings</button>
       </div>
+
+      <section class="admin-tab-panel active" data-admin-panel="overview">
+        <div class="admin-split">
+          <div class="admin-stack">
+            <div class="admin-panel-card">
+              <h4 style="margin:0 0 12px;">Business Snapshot</h4>
+              <div class="admin-summary-grid" id="overviewSummaryCards"></div>
+            </div>
+            <div class="admin-panel-card">
+              <h4 style="margin:0 0 12px;">Latest Booking</h4>
+              <div id="overviewLatestBooking" class="admin-empty">No bookings saved yet.</div>
+            </div>
+          </div>
+          <div class="admin-stack">
+            <div class="admin-panel-card">
+              <h4 style="margin:0 0 12px;">Low Stock Warnings</h4>
+              <ul class="admin-note-list" id="overviewLowStock"></ul>
+            </div>
+            <div class="admin-panel-card">
+              <h4 style="margin:0 0 12px;">System Notes</h4>
+              <p class="admin-subtle" style="margin:0;">All public content, gallery items, packages, testimonials, bookings, settings, and quick inquiries continue to save locally in this browser using localStorage. Existing booking, invoice, analytics, and hidden admin shortcut behavior remain intact.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="admin-tab-panel" data-admin-panel="bookings">
+        <div class="admin-booking-grid">
+          <div class="admin-panel-card">
+            <div class="settings-grid">
+              <div class="field">
+                <label for="adminBookingSearch">Search</label>
+                <input id="adminBookingSearch" type="text" placeholder="Search client, package, phone, venue">
+              </div>
+              <div class="field">
+                <label for="adminBookingStatusFilter">Status Filter</label>
+                <select id="adminBookingStatusFilter">
+                  <option value="">All statuses</option>
+                  <option>New</option>
+                  <option>Pending</option>
+                  <option>Confirmed</option>
+                  <option>Completed</option>
+                  <option>Cancelled</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="adminBookingPaidFilter">Payment Filter</label>
+                <select id="adminBookingPaidFilter">
+                  <option value="">All payment states</option>
+                  <option>Unpaid</option>
+                  <option>Paid</option>
+                  <option>Partial</option>
+                </select>
+              </div>
+            </div>
+            <div class="admin-table-wrap">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Client</th>
+                    <th>Date</th>
+                    <th>Package</th>
+                    <th>Status</th>
+                    <th>Paid</th>
+                    <th>Quote</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="adminBookingsTableBody"></tbody>
+              </table>
+              <div class="admin-empty" id="adminEmptyState">No bookings saved yet.</div>
+            </div>
+          </div>
+
+          <div class="admin-panel-card">
+            <div style="display:flex; justify-content:space-between; gap:12px; align-items:center; flex-wrap:wrap;">
+              <h4 style="margin:0;">Booking Workflow Editor</h4>
+              <span class="status-pill" id="bookingEditorState">No booking selected</span>
+            </div>
+            <div id="bookingEditorSummary" class="admin-empty" style="margin-top:14px;">Choose a booking from the table to manage its workflow.</div>
+
+            <form id="bookingEditorForm" style="display:grid; gap:14px; margin-top:18px;">
+              <input type="hidden" id="bookingEditorId">
+              <div class="settings-grid">
+                <div class="field">
+                  <label for="adminEditStatus">Booking Status</label>
+                  <select id="adminEditStatus" required>
+                    <option>New</option>
+                    <option>Pending</option>
+                    <option>Confirmed</option>
+                    <option>Completed</option>
+                    <option>Cancelled</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="adminEditPaymentStatus">Payment Status</label>
+                  <select id="adminEditPaymentStatus" required>
+                    <option>Unpaid</option>
+                    <option>Paid</option>
+                    <option>Partial</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="adminEditQuoteAmount">Quote Amount</label>
+                  <input id="adminEditQuoteAmount" type="number" min="0" step="1" placeholder="0">
+                </div>
+                <div class="field full">
+                  <label for="adminEditNotes">Admin Notes</label>
+                  <textarea id="adminEditNotes" placeholder="Add internal admin notes for this booking"></textarea>
+                </div>
+              </div>
+              <div class="inline-actions">
+                <button class="btn btn-primary" type="submit">Save Booking Update</button>
+                <button class="btn btn-secondary" type="button" id="clearBookingEditorBtn">Clear Editor</button>
+                <button class="btn btn-secondary" type="button" id="deleteSelectedBookingBtn" disabled>Delete Selected</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="admin-tab-panel" data-admin-panel="cms">
+        <form id="cmsForm" style="display:grid; gap:18px;">
+          <div class="admin-panel-card">
+            <h4 style="margin:0 0 14px;">Brand + Hero</h4>
+            <div class="cms-grid">
+              <div class="field"><label for="brandName">Brand Name</label><input id="brandName" name="brandName" type="text"></div>
+              <div class="field"><label for="brandTagline">Brand Tagline</label><input id="brandTagline" name="brandTagline" type="text"></div>
+              <div class="field full"><label for="heroEyebrow">Hero Eyebrow</label><input id="heroEyebrow" name="heroEyebrow" type="text"></div>
+              <div class="field"><label for="heroTitle">Hero Title</label><input id="heroTitle" name="heroTitle" type="text"></div>
+              <div class="field"><label for="heroAccent">Hero Accent</label><input id="heroAccent" name="heroAccent" type="text"></div>
+              <div class="field full"><label for="heroSubtitle">Hero Subtitle</label><textarea id="heroSubtitle" name="heroSubtitle"></textarea></div>
+              <div class="field"><label for="heroPrimaryCtaText">Primary CTA Text</label><input id="heroPrimaryCtaText" name="heroPrimaryCtaText" type="text"></div>
+              <div class="field"><label for="heroSecondaryCtaText">Secondary CTA Text</label><input id="heroSecondaryCtaText" name="heroSecondaryCtaText" type="text"></div>
+              <div class="field full"><label for="heroBadges">Hero Badges (one per line)</label><textarea id="heroBadges" name="heroBadges"></textarea></div>
+              <div class="field full"><label for="heroStats">Hero Stats (one per line, format: value | label)</label><textarea id="heroStats" name="heroStats"></textarea></div>
+              <div class="field"><label for="heroPanelTitle">Hero Panel Title</label><input id="heroPanelTitle" name="heroPanelTitle" type="text"></div>
+              <div class="field full"><label for="heroPanelText">Hero Panel Text</label><textarea id="heroPanelText" name="heroPanelText"></textarea></div>
+              <div class="field full"><label for="heroMiniCards">Hero Mini Cards (one per line, format: title | text)</label><textarea id="heroMiniCards" name="heroMiniCards"></textarea></div>
+              <div class="field full"><label for="heroChips">Hero Chips (one per line)</label><textarea id="heroChips" name="heroChips"></textarea></div>
+            </div>
+          </div>
+
+          <div class="admin-panel-card">
+            <h4 style="margin:0 0 14px;">About + Section Titles</h4>
+            <div class="cms-grid">
+              <div class="field"><label for="aboutTitle">About Title</label><input id="aboutTitle" name="aboutTitle" type="text"></div>
+              <div class="field full"><label for="aboutSubtitle">About Subtitle</label><textarea id="aboutSubtitle" name="aboutSubtitle"></textarea></div>
+              <div class="field"><label for="aboutCardTitle">About Card Title</label><input id="aboutCardTitle" name="aboutCardTitle" type="text"></div>
+              <div class="field full"><label for="aboutCardText">About Card Text</label><textarea id="aboutCardText" name="aboutCardText"></textarea></div>
+              <div class="field full"><label for="aboutList">About Bullet List (one per line)</label><textarea id="aboutList" name="aboutList"></textarea></div>
+              <div class="field full"><label for="aboutImage">About Image URL</label><input id="aboutImage" name="aboutImage" type="url"></div>
+              <div class="field"><label for="aboutNoteTitle">About Note Title</label><input id="aboutNoteTitle" name="aboutNoteTitle" type="text"></div>
+              <div class="field full"><label for="aboutNoteText">About Note Text</label><textarea id="aboutNoteText" name="aboutNoteText"></textarea></div>
+              <div class="field"><label for="servicesTitle">Services Title</label><input id="servicesTitle" name="servicesTitle" type="text"></div>
+              <div class="field full"><label for="servicesSubtitle">Services Subtitle</label><textarea id="servicesSubtitle" name="servicesSubtitle"></textarea></div>
+              <div class="field"><label for="galleryTitle">Gallery Title</label><input id="galleryTitle" name="galleryTitle" type="text"></div>
+              <div class="field full"><label for="gallerySubtitle">Gallery Subtitle</label><textarea id="gallerySubtitle" name="gallerySubtitle"></textarea></div>
+              <div class="field"><label for="packagesTitle">Packages Title</label><input id="packagesTitle" name="packagesTitle" type="text"></div>
+              <div class="field full"><label for="packagesSubtitle">Packages Subtitle</label><textarea id="packagesSubtitle" name="packagesSubtitle"></textarea></div>
+              <div class="field"><label for="contactTitle">Contact Title</label><input id="contactTitle" name="contactTitle" type="text"></div>
+              <div class="field full"><label for="contactSubtitle">Contact Subtitle</label><textarea id="contactSubtitle" name="contactSubtitle"></textarea></div>
+              <div class="field full"><label for="bookingLead">Booking Lead Text</label><textarea id="bookingLead" name="bookingLead"></textarea></div>
+              <div class="field"><label for="contactInfoTitle">Contact Info Card Title</label><input id="contactInfoTitle" name="contactInfoTitle" type="text"></div>
+              <div class="field"><label for="testimonialsTitle">Testimonials Title</label><input id="testimonialsTitle" name="testimonialsTitle" type="text"></div>
+              <div class="field full"><label for="testimonialsSubtitle">Testimonials Subtitle</label><textarea id="testimonialsSubtitle" name="testimonialsSubtitle"></textarea></div>
+              <div class="field full"><label for="footerSummary">Footer Summary</label><textarea id="footerSummary" name="footerSummary"></textarea></div>
+            </div>
+          </div>
+
+          <div class="admin-panel-card">
+            <div style="display:flex; justify-content:space-between; gap:12px; align-items:center; flex-wrap:wrap;">
+              <h4 style="margin:0;">Services Editor</h4>
+              <button class="btn btn-secondary" type="button" id="addServiceBtn">Add Service</button>
+            </div>
+            <div id="cmsServicesEditor" class="manager-list" style="margin-top:16px;"></div>
+          </div>
+
+          <div class="inline-actions">
+            <button class="btn btn-primary" type="submit">Save CMS Content</button>
+            <button class="btn btn-secondary" type="button" id="resetCmsBtn">Reset CMS to Default</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="admin-tab-panel" data-admin-panel="gallery">
+        <div class="manager-shell">
+          <div class="admin-panel-card">
+            <h4 style="margin:0 0 14px;">Gallery Items</h4>
+            <div class="manager-list" id="galleryManagerList"></div>
+          </div>
+          <div class="admin-panel-card">
+            <h4 style="margin:0 0 14px;">Add / Edit Gallery Item</h4>
+            <form id="galleryItemForm" style="display:grid; gap:14px;">
+              <input type="hidden" id="galleryEditIndex">
+              <div class="field"><label for="galleryItemTitle">Title</label><input id="galleryItemTitle" name="galleryTitle" type="text" required></div>
+              <div class="field"><label for="galleryItemCategory">Category</label><input id="galleryItemCategory" name="galleryCategory" type="text" placeholder="birthday" required></div>
+              <div class="field"><label for="galleryItemImage">Full Image URL</label><input id="galleryItemImage" name="galleryImage" type="url" required></div>
+              <div class="field"><label for="galleryItemThumb">Thumbnail URL</label><input id="galleryItemThumb" name="galleryThumb" type="url"></div>
+              <div class="field"><label for="galleryItemLocation">Location</label><input id="galleryItemLocation" name="galleryLocation" type="text"></div>
+              <div class="field"><label style="display:flex; align-items:center; gap:10px;"><input id="galleryItemVisible" name="galleryVisible" type="checkbox" checked> Visible on public site</label></div>
+              <div class="field"><label for="galleryItemDescription">Description</label><textarea id="galleryItemDescription" name="galleryDescription"></textarea></div>
+              <div class="inline-actions">
+                <button class="btn btn-primary" type="submit">Save Gallery Item</button>
+                <button class="btn btn-secondary" type="button" id="cancelGalleryEdit">Clear Form</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="admin-tab-panel" data-admin-panel="packages">
+        <div class="manager-shell">
+          <div class="admin-panel-card">
+            <h4 style="margin:0 0 14px;">Package Items</h4>
+            <div class="manager-list" id="packageManagerList"></div>
+          </div>
+          <div class="admin-panel-card">
+            <h4 style="margin:0 0 14px;">Add / Edit Package</h4>
+            <form id="packageItemForm" style="display:grid; gap:14px;">
+              <input type="hidden" id="packageEditIndex">
+              <div class="field"><label for="packageBadge">Badge</label><input id="packageBadge" name="packageBadge" type="text" required></div>
+              <div class="field"><label for="packageTitle">Title</label><input id="packageTitle" name="packageTitle" type="text" required></div>
+              <div class="field"><label for="packagePrice">Price</label><input id="packagePrice" name="packagePrice" type="number" min="0" step="1" required></div>
+              <div class="field"><label for="packageButtonText">Button Text</label><input id="packageButtonText" name="packageButtonText" type="text"></div>
+              <div class="field"><label for="packageChairs">Chairs</label><input id="packageChairs" name="packageChairs" type="number" min="0" step="1"></div>
+              <div class="field"><label for="packageTables">Tables</label><input id="packageTables" name="packageTables" type="number" min="0" step="1"></div>
+              <div class="field"><label for="packageDecorations">Decorations</label><input id="packageDecorations" name="packageDecorations" type="number" min="0" step="1"></div>
+              <div class="field"><label style="display:flex; align-items:center; gap:10px;"><input id="packagePopular" name="packagePopular" type="checkbox"> Mark as popular</label></div>
+              <div class="field"><label style="display:flex; align-items:center; gap:10px;"><input id="packageVisible" name="packageVisible" type="checkbox" checked> Visible on public site</label></div>
+              <div class="field"><label for="packageDescription">Description</label><textarea id="packageDescription" name="packageDescription"></textarea></div>
+              <div class="field"><label for="packageFeatures">Features (one per line)</label><textarea id="packageFeatures" name="packageFeatures"></textarea></div>
+              <div class="inline-actions">
+                <button class="btn btn-primary" type="submit">Save Package</button>
+                <button class="btn btn-secondary" type="button" id="cancelPackageEdit">Clear Form</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="admin-tab-panel" data-admin-panel="testimonials">
+        <div class="manager-shell">
+          <div class="admin-panel-card">
+            <h4 style="margin:0 0 14px;">Testimonial Items</h4>
+            <div class="manager-list" id="testimonialManagerList"></div>
+          </div>
+          <div class="admin-panel-card">
+            <h4 style="margin:0 0 14px;">Add / Edit Testimonial</h4>
+            <form id="testimonialItemForm" style="display:grid; gap:14px;">
+              <input type="hidden" id="testimonialEditIndex">
+              <div class="field"><label for="testimonialTitle">Title</label><input id="testimonialTitle" name="testimonialTitle" type="text" required></div>
+              <div class="field"><label for="testimonialStars">Stars</label><input id="testimonialStars" name="testimonialStars" type="number" min="1" max="5" step="1" value="5"></div>
+              <div class="field"><label for="testimonialPerson">Person</label><input id="testimonialPerson" name="testimonialPerson" type="text"></div>
+              <div class="field"><label for="testimonialRole">Role</label><input id="testimonialRole" name="testimonialRole" type="text"></div>
+              <div class="field"><label style="display:flex; align-items:center; gap:10px;"><input id="testimonialVisible" name="testimonialVisible" type="checkbox" checked> Visible on public site</label></div>
+              <div class="field"><label for="testimonialText">Testimonial Text</label><textarea id="testimonialText" name="testimonialText"></textarea></div>
+              <div class="inline-actions">
+                <button class="btn btn-primary" type="submit">Save Testimonial</button>
+                <button class="btn btn-secondary" type="button" id="cancelTestimonialEdit">Clear Form</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="admin-tab-panel" data-admin-panel="analytics">
+        <div class="admin-analytics-grid">
+          <div class="mini-card"><h4 style="margin:0 0 6px;">Total Inquiries</h4><p id="adminAnalyticsTotal" style="margin:0;">0</p></div>
+          <div class="mini-card"><h4 style="margin:0 0 6px;">Confirmed Bookings</h4><p id="adminAnalyticsConfirmed" style="margin:0;">0</p></div>
+          <div class="mini-card"><h4 style="margin:0 0 6px;">Cancelled Bookings</h4><p id="adminAnalyticsCancelled" style="margin:0;">0</p></div>
+          <div class="mini-card"><h4 style="margin:0 0 6px;">Top Package</h4><p id="adminAnalyticsTopPackage" style="margin:0;">—</p></div>
+          <div class="mini-card"><h4 style="margin:0 0 6px;">Estimated Revenue</h4><p id="adminAnalyticsRevenue" style="margin:0;">$0 AUD</p></div>
+          <div class="mini-card"><h4 style="margin:0 0 6px;">Payment Collected</h4><p id="adminAnalyticsCollected" style="margin:0;">$0 AUD</p></div>
+          <div class="mini-card"><h4 style="margin:0 0 6px;">Low Stock Warnings</h4><p id="adminAnalyticsStock" style="margin:0;">Inventory healthy</p></div>
+          <div class="mini-card"><h4 style="margin:0 0 6px;">Most Common Event Type</h4><p id="adminAnalyticsEventType" style="margin:0;">—</p></div>
+        </div>
+        <div class="admin-panel-card" style="margin-top:18px;">
+          <h4 style="margin:0 0 12px;">Analytics Notes</h4>
+          <ul class="admin-note-list" id="adminAnalyticsNotes"></ul>
+        </div>
+      </section>
+
+      <section class="admin-tab-panel" data-admin-panel="backup">
+        <div class="admin-panel-card">
+          <h4 style="margin:0 0 10px;">Export + Restore</h4>
+          <p class="admin-subtle" style="margin:0;">Download complete backups or only the parts you need. Importing a valid backup will safely restore CMS content, gallery items, packages, testimonials, settings, and booking data.</p>
+          <div class="backup-grid">
+            <button class="btn btn-primary" id="exportBackupBtn" type="button">Export Full Backup</button>
+            <button class="btn btn-secondary" id="importBackupBtn" type="button">Import Backup JSON</button>
+            <button class="btn btn-secondary" id="resetPublicContentBtn" type="button">Reset Public Content</button>
+            <button class="btn btn-secondary" id="exportCmsBtn" type="button">Export CMS</button>
+            <button class="btn btn-secondary" id="exportGalleryBtn" type="button">Export Gallery</button>
+            <button class="btn btn-secondary" id="exportPackagesBtn" type="button">Export Packages</button>
+            <button class="btn btn-secondary" id="exportTestimonialsBtn" type="button">Export Testimonials</button>
+            <button class="btn btn-secondary" id="exportSettingsBtn" type="button">Export Settings</button>
+          </div>
+          <input id="backupImportInput" type="file" accept="application/json,.json" hidden>
+        </div>
+      </section>
+
+      <section class="admin-tab-panel" data-admin-panel="settings">
+        <form id="settingsForm" style="display:grid; gap:18px;">
+          <div class="admin-panel-card">
+            <h4 style="margin:0 0 14px;">Business + Contact Settings</h4>
+            <div class="settings-grid">
+              <div class="field"><label for="settingsBusinessName">Business Name</label><input id="settingsBusinessName" name="businessName" type="text"></div>
+              <div class="field"><label for="settingsPhone">Phone</label><input id="settingsPhone" name="phone" type="text"></div>
+              <div class="field"><label for="settingsEmail">Email</label><input id="settingsEmail" name="email" type="email"></div>
+              <div class="field"><label for="settingsLocation">Location</label><input id="settingsLocation" name="location" type="text"></div>
+              <div class="field full"><label for="settingsServiceArea">Service Area</label><input id="settingsServiceArea" name="serviceArea" type="text"></div>
+              <div class="field full"><label for="settingsFacebookUrl">Facebook URL</label><input id="settingsFacebookUrl" name="facebookUrl" type="url"></div>
+              <div class="field"><label for="settingsWhatsappNumber">WhatsApp Number</label><input id="settingsWhatsappNumber" name="whatsappNumber" type="text"></div>
+              <div class="field"><label for="settingsSocialButtonText">Social Button Text</label><input id="settingsSocialButtonText" name="socialButtonText" type="text"></div>
+              <div class="field"><label for="settingsEmailButtonText">Email Button Text</label><input id="settingsEmailButtonText" name="emailButtonText" type="text"></div>
+              <div class="field full"><label for="settingsPlanningTip">Planning Tip</label><textarea id="settingsPlanningTip" name="planningTip"></textarea></div>
+            </div>
+          </div>
+
+          <div class="admin-panel-card">
+            <h4 style="margin:0 0 14px;">Inventory Defaults + Thresholds</h4>
+            <div class="settings-grid">
+              <div class="field"><label for="inventoryChairs">Default Chairs</label><input id="inventoryChairs" name="inventoryChairs" type="number" min="0" step="1"></div>
+              <div class="field"><label for="inventoryTables">Default Tables</label><input id="inventoryTables" name="inventoryTables" type="number" min="0" step="1"></div>
+              <div class="field"><label for="inventoryDecorations">Default Decorations</label><input id="inventoryDecorations" name="inventoryDecorations" type="number" min="0" step="1"></div>
+              <div class="field"><label for="thresholdChairs">Low Stock Chairs Threshold</label><input id="thresholdChairs" name="thresholdChairs" type="number" min="0" step="1"></div>
+              <div class="field"><label for="thresholdTables">Low Stock Tables Threshold</label><input id="thresholdTables" name="thresholdTables" type="number" min="0" step="1"></div>
+              <div class="field"><label for="thresholdDecorations">Low Stock Decorations Threshold</label><input id="thresholdDecorations" name="thresholdDecorations" type="number" min="0" step="1"></div>
+            </div>
+          </div>
+
+          <div class="admin-panel-card">
+            <h4 style="margin:0 0 14px;">Package Builder Extras</h4>
+            <p class="admin-subtle" style="margin:0 0 12px;">Use valid JSON array format, for example: [{ "name": "Fairy Lights", "price": 25 }]</p>
+            <div class="field">
+              <label for="extrasJson">Builder Extras JSON</label>
+              <textarea id="extrasJson" name="extrasJson" style="min-height:220px;"></textarea>
+            </div>
+          </div>
+
+          <div class="inline-actions">
+            <button class="btn btn-primary" type="submit">Save Settings</button>
+            <button class="btn btn-secondary" type="button" id="resetSettingsBtn">Reset Settings</button>
+          </div>
+        </form>
+      </section>
     </div>
   </div>
 
   <div class="lightbox" id="lightbox">
     <button id="closeLightbox" aria-label="Close image preview">✕</button>
-    <img id="lightboxImage" src="" alt="Gallery preview">
+    <div class="lightbox-shell">
+      <img id="lightboxImage" src="" alt="Gallery preview">
+      <div class="lightbox-info glass">
+        <span class="status-pill ok" id="lightboxCategory">Gallery</span>
+        <h3 id="lightboxTitle">Gallery Preview</h3>
+        <p id="lightboxDescription">Project details will appear here.</p>
+        <div class="lightbox-meta">
+          <span id="lightboxLocation">Location not provided</span>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="toast" id="toast">Your request has been received.</div>
+  <div class="toast"
+ id="toast">Your request has been received.</div>
 
+  
   <script>
     const body = document.body;
-    const themeToggle = document.getElementById('themeToggle');
-    const menuToggle = document.getElementById('menuToggle');
-    const navLinks = document.getElementById('navLinks');
-    const bookingModal = document.getElementById('bookingModal');
-    const adminLoginModal = document.getElementById('adminLoginModal');
-    const adminModal = document.getElementById('adminModal');
-    const openBooking = document.getElementById('openBooking');
-    const closeBooking = document.getElementById('closeBooking');
-    const closeAdminLogin = document.getElementById('closeAdminLogin');
-    const closeAdmin = document.getElementById('closeAdmin');
-    const toast = document.getElementById('toast');
-    const bookingForm = document.getElementById('bookingForm');
-    const quickForm = document.getElementById('quickForm');
-    const adminLoginForm = document.getElementById('adminLoginForm');
-    const revealEls = document.querySelectorAll('.reveal');
-    const galleryCards = document.querySelectorAll('.gallery-card');
-    const galleryFilters = document.querySelectorAll('.filter-btn');
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImage = document.getElementById('lightboxImage');
-    const closeLightbox = document.getElementById('closeLightbox');
-    const packageButtons = document.querySelectorAll('.open-package');
-    const packageCards = document.querySelectorAll('[data-package-card]');
-    const quickPackage = document.getElementById('quickPackage');
-    const chipToggles = document.querySelectorAll('.chip-toggle');
-    const packageSelect = document.getElementById('packageSelect');
-    const eventType = document.getElementById('eventType');
-    const eventDate = document.getElementById('eventDate');
-    const guestCount = document.getElementById('guestCount');
-    const setupHours = document.getElementById('setupHours');
-    const venueInput = document.getElementById('venue');
-    const builderTotal = document.getElementById('builderTotal');
-    const liveTotal = document.getElementById('liveTotal');
-    const liveSummaryText = document.getElementById('liveSummaryText');
-    const availabilityStatus = document.getElementById('availabilityStatus');
-    const availabilityText = document.getElementById('availabilityText');
-    const chairsNeed = document.getElementById('chairsNeed');
-    const tablesNeed = document.getElementById('tablesNeed');
-    const decorNeed = document.getElementById('decorNeed');
-    const chairsStock = document.getElementById('chairsStock');
-    const tablesStock = document.getElementById('tablesStock');
-    const decorStock = document.getElementById('decorStock');
-    const inventoryWarning = document.getElementById('inventoryWarning');
-    const suggestionsList = document.getElementById('suggestionsList');
-    const suggestionLead = document.getElementById('suggestionLead');
-    const submitBookingBtn = document.getElementById('submitBookingBtn');
-    const openWhatsappQuote = document.getElementById('openWhatsappQuote');
-    const invoicePreview = document.getElementById('invoicePreview');
-    const invoiceStatus = document.getElementById('invoiceStatus');
-    const invoiceClient = document.getElementById('invoiceClient');
-    const invoiceDate = document.getElementById('invoiceDate');
-    const invoicePackage = document.getElementById('invoicePackage');
-    const invoiceExtras = document.getElementById('invoiceExtras');
-    const invoiceVenue = document.getElementById('invoiceVenue');
-    const invoiceInventory = document.getElementById('invoiceInventory');
-    const invoiceTotal = document.getElementById('invoiceTotal');
-    const printInvoiceBtn = document.getElementById('printInvoiceBtn');
-    const downloadBookingsBtn = document.getElementById('downloadBookingsBtn');
-    const analyticsBookings = document.getElementById('analyticsBookings');
-    const analyticsTopPackage = document.getElementById('analyticsTopPackage');
-    const analyticsRevenue = document.getElementById('analyticsRevenue');
-    const adminPassword = document.getElementById('adminPassword');
-    const adminPasswordConfirmWrap = document.getElementById('adminPasswordConfirmWrap');
-    const adminPasswordConfirm = document.getElementById('adminPasswordConfirm');
-    const adminLoginTitle = document.getElementById('adminLoginTitle');
-    const adminLoginLead = document.getElementById('adminLoginLead');
-    const adminLoginNote = document.getElementById('adminLoginNote');
-    const adminLoginError = document.getElementById('adminLoginError');
-    const adminLoginSubmit = document.getElementById('adminLoginSubmit');
-    const adminBookingsCount = document.getElementById('adminBookingsCount');
-    const adminTopPackage = document.getElementById('adminTopPackage');
-    const adminInventoryLeft = document.getElementById('adminInventoryLeft');
-    const adminBookingsTableBody = document.getElementById('adminBookingsTableBody');
-    const adminEmptyState = document.getElementById('adminEmptyState');
-    const adminSessionText = document.getElementById('adminSessionText');
-    const adminSessionStatus = document.getElementById('adminSessionStatus');
-    const exportAdminJson = document.getElementById('exportAdminJson');
-    const resetInventoryBtn = document.getElementById('resetInventoryBtn');
-    const clearBookingsBtn = document.getElementById('clearBookingsBtn');
-    const lockAdminBtn = document.getElementById('lockAdminBtn');
-    const logoutAdminBtn = document.getElementById('logoutAdminBtn');
+    const themeToggle = document.getElementById("themeToggle");
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+    const bookingModal = document.getElementById("bookingModal");
+    const adminLoginModal = document.getElementById("adminLoginModal");
+    const adminModal = document.getElementById("adminModal");
+    const openBooking = document.getElementById("openBooking");
+    const closeBooking = document.getElementById("closeBooking");
+    const closeAdminLogin = document.getElementById("closeAdminLogin");
+    const closeAdmin = document.getElementById("closeAdmin");
+    const toast = document.getElementById("toast");
+    const bookingForm = document.getElementById("bookingForm");
+    const quickForm = document.getElementById("quickForm");
+    const adminLoginForm = document.getElementById("adminLoginForm");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    const lightboxTitle = document.getElementById("lightboxTitle");
+    const lightboxCategory = document.getElementById("lightboxCategory");
+    const lightboxDescription = document.getElementById("lightboxDescription");
+    const lightboxLocation = document.getElementById("lightboxLocation");
+    const closeLightbox = document.getElementById("closeLightbox");
+    const quickPackage = document.getElementById("quickPackage");
+    const packageSelect = document.getElementById("packageSelect");
+    const eventType = document.getElementById("eventType");
+    const eventDate = document.getElementById("eventDate");
+    const guestCount = document.getElementById("guestCount");
+    const setupHours = document.getElementById("setupHours");
+    const venueInput = document.getElementById("venue");
+    const builderTotal = document.getElementById("builderTotal");
+    const liveTotal = document.getElementById("liveTotal");
+    const liveSummaryText = document.getElementById("liveSummaryText");
+    const availabilityStatus = document.getElementById("availabilityStatus");
+    const availabilityText = document.getElementById("availabilityText");
+    const chairsNeed = document.getElementById("chairsNeed");
+    const tablesNeed = document.getElementById("tablesNeed");
+    const decorNeed = document.getElementById("decorNeed");
+    const chairsStock = document.getElementById("chairsStock");
+    const tablesStock = document.getElementById("tablesStock");
+    const decorStock = document.getElementById("decorStock");
+    const inventoryWarning = document.getElementById("inventoryWarning");
+    const suggestionsList = document.getElementById("suggestionsList");
+    const suggestionLead = document.getElementById("suggestionLead");
+    const submitBookingBtn = document.getElementById("submitBookingBtn");
+    const openWhatsappQuote = document.getElementById("openWhatsappQuote");
+    const invoicePreview = document.getElementById("invoicePreview");
+    const invoiceStatus = document.getElementById("invoiceStatus");
+    const invoiceClient = document.getElementById("invoiceClient");
+    const invoiceDate = document.getElementById("invoiceDate");
+    const invoicePackage = document.getElementById("invoicePackage");
+    const invoiceExtras = document.getElementById("invoiceExtras");
+    const invoiceVenue = document.getElementById("invoiceVenue");
+    const invoiceInventory = document.getElementById("invoiceInventory");
+    const invoiceTotal = document.getElementById("invoiceTotal");
+    const printInvoiceBtn = document.getElementById("printInvoiceBtn");
+    const downloadBookingsBtn = document.getElementById("downloadBookingsBtn");
+    const analyticsBookings = document.getElementById("analyticsBookings");
+    const analyticsTopPackage = document.getElementById("analyticsTopPackage");
+    const analyticsRevenue = document.getElementById("analyticsRevenue");
+    const adminPassword = document.getElementById("adminPassword");
+    const adminPasswordConfirmWrap = document.getElementById("adminPasswordConfirmWrap");
+    const adminPasswordConfirm = document.getElementById("adminPasswordConfirm");
+    const adminLoginTitle = document.getElementById("adminLoginTitle");
+    const adminLoginLead = document.getElementById("adminLoginLead");
+    const adminLoginNote = document.getElementById("adminLoginNote");
+    const adminLoginError = document.getElementById("adminLoginError");
+    const adminLoginSubmit = document.getElementById("adminLoginSubmit");
+    const adminBookingsCount = document.getElementById("adminBookingsCount");
+    const adminTopPackage = document.getElementById("adminTopPackage");
+    const adminInventoryLeft = document.getElementById("adminInventoryLeft");
+    const adminEstimatedRevenue = document.getElementById("adminEstimatedRevenue");
+    const adminPaidCollected = document.getElementById("adminPaidCollected");
+    const adminCancelledCount = document.getElementById("adminCancelledCount");
+    const adminSessionText = document.getElementById("adminSessionText");
+    const adminSessionStatus = document.getElementById("adminSessionStatus");
+    const adminModeBadge = document.getElementById("adminModeBadge");
+    const adminTabRow = document.getElementById("adminTabRow");
+    const adminPanels = document.querySelectorAll("[data-admin-panel]");
+    const overviewSummaryCards = document.getElementById("overviewSummaryCards");
+    const overviewLatestBooking = document.getElementById("overviewLatestBooking");
+    const overviewLowStock = document.getElementById("overviewLowStock");
+    const exportAdminJson = document.getElementById("exportAdminJson");
+    const exportAdminCsv = document.getElementById("exportAdminCsv");
+    const resetInventoryBtn = document.getElementById("resetInventoryBtn");
+    const clearBookingsBtn = document.getElementById("clearBookingsBtn");
+    const lockAdminBtn = document.getElementById("lockAdminBtn");
+    const logoutAdminBtn = document.getElementById("logoutAdminBtn");
+    const adminBookingSearch = document.getElementById("adminBookingSearch");
+    const adminBookingStatusFilter = document.getElementById("adminBookingStatusFilter");
+    const adminBookingPaidFilter = document.getElementById("adminBookingPaidFilter");
+    const adminBookingsTableBody = document.getElementById("adminBookingsTableBody");
+    const adminEmptyState = document.getElementById("adminEmptyState");
+    const bookingEditorForm = document.getElementById("bookingEditorForm");
+    const bookingEditorState = document.getElementById("bookingEditorState");
+    const bookingEditorSummary = document.getElementById("bookingEditorSummary");
+    const bookingEditorId = document.getElementById("bookingEditorId");
+    const adminEditStatus = document.getElementById("adminEditStatus");
+    const adminEditPaymentStatus = document.getElementById("adminEditPaymentStatus");
+    const adminEditQuoteAmount = document.getElementById("adminEditQuoteAmount");
+    const adminEditNotes = document.getElementById("adminEditNotes");
+    const clearBookingEditorBtn = document.getElementById("clearBookingEditorBtn");
+    const deleteSelectedBookingBtn = document.getElementById("deleteSelectedBookingBtn");
+    const cmsForm = document.getElementById("cmsForm");
+    const cmsServicesEditor = document.getElementById("cmsServicesEditor");
+    const addServiceBtn = document.getElementById("addServiceBtn");
+    const resetCmsBtn = document.getElementById("resetCmsBtn");
+    const galleryManagerList = document.getElementById("galleryManagerList");
+    const galleryItemForm = document.getElementById("galleryItemForm");
+    const galleryEditIndex = document.getElementById("galleryEditIndex");
+    const cancelGalleryEdit = document.getElementById("cancelGalleryEdit");
+    const packageManagerList = document.getElementById("packageManagerList");
+    const packageItemForm = document.getElementById("packageItemForm");
+    const packageEditIndex = document.getElementById("packageEditIndex");
+    const cancelPackageEdit = document.getElementById("cancelPackageEdit");
+    const testimonialManagerList = document.getElementById("testimonialManagerList");
+    const testimonialItemForm = document.getElementById("testimonialItemForm");
+    const testimonialEditIndex = document.getElementById("testimonialEditIndex");
+    const cancelTestimonialEdit = document.getElementById("cancelTestimonialEdit");
+    const importBackupBtn = document.getElementById("importBackupBtn");
+    const exportBackupBtn = document.getElementById("exportBackupBtn");
+    const exportCmsBtn = document.getElementById("exportCmsBtn");
+    const exportGalleryBtn = document.getElementById("exportGalleryBtn");
+    const exportPackagesBtn = document.getElementById("exportPackagesBtn");
+    const exportTestimonialsBtn = document.getElementById("exportTestimonialsBtn");
+    const exportSettingsBtn = document.getElementById("exportSettingsBtn");
+    const resetPublicContentBtn = document.getElementById("resetPublicContentBtn");
+    const backupImportInput = document.getElementById("backupImportInput");
+    const settingsForm = document.getElementById("settingsForm");
+    const resetSettingsBtn = document.getElementById("resetSettingsBtn");
+    const analyticsAdminCards = {
+      total: document.getElementById("adminAnalyticsTotal"),
+      confirmed: document.getElementById("adminAnalyticsConfirmed"),
+      cancelled: document.getElementById("adminAnalyticsCancelled"),
+      topPackage: document.getElementById("adminAnalyticsTopPackage"),
+      revenue: document.getElementById("adminAnalyticsRevenue"),
+      collected: document.getElementById("adminAnalyticsCollected"),
+      stock: document.getElementById("adminAnalyticsStock"),
+      eventType: document.getElementById("adminAnalyticsEventType")
+    };
+    const adminAnalyticsNotes = document.getElementById("adminAnalyticsNotes");
+
+    const brandNameEl = document.querySelector(".brand-text strong");
+    const brandTaglineEl = document.querySelector(".brand-text span");
+    const brandBadgeEl = document.querySelector(".brand-badge");
+    const heroEyebrowEl = document.querySelector(".hero-copy .eyebrow");
+    const heroTitleEl = document.querySelector(".hero-copy h1");
+    const heroSubtitleEl = document.querySelector(".hero-copy p");
+    const heroPrimaryCtaEl = document.querySelector(".hero-actions a.btn");
+    const heroSecondaryCtaEl = document.getElementById("openBooking");
+    const heroBadgesWrap = document.querySelector(".premium-badges");
+    const heroStatsWrap = document.querySelector(".hero-stats");
+    const heroPanel = document.querySelector(".hero-panel");
+    const heroPanelTitleEl = heroPanel ? heroPanel.querySelector("h3") : null;
+    const heroPanelTextEl = heroPanel ? heroPanel.querySelector("p") : null;
+    const heroMiniGrid = heroPanel ? heroPanel.querySelector(".mini-grid") : null;
+    const heroChipsWrap = heroPanel ? heroPanel.querySelector(".feature-chip-wrap") : null;
+    const aboutSection = document.getElementById("about");
+    const aboutHeader = aboutSection ? aboutSection.querySelector(".container > .reveal") : null;
+    const aboutTitleEl = aboutHeader ? aboutHeader.querySelector(".section-title") : null;
+    const aboutSubtitleEl = aboutHeader ? aboutHeader.querySelector(".section-subtitle") : null;
+    const aboutTextCard = aboutSection ? aboutSection.querySelector(".about-grid > .card.glass.reveal") : null;
+    const aboutCardTitleEl = aboutTextCard ? aboutTextCard.querySelector("h3") : null;
+    const aboutCardTextEl = aboutTextCard ? aboutTextCard.querySelector("p") : null;
+    const aboutListEl = aboutTextCard ? aboutTextCard.querySelector(".about-list") : null;
+    const aboutVisual = aboutSection ? aboutSection.querySelector(".about-visual") : null;
+    const aboutImageEl = aboutVisual ? aboutVisual.querySelector("img") : null;
+    const aboutNoteTitleEl = aboutVisual ? aboutVisual.querySelector(".floating-note strong") : null;
+    const aboutNoteTextEl = aboutVisual ? aboutVisual.querySelector(".floating-note span") : null;
+    const servicesSection = document.getElementById("services");
+    const servicesHeader = servicesSection ? servicesSection.querySelector(".container > .reveal") : null;
+    const servicesTitleEl = servicesHeader ? servicesHeader.querySelector(".section-title") : null;
+    const servicesSubtitleEl = servicesHeader ? servicesHeader.querySelector(".section-subtitle") : null;
+    const servicesGrid = servicesSection ? servicesSection.querySelector(".service-grid") : null;
+    const gallerySection = document.getElementById("gallery");
+    const galleryHeader = gallerySection ? gallerySection.querySelector(".container > .reveal") : null;
+    const galleryTitleEl = galleryHeader ? galleryHeader.querySelector(".section-title") : null;
+    const gallerySubtitleEl = galleryHeader ? galleryHeader.querySelector(".section-subtitle") : null;
+    const galleryFilterRow = gallerySection ? gallerySection.querySelector(".gallery-filter-row") : null;
+    const galleryGrid = gallerySection ? gallerySection.querySelector(".gallery-grid") : null;
+    const packagesSection = document.getElementById("packages");
+    const packagesHeader = packagesSection ? packagesSection.querySelector(".container > .reveal") : null;
+    const packagesTitleEl = packagesHeader ? packagesHeader.querySelector(".section-title") : null;
+    const packagesSubtitleEl = packagesHeader ? packagesHeader.querySelector(".section-subtitle") : null;
+    const packageGrid = packagesSection ? packagesSection.querySelector(".package-grid") : null;
+    const contactSection = document.getElementById("contact");
+    const contactHeader = contactSection ? contactSection.querySelector(".container > .reveal") : null;
+    const contactTitleEl = contactHeader ? contactHeader.querySelector(".section-title") : null;
+    const contactSubtitleEl = contactHeader ? contactHeader.querySelector(".section-subtitle") : null;
+    const bookingCard = contactSection ? contactSection.querySelector(".booking-card") : null;
+    const bookingLeadEl = bookingCard ? bookingCard.querySelector("p") : null;
+    const builderOptions = bookingCard ? bookingCard.querySelector(".builder-options") : null;
+    const contactInfoCard = contactSection ? contactSection.querySelector(".contact-grid > .card.glass.reveal:last-child") : null;
+    const contactInfoTitleEl = contactInfoCard ? contactInfoCard.querySelector("h3") : null;
+    const contactListEl = contactInfoCard ? contactInfoCard.querySelector(".contact-list") : null;
+    const contactActionsEl = contactInfoCard ? contactInfoCard.querySelector(".contact-actions") : null;
+    const planningTipCard = contactInfoCard ? contactInfoCard.querySelector(".analytics-grid + div") : null;
+    const planningTipTextEl = planningTipCard ? planningTipCard.querySelector("span") : null;
+    const testimonialsSection = document.getElementById("testimonials");
+    const testimonialsHeader = testimonialsSection ? testimonialsSection.querySelector(".container > .reveal") : null;
+    const testimonialsTitleEl = testimonialsHeader ? testimonialsHeader.querySelector(".section-title") : null;
+    const testimonialsSubtitleEl = testimonialsHeader ? testimonialsHeader.querySelector(".section-subtitle") : null;
+    const testimonialsGrid = testimonialsSection ? testimonialsSection.querySelector(".testimonial-grid") : null;
+    const footerSummaryEl = document.querySelector("footer .footer-wrap > p");
+    const footerLinksEl = document.querySelector("footer .footer-links");
+    const floatContact = document.querySelector(".float-contact");
+    const splash = document.getElementById("appReadySplash");
+    const splashBrandName = splash ? splash.querySelector("div > div:nth-child(2)") : null;
 
     const STORAGE_KEYS = {
-      theme: 'fiesta-theme',
-      bookings: 'fiesta-bookings',
-      inventory: 'fiesta-inventory',
-      quick: 'fiesta-quick-inquiry',
-      latest: 'fiesta-booking-last',
-      adminPassword: 'fiesta-admin-password',
-      adminSession: 'fiesta-admin-session'
+      theme: "fiesta-theme",
+      bookings: "fiesta-bookings",
+      inventory: "fiesta-inventory",
+      quick: "fiesta-quick-inquiry",
+      latest: "fiesta-booking-last",
+      adminPassword: "fiesta-admin-password",
+      adminSession: "fiesta-admin-session",
+      cms: "fiesta-cms-content",
+      gallery: "fiesta-gallery-items",
+      packages: "fiesta-package-items",
+      testimonials: "fiesta-testimonials",
+      settings: "fiesta-settings"
     };
 
+    const FIXED_ADMIN_PASSWORD = "FiestaAdmin2026!";
     const DEFAULT_INVENTORY = { chairs: 120, tables: 30, decorations: 24 };
+    const BOOKING_STATUSES = ["New", "Pending", "Confirmed", "Completed", "Cancelled"];
+    const PAYMENT_STATUSES = ["Unpaid", "Paid", "Partial"];
     const EVENT_SUGGESTIONS = {
-      Birthday: ['Add a balloon arch for a photo-ready focal point.', 'Fairy lights work well for evening birthday setups.', 'Backdrop + cake stand creates a stronger celebration area.'],
-      Wedding: ['Consider a backdrop and fairy lights for a more elegant reception look.', 'Premium package pairs well with extra chairs for family seating.', 'Balloon arch can be replaced with softer decor accents if you want a classic style.'],
-      Corporate: ['Marquee coverage and extra chairs help with structured guest flow.', 'Backdrop works well for brand photos and welcome signage.', 'Keep decor lighter and allocate more budget to seating and layout.'],
-      'Baby Shower': ['Backdrop + cake stand is a strong baby shower combo.', 'Soft balloon styling adds color without cluttering the venue.', 'Standard package is usually enough unless your guest list is large.'],
-      'Family Gathering': ['Basic or Standard package usually covers flexible seating well.', 'Add extra chairs if guest count may grow close to the event date.', 'Fairy lights give relaxed evening gatherings a warmer feel.']
+      Birthday: ["Add a balloon arch for a photo-ready focal point.", "Fairy lights work well for evening birthday setups.", "Backdrop + cake stand creates a stronger celebration area."],
+      Wedding: ["Consider a backdrop and fairy lights for a more elegant reception look.", "Premium package pairs well with extra chairs for family seating.", "Swap bright balloons for softer styling touches if you want a classic reception feel."],
+      Corporate: ["Marquee coverage and extra chairs help with structured guest flow.", "Backdrop works well for brand photos and welcome signage.", "Keep decor lighter and allocate more budget to seating and layout."],
+      "Baby Shower": ["Backdrop + cake stand is a strong baby shower combo.", "Soft balloon styling adds color without cluttering the venue.", "Standard package is usually enough unless your guest list is large."],
+      "Family Gathering": ["Basic or Standard package usually covers flexible seating well.", "Add extra chairs if guest count may grow close to the event date.", "Fairy lights give relaxed evening gatherings a warmer feel."]
     };
 
-    let adminLoginMode = 'login';
+    const DEFAULT_CMS = {
+      brandName: "Fiesta Party Hire Yeppoon",
+      brandTagline: "Marquees, Decorations & Party Hire",
+      heroEyebrow: "Celebrate in style with Fiesta Party Hire Yeppoon Yeppoon",
+      heroTitle: "Make Every Gathering",
+      heroAccent: "Beautiful",
+      heroSubtitle: "Based in Yeppoon, Queensland, Australia, Fiesta Party Hire Yeppoon offers marquees, tables and chairs, party decorations, keepsakes, and balloons for all types of gatherings. Party hire packages and individual hire items are available for events of any size.",
+      heroPrimaryCtaText: "Book Now",
+      heroSecondaryCtaText: "Get a Quick Quote",
+      heroBadges: ["Trusted in Yeppoon", "Stylish Party Hire", "Mobile Friendly"],
+      heroStats: [
+        { value: "0427", label: "944 574" },
+        { value: "6x6", label: "& 6x12 Marquees" },
+        { value: "Friendly", label: "Staff & Service" }
+      ],
+      heroPanelTitle: "What we do best",
+      heroPanelText: "We help families, organisers, and businesses create polished, festive spaces with practical party hire solutions, marquee setups, and tasteful event styling.",
+      heroMiniCards: [
+        { title: "Tables & Chairs", text: "Neat, coordinated seating solutions for all event sizes." },
+        { title: "Marquees", text: "Available marquee hire in 6x6 and 6x12 sizes." },
+        { title: "Decor Styling", text: "Balloons, lights, accents, and visual themes that stand out." },
+        { title: "Party Hire Packages", text: "Ready-made options that simplify planning and save time." }
+      ],
+      heroChips: ["Birthdays", "Family Events", "Corporate Setups", "Custom Themes"],
+      aboutTitle: "About Fiesta Party Hire Yeppoon",
+      aboutSubtitle: "We bring party spaces to life with reliable hire essentials, decorative details, and friendly staff who help make every setup smooth and memorable. Whether you are planning a birthday, Mermaid Party, baby shower, wedding reception, or private gathering, we help make the entire setup stress-free and memorable.",
+      aboutCardTitle: "Why clients choose us",
+      aboutCardText: "Our focus is simple: provide clean, attractive, and practical party hire services that suit your needs, supported by friendly staff and dependable service. We combine convenience, festive styling, and dependable service so your event looks polished and feels special from start to finish.",
+      aboutList: [
+        "Complete hire support for marquees, table settings, glassware, cutlery, and event essentials.",
+        "Decor-friendly setup options for Mermaid Party themes, baby showers, and other styled gatherings.",
+        "Flexible party hire options for casual parties, wedding receptions, formal celebrations, and custom events.",
+        "Easy booking process with fast communication and personalized assistance."
+      ],
+      aboutImage: "https://images.unsplash.com/photo-1464349153735-7db50ed83c84?auto=format&fit=crop&w=1200&q=80",
+      aboutNoteTitle: "Styled for celebrations",
+      aboutNoteText: "This includes the hire of the wedding reception venue as well as equipment needed for decorations. Our offerings encompass plates, glassware, wine glasses, cutlery, table settings, marquees and other related items.",
+      servicesTitle: "Our Services",
+      servicesSubtitle: "Everything you need for party hire, marquees, decorations, and gathering setups across Yeppoon and surrounding areas.",
+      serviceItems: [
+        { icon: "🪑", title: "Tables & Chairs", description: "Clean, coordinated seating and table hire options for birthdays, family gatherings, and special occasions." },
+        { icon: "⛺", title: "Marquees", description: "Provide comfort and coverage for outdoor parties, receptions, and community events with marquee hire solutions." },
+        { icon: "🎈", title: "Decorations", description: "Balloon styling, accent decor, lighting, and setup details that instantly elevate the mood of your venue." },
+        { icon: "🎉", title: "Party Setups", description: "Coordinated arrangements for celebration areas, guest flow, focal displays, and themed party spaces." },
+        { icon: "📦", title: "Party Hire Packages", description: "Ready-to-book bundles that combine practical hire items and decorative styling into one simplified package." },
+        { icon: "✨", title: "Custom Event Styling", description: "Tailored event arrangements for clients who want a unique look, specific color palette, or custom concept." }
+      ],
+      galleryTitle: "Event Gallery",
+      gallerySubtitle: "Sample setup inspirations for birthdays, intimate celebrations, and festive gatherings across Yeppoon and surrounding areas.",
+      packagesTitle: "Packages & Pricing",
+      packagesSubtitle: "Editable sample packages you can customize based on event size, styling needs, and setup requirements.",
+      contactTitle: "Contact Us",
+      contactSubtitle: "Tell us about your celebration and we will help you plan the right hire items, marquee setup, and party hire package.",
+      bookingLead: "Book smarter with live totals, package matching, local quotes, and a printable invoice preview.",
+      contactInfoTitle: "Contact Information",
+      testimonialsTitle: "What Clients Say",
+      testimonialsSubtitle: "Sample feedback inspired by a friendly, professional event service experience.",
+      footerSummary: "Marquees, tables and chairs, party decorations, keepsakes, and balloons for all types of gatherings."
+    };
 
-    function getBookings(){
-      try{ return JSON.parse(localStorage.getItem(STORAGE_KEYS.bookings)) || []; }
-      catch(err){ return []; }
+    const DEFAULT_GALLERY = [
+      {
+        title: "Mermaid Party",
+        category: "birthday",
+        image: "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=1400&q=80",
+        thumb: "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=900&q=80",
+        description: "Colourful under-the-sea styling with balloon accents, feature tables, and celebration focal points.",
+        location: "Yeppoon, QLD",
+        visible: true
+      },
+      {
+        title: "Orderland Birthday Theme",
+        category: "birthday",
+        image: "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=1400&q=80",
+        thumb: "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=900&q=80",
+        description: "A bright birthday setup with balloons, layered styling, and a polished event table presentation.",
+        location: "Yeppoon, QLD",
+        visible: true
+      },
+      {
+        title: "Marquees",
+        category: "corporate",
+        image: "https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=1400&q=80",
+        thumb: "https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=900&q=80",
+        description: "Outdoor marquee coverage and seating layout for structured gatherings and business events.",
+        location: "Yeppoon, QLD",
+        visible: true
+      },
+      {
+        title: "Cake Stand",
+        category: "wedding",
+        image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1400&q=80",
+        thumb: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=900&q=80",
+        description: "Elegant reception styling with layered table details and focal dessert presentation.",
+        location: "Yeppoon, QLD",
+        visible: true
+      },
+      {
+        title: "Baby Shower",
+        category: "birthday",
+        image: "https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&w=1400&q=80",
+        thumb: "https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&w=900&q=80",
+        description: "Soft colour palettes, lights, and styling details designed for intimate celebrations.",
+        location: "Yeppoon, QLD",
+        visible: true
+      },
+      {
+        title: "General Party Hire Setup",
+        category: "corporate",
+        image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1400&q=80",
+        thumb: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=900&q=80",
+        description: "Flexible hire layout suited to family functions, community events, and general party setups.",
+        location: "Yeppoon, QLD",
+        visible: true
+      }
+    ];
+
+    const DEFAULT_PACKAGES = [
+      {
+        badge: "Basic",
+        title: "Basic Party Hire Package",
+        price: 99,
+        description: "Perfect for simple family gatherings, Mermaid Party themes, and smaller event hire needs.",
+        features: [
+          "Tables and chairs for small group gatherings",
+          "Basic balloon accent styling",
+          "Simple arrangement assistance",
+          "Ideal for birthdays or home gatherings"
+        ],
+        chairs: 12,
+        tables: 3,
+        decorations: 1,
+        buttonText: "Choose Basic",
+        popular: false,
+        visible: true
+      },
+      {
+        badge: "Most Popular",
+        title: "Standard Party Hire Package",
+        price: 189,
+        description: "Great for medium-sized gatherings with marquees, decorative styling, and coordinated setup support.",
+        features: [
+          "Tables, chairs, and marquee setup",
+          "Decor styling with balloons and accents",
+          "Enhanced event area arrangement",
+          "Suitable for birthdays, reunions, and small receptions"
+        ],
+        chairs: 24,
+        tables: 6,
+        decorations: 2,
+        buttonText: "Choose Standard",
+        popular: true,
+        visible: true
+      },
+      {
+        badge: "Premium",
+        title: "Premium Party Hire Package",
+        price: 299,
+        description: "Designed for larger and more polished events that need a stronger visual impact.",
+        features: [
+          "Full marquee, tables, and seating coordination",
+          "Decor concept styling and focal setup",
+          "Event-ready arrangement assistance",
+          "Best for milestone celebrations and premium gatherings"
+        ],
+        chairs: 40,
+        tables: 10,
+        decorations: 3,
+        buttonText: "Choose Premium",
+        popular: false,
+        visible: true
+      }
+    ];
+
+    const DEFAULT_TESTIMONIALS = [
+      {
+        title: "Exceptional service",
+        text: "Fiesta Party Hire Yeppoon made our family celebration feel so polished and festive. The setup looked great and everything was arranged on time.",
+        person: "Verified Customer",
+        role: "Party Hire Review",
+        stars: 5,
+        visible: true
+      },
+      {
+        title: "Friendly staff",
+        text: "Friendly staff and reliable support for party hire, marquees, and decorations for all kinds of gatherings.",
+        person: "Local Customer",
+        role: "Service Feedback",
+        stars: 5,
+        visible: true
+      },
+      {
+        title: "Professional attention to detail",
+        text: "The professionalism, presentation, and attention to detail made the whole experience smooth and enjoyable.",
+        person: "Happy Client",
+        role: "Review",
+        stars: 5,
+        visible: true
+      }
+    ];
+
+    const DEFAULT_SETTINGS = {
+      businessName: "Fiesta Party Hire Yeppoon",
+      phone: "+61 427 944 574",
+      email: "fiestapartyhireyeppoon@gmail.com",
+      location: "Yeppoon, QLD, Australia",
+      serviceArea: "Serving Yeppoon and surrounding areas",
+      facebookUrl: "https://www.facebook.com/fiestapartyhire",
+      whatsappNumber: "61427944574",
+      socialButtonText: "Visit Facebook",
+      emailButtonText: "MESSAGE US",
+      planningTip: "Book early for weekends and larger gatherings to secure availability for marquees, seating, balloons, and party decorations.",
+      inventory: { chairs: 120, tables: 30, decorations: 24 },
+      extras: [
+        { name: "Fairy Lights", price: 25 },
+        { name: "Balloon Arch", price: 45 },
+        { name: "Cake Stand", price: 20 },
+        { name: "Backdrop", price: 35 },
+        { name: "Extra Chairs", price: 30 }
+      ],
+      lowStockThresholds: { chairs: 18, tables: 6, decorations: 5 }
+    };
+
+    let activeGalleryFilter = "all";
+    let activeAdminTab = "overview";
+    let adminLoginMode = "login";
+    let revealObserver = null;
+
+    function clone(value){
+      return JSON.parse(JSON.stringify(value));
     }
-    function setBookings(bookings){
-      localStorage.setItem(STORAGE_KEYS.bookings, JSON.stringify(bookings));
-    }
-    function getInventory(){
+
+    function readJSON(key, fallback){
       try{
-        const stored = JSON.parse(localStorage.getItem(STORAGE_KEYS.inventory));
-        return stored ? { ...DEFAULT_INVENTORY, ...stored } : { ...DEFAULT_INVENTORY };
+        const raw = localStorage.getItem(key);
+        return raw ? JSON.parse(raw) : clone(fallback);
       }catch(err){
-        return { ...DEFAULT_INVENTORY };
+        return clone(fallback);
       }
     }
-    function setInventory(inventory){
-      localStorage.setItem(STORAGE_KEYS.inventory, JSON.stringify(inventory));
+
+    function writeJSON(key, value){
+      localStorage.setItem(key, JSON.stringify(value));
     }
+
+    function deepMerge(base, override){
+      if(Array.isArray(base)) return Array.isArray(override) ? override : clone(base);
+      if(base && typeof base === "object"){
+        const output = {};
+        const keys = new Set([...Object.keys(base), ...Object.keys(override || {})]);
+        keys.forEach((key) => {
+          const baseValue = base[key];
+          const overrideValue = override ? override[key] : undefined;
+          if(overrideValue === undefined){
+            output[key] = clone(baseValue);
+          }else if(Array.isArray(baseValue)){
+            output[key] = Array.isArray(overrideValue) ? overrideValue : clone(baseValue);
+          }else if(baseValue && typeof baseValue === "object"){
+            output[key] = deepMerge(baseValue, overrideValue || {});
+          }else{
+            output[key] = overrideValue;
+          }
+        });
+        return output;
+      }
+      return override === undefined ? clone(base) : override;
+    }
+
+    function escapeHtml(value){
+      return String(value ?? "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+    }
+
+    function parseLines(value){
+      return String(value || "")
+        .split("\n")
+        .map((item) => item.trim())
+        .filter(Boolean);
+    }
+
+    function parsePairLines(value, leftKey, rightKey){
+      return parseLines(value).map((line) => {
+        const [left, ...rest] = line.split("|");
+        return {
+          [leftKey]: (left || "").trim(),
+          [rightKey]: rest.join("|").trim()
+        };
+      }).filter((item) => item[leftKey] || item[rightKey]);
+    }
+
+    function formatLines(items, leftKey, rightKey){
+      return (items || []).map((item) => `${item[leftKey] || ""} | ${item[rightKey] || ""}`.trim()).join("\n");
+    }
+
+    function formatMoney(value){
+      return `$${Number(value || 0).toFixed(0)} AUD`;
+    }
+
+    function formatDate(value){
+      if(!value) return "—";
+      const dt = new Date(`${value}T00:00:00`);
+      if(Number.isNaN(dt.getTime())) return value;
+      return dt.toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" });
+    }
+
+    function formatDateTime(value){
+      if(!value) return "—";
+      const dt = new Date(value);
+      if(Number.isNaN(dt.getTime())) return "—";
+      return dt.toLocaleString(undefined, {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+        hour: "numeric",
+        minute: "2-digit"
+      });
+    }
+
+    function toSlug(value){
+      return String(value || "")
+        .toLowerCase()
+        .trim()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "") || "item";
+    }
+
+    function sanitizeWhatsappNumber(value){
+      return String(value || "").replace(/[^\d]/g, "") || DEFAULT_SETTINGS.whatsappNumber;
+    }
+
+    function downloadText(filename, content, type){
+      const blob = new Blob([content], { type });
+      const url = URL.createObjectURL(blob);
+      const anchor = document.createElement("a");
+      anchor.href = url;
+      anchor.download = filename;
+      document.body.appendChild(anchor);
+      anchor.click();
+      anchor.remove();
+      URL.revokeObjectURL(url);
+    }
+
+    function downloadJson(filename, data){
+      downloadText(filename, JSON.stringify(data, null, 2), "application/json");
+    }
+
+    function downloadCsv(filename, rows){
+      const csv = rows.map((row) => row.map((cell) => {
+        const text = String(cell ?? "");
+        return `"${text.replace(/"/g, '""')}"`;
+      }).join(",")).join("\n");
+      downloadText(filename, csv, "text/csv");
+    }
+
+    function getCms(){
+      const stored = readJSON(STORAGE_KEYS.cms, DEFAULT_CMS);
+      return deepMerge(DEFAULT_CMS, stored);
+    }
+
+    function setCms(data){
+      writeJSON(STORAGE_KEYS.cms, deepMerge(DEFAULT_CMS, data));
+    }
+
+    function normalizeGalleryItem(item, fallbackIndex){
+      return {
+        title: String(item?.title || `Gallery Item ${fallbackIndex + 1}`),
+        category: toSlug(item?.category || "general"),
+        image: String(item?.image || ""),
+        thumb: String(item?.thumb || item?.image || ""),
+        description: String(item?.description || "Event styling preview."),
+        location: String(item?.location || DEFAULT_SETTINGS.location),
+        visible: item?.visible !== false
+      };
+    }
+
+    function getGalleryItems(){
+      const stored = readJSON(STORAGE_KEYS.gallery, DEFAULT_GALLERY);
+      return (Array.isArray(stored) ? stored : DEFAULT_GALLERY).map(normalizeGalleryItem);
+    }
+
+    function setGalleryItems(items){
+      writeJSON(STORAGE_KEYS.gallery, items.map(normalizeGalleryItem));
+    }
+
+    function normalizePackageItem(item, fallbackIndex){
+      const features = Array.isArray(item?.features) ? item.features.map((feature) => String(feature || "").trim()).filter(Boolean) : [];
+      return {
+        badge: String(item?.badge || "Package"),
+        title: String(item?.title || `Package ${fallbackIndex + 1}`),
+        price: Number(item?.price || 0),
+        description: String(item?.description || ""),
+        features: features.length ? features : ["Package feature"],
+        chairs: Number(item?.chairs || 0),
+        tables: Number(item?.tables || 0),
+        decorations: Number(item?.decorations || 0),
+        buttonText: String(item?.buttonText || "Choose Package"),
+        popular: item?.popular === true,
+        visible: item?.visible !== false
+      };
+    }
+
+    function getPackageItems(){
+      const stored = readJSON(STORAGE_KEYS.packages, DEFAULT_PACKAGES);
+      return (Array.isArray(stored) ? stored : DEFAULT_PACKAGES).map(normalizePackageItem);
+    }
+
+    function setPackageItems(items){
+      writeJSON(STORAGE_KEYS.packages, items.map(normalizePackageItem));
+    }
+
+    function normalizeTestimonial(item, fallbackIndex){
+      const stars = Math.max(1, Math.min(5, Number(item?.stars || 5)));
+      return {
+        title: String(item?.title || `Review ${fallbackIndex + 1}`),
+        text: String(item?.text || ""),
+        person: String(item?.person || "Customer"),
+        role: String(item?.role || "Review"),
+        stars,
+        visible: item?.visible !== false
+      };
+    }
+
+    function getTestimonials(){
+      const stored = readJSON(STORAGE_KEYS.testimonials, DEFAULT_TESTIMONIALS);
+      return (Array.isArray(stored) ? stored : DEFAULT_TESTIMONIALS).map(normalizeTestimonial);
+    }
+
+    function setTestimonials(items){
+      writeJSON(STORAGE_KEYS.testimonials, items.map(normalizeTestimonial));
+    }
+
+    function getSettings(){
+      const stored = readJSON(STORAGE_KEYS.settings, DEFAULT_SETTINGS);
+      const merged = deepMerge(DEFAULT_SETTINGS, stored);
+      merged.whatsappNumber = sanitizeWhatsappNumber(merged.whatsappNumber);
+      merged.extras = (Array.isArray(merged.extras) ? merged.extras : DEFAULT_SETTINGS.extras).map((item, index) => ({
+        name: String(item?.name || `Extra ${index + 1}`),
+        price: Number(item?.price || 0)
+      })).filter((item) => item.name);
+      return merged;
+    }
+
+    function setSettings(data){
+      const merged = deepMerge(DEFAULT_SETTINGS, data);
+      merged.whatsappNumber = sanitizeWhatsappNumber(merged.whatsappNumber);
+      writeJSON(STORAGE_KEYS.settings, merged);
+    }
+
+    function normalizeBooking(raw){
+      const fallbackId = `${Date.now()}-${Math.random().toString(16).slice(2, 8)}`;
+      const extras = Array.isArray(raw?.extras) ? raw.extras.map((item) => ({
+        name: String(item?.name || ""),
+        price: Number(item?.price || 0)
+      })).filter((item) => item.name) : [];
+      const inventory = {
+        chairs: Number(raw?.inventory?.chairs || 0),
+        tables: Number(raw?.inventory?.tables || 0),
+        decorations: Number(raw?.inventory?.decorations || 0)
+      };
+      const total = Number(raw?.total ?? raw?.quoteAmount ?? 0);
+      const statusValue = String(raw?.status || "").trim();
+      const normalizedStatus = BOOKING_STATUSES.includes(statusValue) ? statusValue : (statusValue === "Draft saved locally" ? "New" : "New");
+      const paymentStatus = PAYMENT_STATUSES.includes(raw?.paymentStatus) ? raw.paymentStatus : (raw?.paid === true ? "Paid" : "Unpaid");
+      return {
+        id: String(raw?.id || fallbackId),
+        name: String(raw?.name || ""),
+        phone: String(raw?.phone || ""),
+        email: String(raw?.email || ""),
+        eventDate: String(raw?.eventDate || ""),
+        eventType: String(raw?.eventType || ""),
+        package: String(raw?.package || ""),
+        guestCount: Number(raw?.guestCount || 0),
+        setupHours: Number(raw?.setupHours || 0),
+        venue: String(raw?.venue || ""),
+        message: String(raw?.message || ""),
+        extras,
+        inventory,
+        total,
+        quoteAmount: Number(raw?.quoteAmount ?? total),
+        status: normalizedStatus,
+        paymentStatus,
+        adminNotes: String(raw?.adminNotes || ""),
+        createdAt: raw?.createdAt || new Date().toISOString(),
+        updatedAt: raw?.updatedAt || raw?.createdAt || new Date().toISOString()
+      };
+    }
+
+    function getBookings(){
+      const stored = readJSON(STORAGE_KEYS.bookings, []);
+      return (Array.isArray(stored) ? stored : []).map(normalizeBooking);
+    }
+
+    function setBookings(bookings){
+      writeJSON(STORAGE_KEYS.bookings, bookings.map(normalizeBooking));
+    }
+
+    function getInventory(){
+      const settings = getSettings();
+      const stored = readJSON(STORAGE_KEYS.inventory, settings.inventory);
+      return {
+        chairs: Number(stored?.chairs ?? settings.inventory.chairs),
+        tables: Number(stored?.tables ?? settings.inventory.tables),
+        decorations: Number(stored?.decorations ?? settings.inventory.decorations)
+      };
+    }
+
+    function setInventory(inventory){
+      writeJSON(STORAGE_KEYS.inventory, {
+        chairs: Number(inventory?.chairs || 0),
+        tables: Number(inventory?.tables || 0),
+        decorations: Number(inventory?.decorations || 0)
+      });
+    }
+
+    function latestBookingDraft(){
+      try{
+        const raw = localStorage.getItem(STORAGE_KEYS.latest);
+        return raw ? normalizeBooking(JSON.parse(raw)) : null;
+      }catch(err){
+        return null;
+      }
+    }
+
+    function setLatestBookingDraft(booking){
+      localStorage.setItem(STORAGE_KEYS.latest, JSON.stringify(normalizeBooking(booking)));
+    }
+
     function getAdminSession(){
       try{
         const stored = JSON.parse(localStorage.getItem(STORAGE_KEYS.adminSession));
-        return stored && typeof stored === 'object'
-          ? { authenticated:false, locked:false, loggedInAt:'', lockedAt:'', ...stored }
-          : { authenticated:false, locked:false, loggedInAt:'', lockedAt:'' };
+        return stored && typeof stored === "object"
+          ? { authenticated: false, locked: false, loggedInAt: "", lockedAt: "", ...stored }
+          : { authenticated: false, locked: false, loggedInAt: "", lockedAt: "" };
       }catch(err){
-        return { authenticated:false, locked:false, loggedInAt:'', lockedAt:'' };
+        return { authenticated: false, locked: false, loggedInAt: "", lockedAt: "" };
       }
     }
+
     function setAdminSession(session){
       localStorage.setItem(STORAGE_KEYS.adminSession, JSON.stringify({
         authenticated: !!session.authenticated,
         locked: !!session.locked,
-        loggedInAt: session.loggedInAt || '',
-        lockedAt: session.lockedAt || ''
+        loggedInAt: session.loggedInAt || "",
+        lockedAt: session.lockedAt || ""
       }));
     }
+
     function clearAdminSession(){
       localStorage.removeItem(STORAGE_KEYS.adminSession);
     }
+
+    function syncFixedAdminPassword(){
+      if(localStorage.getItem(STORAGE_KEYS.adminPassword) !== FIXED_ADMIN_PASSWORD){
+        localStorage.setItem(STORAGE_KEYS.adminPassword, FIXED_ADMIN_PASSWORD);
+      }
+    }
+
     function hasAdminPassword(){
-      return !!localStorage.getItem(STORAGE_KEYS.adminPassword);
+      return true;
     }
+
     function getAdminPassword(){
-      return localStorage.getItem(STORAGE_KEYS.adminPassword) || '';
+      return FIXED_ADMIN_PASSWORD;
     }
-    function setAdminPasswordValue(value){
-      localStorage.setItem(STORAGE_KEYS.adminPassword, value);
+
+    function setAdminPasswordValue(){
+      localStorage.setItem(STORAGE_KEYS.adminPassword, FIXED_ADMIN_PASSWORD);
     }
-    function formatMoney(value){
-      return `$${Number(value || 0).toFixed(0)} AUD`;
+
+    function showToast(message){
+      toast.textContent = message;
+      toast.classList.add("show");
+      clearTimeout(showToast._timer);
+      showToast._timer = setTimeout(() => toast.classList.remove("show"), 2800);
     }
-    function formatDate(value){
-      if(!value) return '—';
-      const dt = new Date(value + 'T00:00:00');
-      if(Number.isNaN(dt.getTime())) return value;
-      return dt.toLocaleDateString(undefined, { year:'numeric', month:'short', day:'numeric' });
+
+    function setAdminLoginError(message = ""){
+      adminLoginError.textContent = message;
+      adminLoginError.classList.toggle("visible", !!message);
     }
-    function formatDateTime(value){
-      if(!value) return '—';
-      const dt = new Date(value);
-      if(Number.isNaN(dt.getTime())) return '—';
-      return dt.toLocaleString(undefined, {
-        year:'numeric',
-        month:'short',
-        day:'numeric',
-        hour:'numeric',
-        minute:'2-digit'
+
+    function syncBodyLockState(){
+      const locked = bookingModal.classList.contains("active") || adminLoginModal.classList.contains("active") || adminModal.classList.contains("active") || lightbox.classList.contains("active");
+      document.body.classList.toggle("modal-open", locked);
+    }
+
+    function startAdminSession(){
+      setAdminSession({ authenticated: true, locked: false, loggedInAt: new Date().toISOString(), lockedAt: "" });
+      updateAdminSessionUI();
+    }
+
+    function lockAdminSession(){
+      const session = getAdminSession();
+      setAdminSession({ authenticated: true, locked: true, loggedInAt: session.loggedInAt || new Date().toISOString(), lockedAt: new Date().toISOString() });
+      updateAdminSessionUI();
+    }
+
+    function logoutAdminSession(){
+      clearAdminSession();
+      updateAdminSessionUI();
+    }
+
+    function isAdminAuthenticated(){
+      const session = getAdminSession();
+      return session.authenticated === true && session.locked !== true;
+    }
+
+    function updateAdminSessionUI(){
+      const session = getAdminSession();
+      const active = session.authenticated === true && session.locked !== true;
+      adminSessionStatus.textContent = active ? "Authenticated" : (session.locked ? "Locked" : "Logged out");
+      adminSessionStatus.className = `status-pill ${active ? "ok" : "warn"}`;
+      adminModeBadge.textContent = active ? "Admin tools ready" : (session.locked ? "Admin session locked" : "Hidden access required");
+      adminSessionText.textContent = active
+        ? `Verified on ${formatDateTime(session.loggedInAt)}. Hidden admin tools are unlocked on this browser.`
+        : session.locked
+          ? `Session locked on ${formatDateTime(session.lockedAt)}. Use the hidden shortcut and re-enter the password to continue.`
+          : "No active admin session. Use Ctrl + Shift + A to request protected access.";
+    }
+
+    function openModal(){
+      bookingModal.classList.add("active");
+      bookingModal.setAttribute("aria-hidden", "false");
+      syncBodyLockState();
+    }
+
+    function closeModal(){
+      bookingModal.classList.remove("active");
+      bookingModal.setAttribute("aria-hidden", "true");
+      syncBodyLockState();
+    }
+
+    function openAdminLogin(mode = "login"){
+      adminLoginMode = mode;
+      const isSetup = mode === "setup";
+      const isUnlock = mode === "unlock";
+      adminLoginTitle.textContent = isSetup ? "Set Admin Password" : (isUnlock ? "Unlock Admin Session" : "Admin Access");
+      adminLoginLead.textContent = isSetup
+        ? "Create the local admin password for this browser before opening the hidden dashboard."
+        : (isUnlock
+          ? "This admin session is locked. Re-enter the admin password to unlock the dashboard."
+          : "Enter the admin password to open the hidden dashboard.");
+      adminLoginNote.textContent = isSetup
+        ? "This password is stored only in this browser using localStorage. Keep it somewhere safe."
+        : "Protected admin access is verified locally on this browser before any admin tools are shown.";
+      adminPassword.placeholder = isSetup ? "Create admin password" : "Enter admin password";
+      adminPassword.value = "";
+      adminPasswordConfirm.value = "";
+      adminPasswordConfirmWrap.style.display = isSetup ? "grid" : "none";
+      adminPasswordConfirm.required = isSetup;
+      adminPassword.setAttribute("autocomplete", isSetup ? "new-password" : "current-password");
+      adminLoginSubmit.textContent = isSetup ? "Create Password & Open Admin" : (isUnlock ? "Unlock Admin" : "Login to Admin");
+      setAdminLoginError("");
+      adminLoginModal.classList.add("active");
+      adminLoginModal.setAttribute("aria-hidden", "false");
+      syncBodyLockState();
+      setTimeout(() => adminPassword.focus(), 30);
+    }
+
+    function closeAdminLoginModal(){
+      adminLoginModal.classList.remove("active");
+      adminLoginModal.setAttribute("aria-hidden", "true");
+      adminLoginForm.reset();
+      adminPasswordConfirmWrap.style.display = "none";
+      adminPasswordConfirm.required = false;
+      setAdminLoginError("");
+      syncBodyLockState();
+    }
+
+    function handleAdminAccessRequest(){
+      if(!hasAdminPassword()){
+        openAdminLogin("setup");
+        return;
+      }
+      const session = getAdminSession();
+      if(session.authenticated === true && session.locked !== true){
+        openAdmin();
+        return;
+      }
+      openAdminLogin(session.locked ? "unlock" : "login");
+    }
+
+    function requireAdminAccess(){
+      if(isAdminAuthenticated()) return true;
+      handleAdminAccessRequest();
+      showToast("Admin verification required.");
+      return false;
+    }
+
+    function openAdmin(){
+      if(!isAdminAuthenticated()){
+        handleAdminAccessRequest();
+        return;
+      }
+      adminModal.classList.add("active");
+      adminModal.setAttribute("aria-hidden", "false");
+      renderAdminAll();
+      syncBodyLockState();
+    }
+
+    function closeAdminPanel(){
+      adminModal.classList.remove("active");
+      adminModal.setAttribute("aria-hidden", "true");
+      syncBodyLockState();
+    }
+
+    function scrollFieldIntoView(target){
+      if(!target) return;
+      setTimeout(() => {
+        try{
+          target.scrollIntoView({ behavior: "smooth", block: "center" });
+        }catch(err){}
+      }, 250);
+    }
+
+    function hydrateRevealElements(){
+      document.querySelectorAll(".reveal").forEach((el) => {
+        if(!revealObserver){
+          el.classList.add("visible");
+          return;
+        }
+        if(el.dataset.revealBound) return;
+        el.dataset.revealBound = "1";
+        revealObserver.observe(el);
       });
     }
-    function downloadJson(filename, data){
-      const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = filename;
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      URL.revokeObjectURL(url);
+
+    function renderBrandAndHero(){
+      const cms = getCms();
+      brandNameEl.textContent = cms.brandName;
+      brandTaglineEl.textContent = cms.brandTagline;
+      brandBadgeEl.textContent = (cms.brandName || "F").trim().charAt(0).toUpperCase() || "F";
+      if(splashBrandName) splashBrandName.textContent = cms.brandName;
+      heroEyebrowEl.textContent = cms.heroEyebrow;
+      heroTitleEl.innerHTML = `${escapeHtml(cms.heroTitle)} <span style="color:var(--secondary)">${escapeHtml(cms.heroAccent)}</span>, Styled, and Stress-Free.`;
+      heroSubtitleEl.textContent = cms.heroSubtitle;
+      heroPrimaryCtaEl.textContent = cms.heroPrimaryCtaText;
+      heroSecondaryCtaEl.textContent = cms.heroSecondaryCtaText;
+      heroBadgesWrap.innerHTML = cms.heroBadges.map((badge) => `<span class="premium-badge">${escapeHtml(badge)}</span>`).join("");
+      heroStatsWrap.innerHTML = cms.heroStats.map((stat) => `<div class="stat-card glass"><strong>${escapeHtml(stat.value)}</strong><span>${escapeHtml(stat.label)}</span></div>`).join("");
+      heroPanelTitleEl.textContent = cms.heroPanelTitle;
+      heroPanelTextEl.textContent = cms.heroPanelText;
+      heroMiniGrid.innerHTML = cms.heroMiniCards.map((item) => `
+        <div class="mini-card">
+          <h4>${escapeHtml(item.title)}</h4>
+          <p>${escapeHtml(item.text)}</p>
+        </div>
+      `).join("");
+      heroChipsWrap.innerHTML = cms.heroChips.map((chip) => `<span class="chip">${escapeHtml(chip)}</span>`).join("");
     }
+
+    function renderAbout(){
+      const cms = getCms();
+      aboutTitleEl.textContent = cms.aboutTitle;
+      aboutSubtitleEl.textContent = cms.aboutSubtitle;
+      aboutCardTitleEl.textContent = cms.aboutCardTitle;
+      aboutCardTextEl.textContent = cms.aboutCardText;
+      aboutListEl.innerHTML = cms.aboutList.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
+      aboutImageEl.src = cms.aboutImage;
+      aboutNoteTitleEl.textContent = cms.aboutNoteTitle;
+      aboutNoteTextEl.textContent = cms.aboutNoteText;
+    }
+
+    function renderServices(){
+      const cms = getCms();
+      servicesTitleEl.textContent = cms.servicesTitle;
+      servicesSubtitleEl.textContent = cms.servicesSubtitle;
+      servicesGrid.innerHTML = cms.serviceItems.map((item) => `
+        <article class="service-card card glass reveal visible">
+          <div class="icon">${escapeHtml(item.icon)}</div>
+          <h3>${escapeHtml(item.title)}</h3>
+          <p>${escapeHtml(item.description)}</p>
+        </article>
+      `).join("");
+    }
+
+    function applyGalleryFilter(){
+      const cards = galleryGrid.querySelectorAll(".gallery-card");
+      cards.forEach((card) => {
+        const visible = activeGalleryFilter === "all" || card.dataset.category === activeGalleryFilter;
+        card.classList.toggle("hidden", !visible);
+      });
+      galleryFilterRow.querySelectorAll(".filter-btn").forEach((button) => {
+        button.classList.toggle("active", button.dataset.filter === activeGalleryFilter);
+      });
+    }
+
+    function renderGallery(){
+      const cms = getCms();
+      const items = getGalleryItems();
+      galleryTitleEl.textContent = cms.galleryTitle;
+      gallerySubtitleEl.textContent = cms.gallerySubtitle;
+      const visibleItems = items.filter((item) => item.visible !== false);
+      const categories = [...new Set(visibleItems.map((item) => item.category).filter(Boolean))];
+      if(activeGalleryFilter !== "all" && !categories.includes(activeGalleryFilter)){
+        activeGalleryFilter = "all";
+      }
+      galleryFilterRow.innerHTML = `
+        <button class="filter-btn ${activeGalleryFilter === "all" ? "active" : ""}" type="button" data-filter="all">All</button>
+        ${categories.map((category) => `<button class="filter-btn ${activeGalleryFilter === category ? "active" : ""}" type="button" data-filter="${escapeHtml(category)}">${escapeHtml(category.charAt(0).toUpperCase() + category.slice(1))}</button>`).join("")}
+      `;
+      galleryGrid.innerHTML = visibleItems.map((item, index) => `
+        <div class="gallery-card reveal visible" data-category="${escapeHtml(item.category)}" data-gallery-index="${index}" data-image="${escapeHtml(item.image)}" data-title="${escapeHtml(item.title)}" data-description="${escapeHtml(item.description)}" data-location="${escapeHtml(item.location)}">
+          <img src="${escapeHtml(item.thumb || item.image)}" alt="${escapeHtml(item.title)}">
+          <div class="overlay">
+            <strong>${escapeHtml(item.title)}</strong>
+            <div style="margin-top:6px; color:rgba(255,255,255,0.82); font-size:.88rem; text-transform:capitalize;">${escapeHtml(item.category)}</div>
+          </div>
+        </div>
+      `).join("");
+      applyGalleryFilter();
+    }
+
+    function renderPackageOptions(optionsTarget, selectedValue, includeCustom){
+      const visiblePackages = getPackageItems().filter((item) => item.visible !== false);
+      const currentValue = selectedValue || optionsTarget.value;
+      optionsTarget.innerHTML = `<option value="">Select package</option>${visiblePackages.map((item) => `
+        <option value="${escapeHtml(item.title)}" data-price="${item.price}" data-chairs="${item.chairs}" data-tables="${item.tables}" data-decorations="${item.decorations}">
+          ${escapeHtml(item.title)} — ${formatMoney(item.price)}
+        </option>
+      `).join("")}${includeCustom ? `<option value="Custom Quote">Custom Quote</option>` : ""}`;
+      if([...optionsTarget.options].some((option) => option.value === currentValue)){
+        optionsTarget.value = currentValue;
+      }
+    }
+
+    function renderPackages(){
+      const cms = getCms();
+      const items = getPackageItems().filter((item) => item.visible !== false);
+      const selectedValue = packageSelect.value;
+      const quickSelectedValue = quickPackage.value;
+      packagesTitleEl.textContent = cms.packagesTitle;
+      packagesSubtitleEl.textContent = cms.packagesSubtitle;
+      packageGrid.innerHTML = items.map((item) => `
+        <article class="package-card card glass ${item.popular ? "popular" : ""} reveal visible" data-package-card="${escapeHtml(item.title)}" data-package-price="${item.price}" data-chairs="${item.chairs}" data-tables="${item.tables}" data-decorations="${item.decorations}">
+          <span class="badge">${escapeHtml(item.badge)}</span>
+          <h3>${escapeHtml(item.title)}</h3>
+          <div class="price">${formatMoney(item.price)} <small>/ package</small></div>
+          <p>${escapeHtml(item.description)}</p>
+          <ul class="package-list">
+            ${item.features.map((feature) => `<li>${escapeHtml(feature)}</li>`).join("")}
+          </ul>
+          <button class="btn ${item.popular ? "btn-primary" : "btn-secondary"} open-package" type="button" data-package="${escapeHtml(item.title)}">${escapeHtml(item.buttonText)}</button>
+        </article>
+      `).join("");
+      renderPackageOptions(packageSelect, selectedValue, false);
+      renderPackageOptions(quickPackage, quickSelectedValue, true);
+    }
+
+    function renderBuilderExtras(){
+      const settings = getSettings();
+      const selected = [...builderOptions.querySelectorAll(".chip-toggle.active")].map((button) => button.dataset.builder);
+      builderOptions.innerHTML = settings.extras.map((item) => `
+        <button type="button" class="chip-toggle ${selected.includes(item.name) ? "active" : ""}" data-builder="${escapeHtml(item.name)}" data-price="${item.price}">
+          ${escapeHtml(item.name)} +$${Number(item.price || 0)}
+        </button>
+      `).join("");
+    }
+
+    function renderContact(){
+      const cms = getCms();
+      const settings = getSettings();
+      contactTitleEl.textContent = cms.contactTitle;
+      contactSubtitleEl.textContent = cms.contactSubtitle;
+      bookingLeadEl.textContent = cms.bookingLead;
+      contactInfoTitleEl.textContent = cms.contactInfoTitle;
+      contactListEl.innerHTML = `
+        <li><strong>Business Name</strong>${escapeHtml(settings.businessName)}</li>
+        <li><strong>Phone / Mobile</strong>${escapeHtml(settings.phone)}</li>
+        <li><strong>Email</strong>${escapeHtml(settings.email)}</li>
+        <li><strong>Location</strong>${escapeHtml(settings.location)}</li>
+        <li><strong>Service Area</strong>${escapeHtml(settings.serviceArea)}</li>
+      `;
+      contactActionsEl.innerHTML = `
+        <a class="btn btn-primary" href="${escapeHtml(settings.facebookUrl)}" target="_blank" rel="noopener">${escapeHtml(settings.socialButtonText)}</a>
+        <a class="btn btn-secondary" href="mailto:${encodeURIComponent(settings.email)}?subject=${encodeURIComponent(`${settings.businessName} Inquiry`)}">${escapeHtml(settings.emailButtonText)}</a>
+      `;
+      if(planningTipTextEl) planningTipTextEl.textContent = settings.planningTip;
+      if(floatContact){
+        floatContact.href = `https://wa.me/${sanitizeWhatsappNumber(settings.whatsappNumber)}`;
+        floatContact.setAttribute("aria-label", `Contact ${settings.businessName}`);
+      }
+    }
+
+    function renderTestimonials(){
+      const cms = getCms();
+      const testimonials = getTestimonials().filter((item) => item.visible !== false);
+      testimonialsTitleEl.textContent = cms.testimonialsTitle;
+      testimonialsSubtitleEl.textContent = cms.testimonialsSubtitle;
+      testimonialsGrid.innerHTML = testimonials.map((item) => `
+        <article class="testimonial-card card glass reveal visible">
+          <div class="stars">${"★".repeat(Math.max(1, Math.min(5, Number(item.stars || 5))))}</div>
+          <h3>${escapeHtml(item.title)}</h3>
+          <p>${escapeHtml(item.text)}</p>
+          <div class="person">${escapeHtml(item.person)}<span class="role">${escapeHtml(item.role)}</span></div>
+        </article>
+      `).join("");
+    }
+
+    function renderFooter(){
+      const cms = getCms();
+      const settings = getSettings();
+      footerSummaryEl.innerHTML = `<strong>${escapeHtml(cms.brandName)}</strong><br>${escapeHtml(cms.footerSummary)}`;
+      footerLinksEl.innerHTML = `
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#packages">Packages</a>
+        <a href="${escapeHtml(settings.facebookUrl)}" target="_blank" rel="noopener">Facebook</a>
+      `;
+    }
+
+    function renderPublicContent(){
+      renderBrandAndHero();
+      renderAbout();
+      renderServices();
+      renderGallery();
+      renderPackages();
+      renderBuilderExtras();
+      renderContact();
+      renderTestimonials();
+      renderFooter();
+      updateSuggestions();
+      updateQuoteUI();
+      hydrateRevealElements();
+    }
+
     function selectedPackageMeta(){
       const option = packageSelect.selectedOptions[0];
       if(!option || !option.value) return null;
@@ -2462,28 +4038,30 @@
         decorations: Number(option.dataset.decorations || 0)
       };
     }
+
     function selectedExtras(){
-      return [...chipToggles].filter(btn => btn.classList.contains('active')).map(btn => ({
-        name: btn.dataset.builder,
-        price: Number(btn.dataset.price || 0)
+      return [...builderOptions.querySelectorAll(".chip-toggle.active")].map((button) => ({
+        name: button.dataset.builder,
+        price: Number(button.dataset.price || 0)
       }));
     }
+
     function calculateNeeds(){
       const meta = selectedPackageMeta();
       const guests = Math.max(1, Number(guestCount.value || 0));
       const tablesExtra = Math.max(0, Math.ceil((guests - 24) / 8));
       const chairsExtra = guests > 24 ? Math.ceil((guests - 24) / 4) * 2 : 0;
       const extras = selectedExtras();
-      const decorBonus = extras.some(item => item.name === 'Backdrop') ? 1 : 0;
-      const extraChairBonus = extras.some(item => item.name === 'Extra Chairs') ? 12 : 0;
+      const decorBonus = extras.some((item) => item.name === "Backdrop") ? 1 : 0;
+      const extraChairBonus = extras.some((item) => item.name === "Extra Chairs") ? 12 : 0;
       if(!meta){
-        return { meta:null, total:0, extras, builderTotal: extras.reduce((sum, item) => sum + item.price, 0), chairs:0, tables:0, decorations:0, ok:true };
+        return { meta: null, total: 0, extras, builderTotal: extras.reduce((sum, item) => sum + item.price, 0), chairs: 0, tables: 0, decorations: 0, ok: true };
       }
       const builderTotalAmount = extras.reduce((sum, item) => sum + item.price, 0);
       const overtime = Math.max(0, Number(setupHours.value || 0) - 4) * 18;
       const chairs = meta.chairs + chairsExtra + extraChairBonus;
       const tables = meta.tables + Math.max(0, tablesExtra);
-      const decorations = meta.decorations + decorBonus + (extras.some(item => item.name === 'Balloon Arch') ? 1 : 0) + (extras.some(item => item.name === 'Fairy Lights') ? 1 : 0);
+      const decorations = meta.decorations + decorBonus + (extras.some((item) => item.name === "Balloon Arch") ? 1 : 0) + (extras.some((item) => item.name === "Fairy Lights") ? 1 : 0);
       return {
         meta,
         extras,
@@ -2492,9 +4070,10 @@
         tables,
         decorations,
         total: meta.price + builderTotalAmount + overtime,
-        ok:true
+        ok: true
       };
     }
+
     function evaluateAvailability(){
       const calc = calculateNeeds();
       const stock = getInventory();
@@ -2502,131 +4081,164 @@
       calc.ok = ok;
       return { ...calc, stock };
     }
+
     function updateSuggestions(){
       const value = eventType.value;
-      suggestionsList.innerHTML = '';
+      suggestionsList.innerHTML = "";
       const suggestions = EVENT_SUGGESTIONS[value] || [];
-      suggestionLead.textContent = suggestions.length ? `Recommended extras for ${value}.` : 'Choose an event type to see recommended extras.';
-      suggestions.forEach(text => {
-        const li = document.createElement('li');
+      suggestionLead.textContent = suggestions.length ? `Recommended extras for ${value}.` : "Choose an event type to see recommended extras.";
+      suggestions.forEach((text) => {
+        const li = document.createElement("li");
         li.textContent = text;
         suggestionsList.appendChild(li);
       });
     }
+
     function syncPackageCardHighlight(){
       const selected = packageSelect.value;
-      packageCards.forEach(card => {
-        card.classList.toggle('selected', card.dataset.packageCard === selected);
+      packageGrid.querySelectorAll("[data-package-card]").forEach((card) => {
+        card.classList.toggle("selected", card.dataset.packageCard === selected);
       });
     }
+
     function updateQuoteUI(){
       const state = evaluateAvailability();
       builderTotal.textContent = formatMoney(state.builderTotal);
       liveTotal.textContent = formatMoney(state.total);
-      liveSummaryText.textContent = state.meta ? `${state.meta.name} • ${Number(guestCount.value || 0)} guests • ${state.extras.length} add-on(s)` : 'Choose a package to start your quote.';
+      liveSummaryText.textContent = state.meta ? `${state.meta.name} • ${Number(guestCount.value || 0)} guests • ${state.extras.length} add-on(s)` : "Choose a package to start your quote.";
       chairsNeed.textContent = state.chairs;
       tablesNeed.textContent = state.tables;
       decorNeed.textContent = state.decorations;
       chairsStock.textContent = `Stock: ${state.stock.chairs}`;
       tablesStock.textContent = `Stock: ${state.stock.tables}`;
       decorStock.textContent = `Stock: ${state.stock.decorations}`;
-      availabilityStatus.textContent = state.meta ? (state.ok ? 'Available locally' : 'Low inventory warning') : 'Ready to quote';
-      availabilityText.textContent = state.meta ? (state.ok ? 'Light inventory check passed for this browser.' : 'Inventory is low for the selected package/extras combination.') : 'Pick a date and package to check light inventory.';
-      inventoryWarning.classList.toggle('visible', !!state.meta && !state.ok);
+      availabilityStatus.textContent = state.meta ? (state.ok ? "Available locally" : "Low inventory warning") : "Ready to quote";
+      availabilityText.textContent = state.meta ? (state.ok ? "Light inventory check passed for this browser." : "Inventory is low for the selected package/extras combination.") : "Pick a date and package to check light inventory.";
+      inventoryWarning.classList.toggle("visible", !!state.meta && !state.ok);
       syncPackageCardHighlight();
       return state;
     }
-    function renderAnalytics(){
+
+    function computeAnalytics(){
       const bookings = getBookings();
-      const totalRevenue = bookings.reduce((sum, item) => sum + Number(item.total || 0), 0);
-      const counts = bookings.reduce((acc, item) => {
-        acc[item.package] = (acc[item.package] || 0) + 1;
+      const activeBookings = bookings.filter((item) => item.status !== "Cancelled");
+      const totalRevenue = activeBookings.reduce((sum, item) => sum + Number(item.quoteAmount || item.total || 0), 0);
+      const paidCollected = bookings.filter((item) => item.paymentStatus === "Paid").reduce((sum, item) => sum + Number(item.quoteAmount || item.total || 0), 0);
+      const packageCounts = bookings.reduce((acc, item) => {
+        if(item.package){
+          acc[item.package] = (acc[item.package] || 0) + 1;
+        }
         return acc;
       }, {});
-      const topPackage = Object.entries(counts).sort((a,b) => b[1] - a[1])[0]?.[0] || '—';
-      analyticsBookings.textContent = String(bookings.length);
-      analyticsTopPackage.textContent = topPackage;
-      analyticsRevenue.textContent = formatMoney(totalRevenue);
-      adminBookingsCount.textContent = `${bookings.length} saved`;
-      adminTopPackage.textContent = topPackage;
-      const inv = getInventory();
-      adminInventoryLeft.textContent = `Chairs ${inv.chairs} • Tables ${inv.tables} • Decor ${inv.decorations}`;
+      const eventCounts = bookings.reduce((acc, item) => {
+        if(item.eventType){
+          acc[item.eventType] = (acc[item.eventType] || 0) + 1;
+        }
+        return acc;
+      }, {});
+      const topPackage = Object.entries(packageCounts).sort((a, b) => b[1] - a[1])[0]?.[0] || "—";
+      const topEventType = Object.entries(eventCounts).sort((a, b) => b[1] - a[1])[0]?.[0] || "—";
+      const confirmed = bookings.filter((item) => item.status === "Confirmed").length;
+      const cancelled = bookings.filter((item) => item.status === "Cancelled").length;
+      const inventory = getInventory();
+      const settings = getSettings();
+      const lowStockWarnings = [];
+      if(inventory.chairs <= Number(settings.lowStockThresholds.chairs || 0)) lowStockWarnings.push(`Chairs low (${inventory.chairs} left)`);
+      if(inventory.tables <= Number(settings.lowStockThresholds.tables || 0)) lowStockWarnings.push(`Tables low (${inventory.tables} left)`);
+      if(inventory.decorations <= Number(settings.lowStockThresholds.decorations || 0)) lowStockWarnings.push(`Decor low (${inventory.decorations} left)`);
+      return {
+        totalBookings: bookings.length,
+        totalRevenue,
+        paidCollected,
+        topPackage,
+        confirmed,
+        cancelled,
+        topEventType,
+        lowStockWarnings,
+        inventory
+      };
     }
-    function renderAdminTable(){
-      const bookings = getBookings();
-      adminBookingsTableBody.innerHTML = '';
-      adminEmptyState.style.display = bookings.length ? 'none' : 'block';
-      bookings.forEach(item => {
-        const row = document.createElement('tr');
-        row.innerHTML = `
-          <td><strong style="color:var(--text)">${item.name}</strong><br>${item.phone}</td>
-          <td>${formatDate(item.eventDate)}</td>
-          <td>${item.package}</td>
-          <td>${formatMoney(item.total)}</td>
-          <td>${item.eventType}</td>
-          <td>${item.venue}</td>
-          <td><button class="icon-btn" type="button" data-delete-booking="${item.id}">Delete</button></td>
-        `;
-        adminBookingsTableBody.appendChild(row);
-      });
+
+    function renderAnalytics(){
+      const metrics = computeAnalytics();
+      analyticsBookings.textContent = String(metrics.totalBookings);
+      analyticsTopPackage.textContent = metrics.topPackage;
+      analyticsRevenue.textContent = formatMoney(metrics.totalRevenue);
+      adminBookingsCount.textContent = `${metrics.totalBookings} saved`;
+      adminTopPackage.textContent = metrics.topPackage;
+      adminInventoryLeft.textContent = `Chairs ${metrics.inventory.chairs} • Tables ${metrics.inventory.tables} • Decor ${metrics.inventory.decorations}`;
+      adminEstimatedRevenue.textContent = formatMoney(metrics.totalRevenue);
+      adminPaidCollected.textContent = formatMoney(metrics.paidCollected);
+      adminCancelledCount.textContent = `${metrics.cancelled} cancelled`;
+      analyticsAdminCards.total.textContent = String(metrics.totalBookings);
+      analyticsAdminCards.confirmed.textContent = String(metrics.confirmed);
+      analyticsAdminCards.cancelled.textContent = String(metrics.cancelled);
+      analyticsAdminCards.topPackage.textContent = metrics.topPackage;
+      analyticsAdminCards.revenue.textContent = formatMoney(metrics.totalRevenue);
+      analyticsAdminCards.collected.textContent = formatMoney(metrics.paidCollected);
+      analyticsAdminCards.stock.textContent = metrics.lowStockWarnings.length ? metrics.lowStockWarnings.join(" • ") : "Inventory healthy";
+      analyticsAdminCards.eventType.textContent = metrics.topEventType;
+      adminAnalyticsNotes.innerHTML = metrics.lowStockWarnings.length
+        ? metrics.lowStockWarnings.map((item) => `<li>${escapeHtml(item)}</li>`).join("")
+        : "<li>No low-stock warnings right now.</li>";
     }
+
     function renderInvoice(booking){
       if(!booking) return;
-      invoicePreview.classList.add('visible');
+      invoicePreview.classList.add("visible");
       invoiceClient.textContent = `${booking.name} • ${booking.phone}`;
       invoiceDate.textContent = formatDate(booking.eventDate);
       invoicePackage.textContent = booking.package;
-      invoiceExtras.textContent = booking.extras.length ? booking.extras.map(item => `${item.name} (${formatMoney(item.price)})`).join(', ') : 'None';
+      invoiceExtras.textContent = booking.extras.length ? booking.extras.map((item) => `${item.name} (${formatMoney(item.price)})`).join(", ") : "None";
       invoiceVenue.textContent = booking.venue;
       invoiceInventory.textContent = `${booking.inventory.chairs} chairs • ${booking.inventory.tables} tables • ${booking.inventory.decorations} decorations`;
-      invoiceTotal.textContent = formatMoney(booking.total);
-      invoiceStatus.textContent = booking.status || 'Draft saved locally';
+      invoiceTotal.textContent = formatMoney(booking.quoteAmount || booking.total);
+      invoiceStatus.textContent = `${booking.status} • ${booking.paymentStatus}`;
     }
+
     function buildWhatsappLink(booking){
+      const settings = getSettings();
       const lines = [
-        'Hi Fiesta Party Hire Yeppoon!',
-        'I would like to book / confirm this event:',
+        `Hi ${settings.businessName}!`,
+        "I would like to book / confirm this event:",
         `Name: ${booking.name}`,
         `Phone: ${booking.phone}`,
         `Email: ${booking.email}`,
         `Date: ${formatDate(booking.eventDate)}`,
         `Event Type: ${booking.eventType}`,
         `Package: ${booking.package}`,
-        `Extras: ${booking.extras.length ? booking.extras.map(item => item.name).join(', ') : 'None'}`,
+        `Extras: ${booking.extras.length ? booking.extras.map((item) => item.name).join(", ") : "None"}`,
         `Venue: ${booking.venue}`,
-        `Total: ${formatMoney(booking.total)}`,
-        `Notes: ${booking.message || 'N/A'}`
+        `Quote: ${formatMoney(booking.quoteAmount || booking.total)}`,
+        `Notes: ${booking.message || "N/A"}`
       ];
-      return `https://wa.me/61427944574?text=${encodeURIComponent(lines.join('\n'))}`;
+      return `https://wa.me/${sanitizeWhatsappNumber(settings.whatsappNumber)}?text=${encodeURIComponent(lines.join("\n"))}`;
     }
-    function latestBookingDraft(){
-      try{ return JSON.parse(localStorage.getItem(STORAGE_KEYS.latest)); }
-      catch(err){ return null; }
-    }
+
     function collectBookingFromForm(){
       const state = updateQuoteUI();
       const formData = Object.fromEntries(new FormData(bookingForm).entries());
       const today = new Date();
-      today.setHours(0,0,0,0);
-      const selected = formData.eventDate ? new Date(formData.eventDate + 'T00:00:00') : null;
+      today.setHours(0, 0, 0, 0);
+      const selected = formData.eventDate ? new Date(`${formData.eventDate}T00:00:00`) : null;
       if(!formData.name?.trim() || !formData.phone?.trim() || !formData.email?.trim() || !formData.eventDate || !formData.eventType || !formData.package || !formData.venue?.trim()){
-        showToast('Please complete all required booking fields.');
+        showToast("Please complete all required booking fields.");
         return null;
       }
       if(!selected || Number.isNaN(selected.getTime()) || selected < today){
-        showToast('Please choose a valid future event date.');
+        showToast("Please choose a valid future event date.");
         return null;
       }
       if(!state.meta){
-        showToast('Please choose a package first.');
+        showToast("Please choose a package first.");
         return null;
       }
       if(!state.ok){
-        showToast('Inventory is too low for this booking.');
+        showToast("Inventory is too low for this booking.");
         return null;
       }
-      return {
-        id: `${Date.now()}-${Math.random().toString(16).slice(2,8)}`,
+      return normalizeBooking({
+        id: `${Date.now()}-${Math.random().toString(16).slice(2, 8)}`,
         name: formData.name.trim(),
         phone: formData.phone.trim(),
         email: formData.email.trim(),
@@ -2636,7 +4248,7 @@
         guestCount: Number(formData.guestCount || 0),
         setupHours: Number(formData.setupHours || 0),
         venue: formData.venue.trim(),
-        message: (formData.message || '').trim(),
+        message: (formData.message || "").trim(),
         extras: state.extras,
         inventory: {
           chairs: state.chairs,
@@ -2644,10 +4256,15 @@
           decorations: state.decorations
         },
         total: state.total,
-        status: 'Draft saved locally',
-        createdAt: new Date().toISOString()
-      };
+        quoteAmount: state.total,
+        status: "New",
+        paymentStatus: "Unpaid",
+        adminNotes: "",
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString()
+      });
     }
+
     function saveBooking(booking){
       const bookings = getBookings();
       bookings.unshift(booking);
@@ -2657,426 +4274,1240 @@
       inventory.tables -= booking.inventory.tables;
       inventory.decorations -= booking.inventory.decorations;
       setInventory(inventory);
-      localStorage.setItem(STORAGE_KEYS.latest, JSON.stringify(booking));
+      setLatestBookingDraft(booking);
       renderInvoice(booking);
       renderAnalytics();
-      renderAdminTable();
+      renderBookingsManager();
+      renderOverviewPanel();
       updateQuoteUI();
     }
+
     function deleteBooking(id){
       const bookings = getBookings();
-      const booking = bookings.find(item => item.id === id);
+      const booking = bookings.find((item) => item.id === id);
       if(!booking) return;
-      const next = bookings.filter(item => item.id !== id);
+      const next = bookings.filter((item) => item.id !== id);
       setBookings(next);
       const inventory = getInventory();
       inventory.chairs += Number(booking.inventory?.chairs || 0);
       inventory.tables += Number(booking.inventory?.tables || 0);
       inventory.decorations += Number(booking.inventory?.decorations || 0);
       setInventory(inventory);
+      const latest = latestBookingDraft();
+      if(latest && latest.id === id){
+        localStorage.removeItem(STORAGE_KEYS.latest);
+        if(next[0]){
+          setLatestBookingDraft(next[0]);
+          renderInvoice(next[0]);
+        }else{
+          invoicePreview.classList.remove("visible");
+        }
+      }
+      if(bookingEditorId.value === id){
+        clearBookingEditor();
+      }
       renderAnalytics();
-      renderAdminTable();
+      renderBookingsManager();
+      renderOverviewPanel();
       updateQuoteUI();
-      showToast('Booking deleted.');
+      showToast("Booking deleted.");
     }
-    function showToast(message){
-      toast.textContent = message;
-      toast.classList.add('show');
-      clearTimeout(showToast._timer);
-      showToast._timer = setTimeout(() => toast.classList.remove('show'), 2800);
-    }
-    function setAdminLoginError(message = ''){
-      adminLoginError.textContent = message;
-      adminLoginError.classList.toggle('visible', !!message);
-    }
-    function syncBodyLockState(){
-      const locked = bookingModal.classList.contains('active') || adminLoginModal.classList.contains('active') || adminModal.classList.contains('active') || lightbox.classList.contains('active');
-      document.body.classList.toggle('modal-open', locked);
-    }
-    function startAdminSession(){
-      setAdminSession({ authenticated:true, locked:false, loggedInAt:new Date().toISOString(), lockedAt:'' });
-      updateAdminSessionUI();
-    }
-    function lockAdminSession(){
-      const session = getAdminSession();
-      setAdminSession({ authenticated:true, locked:true, loggedInAt:session.loggedInAt || new Date().toISOString(), lockedAt:new Date().toISOString() });
-      updateAdminSessionUI();
-    }
-    function logoutAdminSession(){
-      clearAdminSession();
-      updateAdminSessionUI();
-    }
-    function isAdminAuthenticated(){
-      const session = getAdminSession();
-      return session.authenticated === true && session.locked !== true;
-    }
-    function updateAdminSessionUI(){
-      const session = getAdminSession();
-      const active = session.authenticated === true && session.locked !== true;
-      adminSessionStatus.textContent = active ? 'Authenticated' : (session.locked ? 'Locked' : 'Logged out');
-      adminSessionStatus.className = `status-pill ${active ? 'ok' : 'warn'}`;
-      adminSessionText.textContent = active
-        ? `Verified on ${formatDateTime(session.loggedInAt)}. Hidden admin tools are unlocked on this browser.`
-        : session.locked
-          ? `Session locked on ${formatDateTime(session.lockedAt)}. Use the hidden shortcut and re-enter the password to continue.`
-          : 'No active admin session. Use Ctrl + Shift + A to request protected access.';
-    }
-    function openModal(){
-      bookingModal.classList.add('active');
-      bookingModal.setAttribute('aria-hidden', 'false');
-      syncBodyLockState();
-    }
-    function closeModal(){
-      bookingModal.classList.remove('active');
-      bookingModal.setAttribute('aria-hidden', 'true');
-      syncBodyLockState();
-    }
-    function openAdminLogin(mode = 'login'){
-      adminLoginMode = mode;
-      const isSetup = mode === 'setup';
-      const isUnlock = mode === 'unlock';
-      adminLoginTitle.textContent = isSetup ? 'Set Admin Password' : (isUnlock ? 'Unlock Admin Session' : 'Admin Access');
-      adminLoginLead.textContent = isSetup
-        ? 'Create the local admin password for this browser before opening the hidden dashboard.'
-        : (isUnlock
-          ? 'This admin session is locked. Re-enter the admin password to unlock the dashboard.'
-          : 'Enter the admin password to open the hidden dashboard.');
-      adminLoginNote.textContent = isSetup
-        ? 'This password is stored only in this browser using localStorage. Keep it somewhere safe.'
-        : 'Protected admin access is verified locally on this browser before any admin tools are shown.';
-      adminPassword.placeholder = isSetup ? 'Create admin password' : 'Enter admin password';
-      adminPassword.value = '';
-      adminPasswordConfirm.value = '';
-      adminPasswordConfirmWrap.style.display = isSetup ? 'grid' : 'none';
-      adminPasswordConfirm.required = isSetup;
-      adminPassword.setAttribute('autocomplete', isSetup ? 'new-password' : 'current-password');
-      adminLoginSubmit.textContent = isSetup ? 'Create Password & Open Admin' : (isUnlock ? 'Unlock Admin' : 'Login to Admin');
-      setAdminLoginError('');
-      adminLoginModal.classList.add('active');
-      adminLoginModal.setAttribute('aria-hidden', 'false');
-      syncBodyLockState();
-      setTimeout(() => adminPassword.focus(), 30);
-    }
-    function closeAdminLoginModal(){
-      adminLoginModal.classList.remove('active');
-      adminLoginModal.setAttribute('aria-hidden', 'true');
-      adminLoginForm.reset();
-      adminPasswordConfirmWrap.style.display = 'none';
-      adminPasswordConfirm.required = false;
-      setAdminLoginError('');
-      syncBodyLockState();
-    }
-    function handleAdminAccessRequest(){
-      if(!hasAdminPassword()){
-        openAdminLogin('setup');
-        return;
+
+    function updateBooking(id, patch){
+      const bookings = getBookings();
+      const index = bookings.findIndex((item) => item.id === id);
+      if(index === -1) return;
+      bookings[index] = normalizeBooking({
+        ...bookings[index],
+        ...patch,
+        updatedAt: new Date().toISOString()
+      });
+      setBookings(bookings);
+      const latest = latestBookingDraft();
+      if(latest && latest.id === id){
+        setLatestBookingDraft(bookings[index]);
+        renderInvoice(bookings[index]);
       }
-      const session = getAdminSession();
-      if(session.authenticated === true && session.locked !== true){
-        openAdmin();
-        return;
-      }
-      openAdminLogin(session.locked ? 'unlock' : 'login');
-    }
-    function openAdmin(){
-      if(!isAdminAuthenticated()){
-        handleAdminAccessRequest();
-        return;
-      }
-      adminModal.classList.add('active');
-      adminModal.setAttribute('aria-hidden', 'false');
       renderAnalytics();
-      renderAdminTable();
+      renderBookingsManager();
+      renderOverviewPanel();
+      updateQuoteUI();
+    }
+
+    function getFilteredBookings(){
+      const searchValue = adminBookingSearch.value.trim().toLowerCase();
+      const statusValue = adminBookingStatusFilter.value;
+      const paidValue = adminBookingPaidFilter.value;
+      return getBookings().filter((booking) => {
+        const haystack = [booking.name, booking.phone, booking.email, booking.package, booking.eventType, booking.venue].join(" ").toLowerCase();
+        const matchesSearch = !searchValue || haystack.includes(searchValue);
+        const matchesStatus = !statusValue || booking.status === statusValue;
+        const matchesPaid = !paidValue || booking.paymentStatus === paidValue;
+        return matchesSearch && matchesStatus && matchesPaid;
+      });
+    }
+
+    function populateBookingEditor(booking){
+      if(!booking){
+        bookingEditorState.textContent = "No booking selected";
+        bookingEditorSummary.innerHTML = "<span class='admin-empty'>Choose a booking from the table to manage its workflow.</span>";
+        bookingEditorId.value = "";
+        adminEditStatus.value = "New";
+        adminEditPaymentStatus.value = "Unpaid";
+        adminEditQuoteAmount.value = "";
+        adminEditNotes.value = "";
+        deleteSelectedBookingBtn.disabled = true;
+        return;
+      }
+      bookingEditorState.textContent = `${booking.name} • ${booking.package}`;
+      bookingEditorSummary.innerHTML = `
+        <div class="admin-inline-meta">
+          <span>${escapeHtml(formatDate(booking.eventDate))}</span>
+          <span>${escapeHtml(booking.eventType)}</span>
+          <span>${escapeHtml(booking.venue)}</span>
+          <span>${escapeHtml(booking.email)}</span>
+        </div>
+        <p style="margin:12px 0 0; color:var(--muted); line-height:1.7;">Saved ${escapeHtml(formatDateTime(booking.createdAt))} • Updated ${escapeHtml(formatDateTime(booking.updatedAt))}</p>
+      `;
+      bookingEditorId.value = booking.id;
+      adminEditStatus.value = booking.status;
+      adminEditPaymentStatus.value = booking.paymentStatus;
+      adminEditQuoteAmount.value = Number(booking.quoteAmount || booking.total || 0);
+      adminEditNotes.value = booking.adminNotes || "";
+      deleteSelectedBookingBtn.disabled = false;
+    }
+
+    function clearBookingEditor(){
+      populateBookingEditor(null);
+    }
+
+    function renderBookingsManager(){
+      const bookings = getFilteredBookings();
+      adminBookingsTableBody.innerHTML = "";
+      adminEmptyState.style.display = bookings.length ? "none" : "block";
+      bookings.forEach((item) => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+          <td><strong style="color:var(--text)">${escapeHtml(item.name)}</strong><br>${escapeHtml(item.phone)}</td>
+          <td>${escapeHtml(formatDate(item.eventDate))}</td>
+          <td>${escapeHtml(item.package)}</td>
+          <td><span class="status-pill ${item.status === "Cancelled" ? "warn" : "ok"}">${escapeHtml(item.status)}</span></td>
+          <td>${escapeHtml(item.paymentStatus)}</td>
+          <td>${escapeHtml(formatMoney(item.quoteAmount || item.total))}</td>
+          <td>
+            <div style="display:flex; gap:8px; flex-wrap:wrap;">
+              <button class="icon-btn" type="button" data-edit-booking="${item.id}">Edit</button>
+              <button class="icon-btn" type="button" data-delete-booking="${item.id}">Delete</button>
+            </div>
+          </td>
+        `;
+        adminBookingsTableBody.appendChild(row);
+      });
+      if(bookingEditorId.value){
+        const current = getBookings().find((item) => item.id === bookingEditorId.value);
+        populateBookingEditor(current || null);
+      }
+    }
+
+    function renderOverviewPanel(){
+      const bookings = getBookings();
+      const metrics = computeAnalytics();
+      const latest = bookings[0] || null;
+      overviewSummaryCards.innerHTML = `
+        <div class="mini-card"><h4 style="margin:0 0 6px;">Total Inquiries</h4><p style="margin:0;">${metrics.totalBookings}</p></div>
+        <div class="mini-card"><h4 style="margin:0 0 6px;">Confirmed</h4><p style="margin:0;">${metrics.confirmed}</p></div>
+        <div class="mini-card"><h4 style="margin:0 0 6px;">Collected</h4><p style="margin:0;">${formatMoney(metrics.paidCollected)}</p></div>
+        <div class="mini-card"><h4 style="margin:0 0 6px;">Top Event Type</h4><p style="margin:0;">${escapeHtml(metrics.topEventType)}</p></div>
+      `;
+      overviewLatestBooking.innerHTML = latest ? `
+        <strong style="display:block; margin-bottom:10px;">${escapeHtml(latest.name)} • ${escapeHtml(latest.package)}</strong>
+        <div class="admin-inline-meta">
+          <span>${escapeHtml(formatDate(latest.eventDate))}</span>
+          <span>${escapeHtml(latest.status)}</span>
+          <span>${escapeHtml(latest.paymentStatus)}</span>
+          <span>${escapeHtml(formatMoney(latest.quoteAmount || latest.total))}</span>
+        </div>
+        <p style="margin:12px 0 0; color:var(--muted); line-height:1.7;">${escapeHtml(latest.venue)}</p>
+      ` : "<div class='admin-empty'>No bookings saved yet.</div>";
+      overviewLowStock.innerHTML = metrics.lowStockWarnings.length
+        ? metrics.lowStockWarnings.map((item) => `<li>${escapeHtml(item)}</li>`).join("")
+        : "<li>No low-stock warnings right now.</li>";
+    }
+
+    function renderCmsServicesEditor(items){
+      cmsServicesEditor.innerHTML = items.map((item, index) => `
+        <div class="admin-row-card" data-service-index="${index}">
+          <div class="field"><label>Icon</label><input type="text" data-service-field="icon" value="${escapeHtml(item.icon)}" maxlength="4"></div>
+          <div class="field"><label>Title</label><input type="text" data-service-field="title" value="${escapeHtml(item.title)}"></div>
+          <div class="field" style="grid-column:1/-1;"><label>Description</label><textarea data-service-field="description">${escapeHtml(item.description)}</textarea></div>
+          <div class="inline-actions">
+            <button class="icon-btn" type="button" data-service-action="up">↑</button>
+            <button class="icon-btn" type="button" data-service-action="down">↓</button>
+            <button class="icon-btn" type="button" data-service-action="delete">Delete</button>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    function collectServicesFromEditor(){
+      return [...cmsServicesEditor.querySelectorAll(".admin-row-card")].map((row) => ({
+        icon: row.querySelector('[data-service-field="icon"]').value.trim() || "✨",
+        title: row.querySelector('[data-service-field="title"]').value.trim() || "Service",
+        description: row.querySelector('[data-service-field="description"]').value.trim() || "Service description."
+      }));
+    }
+
+    function populateCmsForm(){
+      const cms = getCms();
+      cmsForm.brandName.value = cms.brandName;
+      cmsForm.brandTagline.value = cms.brandTagline;
+      cmsForm.heroEyebrow.value = cms.heroEyebrow;
+      cmsForm.heroTitle.value = cms.heroTitle;
+      cmsForm.heroAccent.value = cms.heroAccent;
+      cmsForm.heroSubtitle.value = cms.heroSubtitle;
+      cmsForm.heroPrimaryCtaText.value = cms.heroPrimaryCtaText;
+      cmsForm.heroSecondaryCtaText.value = cms.heroSecondaryCtaText;
+      cmsForm.heroBadges.value = cms.heroBadges.join("\n");
+      cmsForm.heroStats.value = formatLines(cms.heroStats, "value", "label");
+      cmsForm.heroPanelTitle.value = cms.heroPanelTitle;
+      cmsForm.heroPanelText.value = cms.heroPanelText;
+      cmsForm.heroMiniCards.value = formatLines(cms.heroMiniCards, "title", "text");
+      cmsForm.heroChips.value = cms.heroChips.join("\n");
+      cmsForm.aboutTitle.value = cms.aboutTitle;
+      cmsForm.aboutSubtitle.value = cms.aboutSubtitle;
+      cmsForm.aboutCardTitle.value = cms.aboutCardTitle;
+      cmsForm.aboutCardText.value = cms.aboutCardText;
+      cmsForm.aboutList.value = cms.aboutList.join("\n");
+      cmsForm.aboutImage.value = cms.aboutImage;
+      cmsForm.aboutNoteTitle.value = cms.aboutNoteTitle;
+      cmsForm.aboutNoteText.value = cms.aboutNoteText;
+      cmsForm.servicesTitle.value = cms.servicesTitle;
+      cmsForm.servicesSubtitle.value = cms.servicesSubtitle;
+      cmsForm.galleryTitle.value = cms.galleryTitle;
+      cmsForm.gallerySubtitle.value = cms.gallerySubtitle;
+      cmsForm.packagesTitle.value = cms.packagesTitle;
+      cmsForm.packagesSubtitle.value = cms.packagesSubtitle;
+      cmsForm.contactTitle.value = cms.contactTitle;
+      cmsForm.contactSubtitle.value = cms.contactSubtitle;
+      cmsForm.bookingLead.value = cms.bookingLead;
+      cmsForm.contactInfoTitle.value = cms.contactInfoTitle;
+      cmsForm.testimonialsTitle.value = cms.testimonialsTitle;
+      cmsForm.testimonialsSubtitle.value = cms.testimonialsSubtitle;
+      cmsForm.footerSummary.value = cms.footerSummary;
+      renderCmsServicesEditor(cms.serviceItems);
+    }
+
+    function saveCmsForm(){
+      const next = {
+        brandName: cmsForm.brandName.value.trim() || DEFAULT_CMS.brandName,
+        brandTagline: cmsForm.brandTagline.value.trim() || DEFAULT_CMS.brandTagline,
+        heroEyebrow: cmsForm.heroEyebrow.value.trim() || DEFAULT_CMS.heroEyebrow,
+        heroTitle: cmsForm.heroTitle.value.trim() || DEFAULT_CMS.heroTitle,
+        heroAccent: cmsForm.heroAccent.value.trim() || DEFAULT_CMS.heroAccent,
+        heroSubtitle: cmsForm.heroSubtitle.value.trim() || DEFAULT_CMS.heroSubtitle,
+        heroPrimaryCtaText: cmsForm.heroPrimaryCtaText.value.trim() || DEFAULT_CMS.heroPrimaryCtaText,
+        heroSecondaryCtaText: cmsForm.heroSecondaryCtaText.value.trim() || DEFAULT_CMS.heroSecondaryCtaText,
+        heroBadges: parseLines(cmsForm.heroBadges.value),
+        heroStats: parsePairLines(cmsForm.heroStats.value, "value", "label"),
+        heroPanelTitle: cmsForm.heroPanelTitle.value.trim() || DEFAULT_CMS.heroPanelTitle,
+        heroPanelText: cmsForm.heroPanelText.value.trim() || DEFAULT_CMS.heroPanelText,
+        heroMiniCards: parsePairLines(cmsForm.heroMiniCards.value, "title", "text"),
+        heroChips: parseLines(cmsForm.heroChips.value),
+        aboutTitle: cmsForm.aboutTitle.value.trim() || DEFAULT_CMS.aboutTitle,
+        aboutSubtitle: cmsForm.aboutSubtitle.value.trim() || DEFAULT_CMS.aboutSubtitle,
+        aboutCardTitle: cmsForm.aboutCardTitle.value.trim() || DEFAULT_CMS.aboutCardTitle,
+        aboutCardText: cmsForm.aboutCardText.value.trim() || DEFAULT_CMS.aboutCardText,
+        aboutList: parseLines(cmsForm.aboutList.value),
+        aboutImage: cmsForm.aboutImage.value.trim() || DEFAULT_CMS.aboutImage,
+        aboutNoteTitle: cmsForm.aboutNoteTitle.value.trim() || DEFAULT_CMS.aboutNoteTitle,
+        aboutNoteText: cmsForm.aboutNoteText.value.trim() || DEFAULT_CMS.aboutNoteText,
+        servicesTitle: cmsForm.servicesTitle.value.trim() || DEFAULT_CMS.servicesTitle,
+        servicesSubtitle: cmsForm.servicesSubtitle.value.trim() || DEFAULT_CMS.servicesSubtitle,
+        galleryTitle: cmsForm.galleryTitle.value.trim() || DEFAULT_CMS.galleryTitle,
+        gallerySubtitle: cmsForm.gallerySubtitle.value.trim() || DEFAULT_CMS.gallerySubtitle,
+        packagesTitle: cmsForm.packagesTitle.value.trim() || DEFAULT_CMS.packagesTitle,
+        packagesSubtitle: cmsForm.packagesSubtitle.value.trim() || DEFAULT_CMS.packagesSubtitle,
+        contactTitle: cmsForm.contactTitle.value.trim() || DEFAULT_CMS.contactTitle,
+        contactSubtitle: cmsForm.contactSubtitle.value.trim() || DEFAULT_CMS.contactSubtitle,
+        bookingLead: cmsForm.bookingLead.value.trim() || DEFAULT_CMS.bookingLead,
+        contactInfoTitle: cmsForm.contactInfoTitle.value.trim() || DEFAULT_CMS.contactInfoTitle,
+        testimonialsTitle: cmsForm.testimonialsTitle.value.trim() || DEFAULT_CMS.testimonialsTitle,
+        testimonialsSubtitle: cmsForm.testimonialsSubtitle.value.trim() || DEFAULT_CMS.testimonialsSubtitle,
+        footerSummary: cmsForm.footerSummary.value.trim() || DEFAULT_CMS.footerSummary,
+        serviceItems: collectServicesFromEditor()
+      };
+      setCms(next);
+      populateCmsForm();
+      renderPublicContent();
+      renderAdminAll();
+      showToast("CMS content updated.");
+    }
+
+    function renderGalleryManager(){
+      const items = getGalleryItems();
+      galleryManagerList.innerHTML = items.map((item, index) => `
+        <div class="manager-card ${item.visible ? "" : "muted-card"}">
+          <div>
+            <strong>${escapeHtml(item.title)}</strong>
+            <div class="admin-inline-meta">
+              <span>${escapeHtml(item.category)}</span>
+              <span>${escapeHtml(item.location)}</span>
+              <span>${item.visible ? "Visible" : "Hidden"}</span>
+            </div>
+          </div>
+          <div class="inline-actions">
+            <button class="icon-btn" type="button" data-gallery-action="edit" data-index="${index}">Edit</button>
+            <button class="icon-btn" type="button" data-gallery-action="toggle" data-index="${index}">${item.visible ? "Hide" : "Show"}</button>
+            <button class="icon-btn" type="button" data-gallery-action="up" data-index="${index}">↑</button>
+            <button class="icon-btn" type="button" data-gallery-action="down" data-index="${index}">↓</button>
+            <button class="icon-btn" type="button" data-gallery-action="delete" data-index="${index}">Delete</button>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    function resetGalleryForm(){
+      galleryItemForm.reset();
+      galleryEditIndex.value = "";
+    }
+
+    function populateGalleryForm(index){
+      const items = getGalleryItems();
+      const item = items[index];
+      if(!item) return;
+      galleryEditIndex.value = String(index);
+      galleryItemForm.galleryTitle.value = item.title;
+      galleryItemForm.galleryCategory.value = item.category;
+      galleryItemForm.galleryImage.value = item.image;
+      galleryItemForm.galleryThumb.value = item.thumb;
+      galleryItemForm.galleryLocation.value = item.location;
+      galleryItemForm.galleryDescription.value = item.description;
+      galleryItemForm.galleryVisible.checked = item.visible !== false;
+    }
+
+    function saveGalleryForm(){
+      const items = getGalleryItems();
+      const index = galleryEditIndex.value === "" ? -1 : Number(galleryEditIndex.value);
+      const record = normalizeGalleryItem({
+        title: galleryItemForm.galleryTitle.value.trim(),
+        category: galleryItemForm.galleryCategory.value.trim(),
+        image: galleryItemForm.galleryImage.value.trim(),
+        thumb: galleryItemForm.galleryThumb.value.trim() || galleryItemForm.galleryImage.value.trim(),
+        location: galleryItemForm.galleryLocation.value.trim(),
+        description: galleryItemForm.galleryDescription.value.trim(),
+        visible: galleryItemForm.galleryVisible.checked
+      }, items.length);
+      if(!record.image){
+        showToast("Gallery item image URL is required.");
+        return;
+      }
+      if(index >= 0){
+        items[index] = record;
+      }else{
+        items.push(record);
+      }
+      setGalleryItems(items);
+      resetGalleryForm();
+      renderPublicContent();
+      renderGalleryManager();
+      showToast("Gallery updated.");
+    }
+
+    function moveItem(list, fromIndex, direction){
+      const toIndex = fromIndex + direction;
+      if(toIndex < 0 || toIndex >= list.length) return list;
+      const next = [...list];
+      const [item] = next.splice(fromIndex, 1);
+      next.splice(toIndex, 0, item);
+      return next;
+    }
+
+    function renderPackageManager(){
+      const items = getPackageItems();
+      packageManagerList.innerHTML = items.map((item, index) => `
+        <div class="manager-card ${item.visible ? "" : "muted-card"}">
+          <div>
+            <strong>${escapeHtml(item.title)}</strong>
+            <div class="admin-inline-meta">
+              <span>${escapeHtml(item.badge)}</span>
+              <span>${escapeHtml(formatMoney(item.price))}</span>
+              <span>${item.popular ? "Popular" : "Standard"}</span>
+              <span>${item.visible ? "Visible" : "Hidden"}</span>
+            </div>
+          </div>
+          <div class="inline-actions">
+            <button class="icon-btn" type="button" data-package-action="edit" data-index="${index}">Edit</button>
+            <button class="icon-btn" type="button" data-package-action="toggle" data-index="${index}">${item.visible ? "Hide" : "Show"}</button>
+            <button class="icon-btn" type="button" data-package-action="up" data-index="${index}">↑</button>
+            <button class="icon-btn" type="button" data-package-action="down" data-index="${index}">↓</button>
+            <button class="icon-btn" type="button" data-package-action="delete" data-index="${index}">Delete</button>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    function resetPackageForm(){
+      packageItemForm.reset();
+      packageEditIndex.value = "";
+      packageItemForm.packageVisible.checked = true;
+    }
+
+    function populatePackageForm(index){
+      const items = getPackageItems();
+      const item = items[index];
+      if(!item) return;
+      packageEditIndex.value = String(index);
+      packageItemForm.packageBadge.value = item.badge;
+      packageItemForm.packageTitle.value = item.title;
+      packageItemForm.packagePrice.value = item.price;
+      packageItemForm.packageDescription.value = item.description;
+      packageItemForm.packageFeatures.value = item.features.join("\n");
+      packageItemForm.packageChairs.value = item.chairs;
+      packageItemForm.packageTables.value = item.tables;
+      packageItemForm.packageDecorations.value = item.decorations;
+      packageItemForm.packageButtonText.value = item.buttonText;
+      packageItemForm.packagePopular.checked = item.popular === true;
+      packageItemForm.packageVisible.checked = item.visible !== false;
+    }
+
+    function savePackageForm(){
+      const items = getPackageItems();
+      const index = packageEditIndex.value === "" ? -1 : Number(packageEditIndex.value);
+      const record = normalizePackageItem({
+        badge: packageItemForm.packageBadge.value.trim(),
+        title: packageItemForm.packageTitle.value.trim(),
+        price: packageItemForm.packagePrice.value,
+        description: packageItemForm.packageDescription.value.trim(),
+        features: parseLines(packageItemForm.packageFeatures.value),
+        chairs: packageItemForm.packageChairs.value,
+        tables: packageItemForm.packageTables.value,
+        decorations: packageItemForm.packageDecorations.value,
+        buttonText: packageItemForm.packageButtonText.value.trim(),
+        popular: packageItemForm.packagePopular.checked,
+        visible: packageItemForm.packageVisible.checked
+      }, items.length);
+      if(!record.title){
+        showToast("Package title is required.");
+        return;
+      }
+      if(index >= 0){
+        items[index] = record;
+      }else{
+        items.push(record);
+      }
+      setPackageItems(items);
+      resetPackageForm();
+      renderPublicContent();
+      renderPackageManager();
+      showToast("Packages updated.");
+    }
+
+    function renderTestimonialManager(){
+      const items = getTestimonials();
+      testimonialManagerList.innerHTML = items.map((item, index) => `
+        <div class="manager-card ${item.visible ? "" : "muted-card"}">
+          <div>
+            <strong>${escapeHtml(item.title)}</strong>
+            <div class="admin-inline-meta">
+              <span>${escapeHtml(item.person)}</span>
+              <span>${"★".repeat(item.stars)}</span>
+              <span>${item.visible ? "Visible" : "Hidden"}</span>
+            </div>
+          </div>
+          <div class="inline-actions">
+            <button class="icon-btn" type="button" data-testimonial-action="edit" data-index="${index}">Edit</button>
+            <button class="icon-btn" type="button" data-testimonial-action="toggle" data-index="${index}">${item.visible ? "Hide" : "Show"}</button>
+            <button class="icon-btn" type="button" data-testimonial-action="up" data-index="${index}">↑</button>
+            <button class="icon-btn" type="button" data-testimonial-action="down" data-index="${index}">↓</button>
+            <button class="icon-btn" type="button" data-testimonial-action="delete" data-index="${index}">Delete</button>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    function resetTestimonialForm(){
+      testimonialItemForm.reset();
+      testimonialEditIndex.value = "";
+      testimonialItemForm.testimonialStars.value = 5;
+      testimonialItemForm.testimonialVisible.checked = true;
+    }
+
+    function populateTestimonialForm(index){
+      const items = getTestimonials();
+      const item = items[index];
+      if(!item) return;
+      testimonialEditIndex.value = String(index);
+      testimonialItemForm.testimonialTitle.value = item.title;
+      testimonialItemForm.testimonialText.value = item.text;
+      testimonialItemForm.testimonialPerson.value = item.person;
+      testimonialItemForm.testimonialRole.value = item.role;
+      testimonialItemForm.testimonialStars.value = item.stars;
+      testimonialItemForm.testimonialVisible.checked = item.visible !== false;
+    }
+
+    function saveTestimonialForm(){
+      const items = getTestimonials();
+      const index = testimonialEditIndex.value === "" ? -1 : Number(testimonialEditIndex.value);
+      const record = normalizeTestimonial({
+        title: testimonialItemForm.testimonialTitle.value.trim(),
+        text: testimonialItemForm.testimonialText.value.trim(),
+        person: testimonialItemForm.testimonialPerson.value.trim(),
+        role: testimonialItemForm.testimonialRole.value.trim(),
+        stars: testimonialItemForm.testimonialStars.value,
+        visible: testimonialItemForm.testimonialVisible.checked
+      }, items.length);
+      if(!record.title){
+        showToast("Testimonial title is required.");
+        return;
+      }
+      if(index >= 0){
+        items[index] = record;
+      }else{
+        items.push(record);
+      }
+      setTestimonials(items);
+      resetTestimonialForm();
+      renderPublicContent();
+      renderTestimonialManager();
+      showToast("Testimonials updated.");
+    }
+
+    function populateSettingsForm(){
+      const settings = getSettings();
+      settingsForm.businessName.value = settings.businessName;
+      settingsForm.phone.value = settings.phone;
+      settingsForm.email.value = settings.email;
+      settingsForm.location.value = settings.location;
+      settingsForm.serviceArea.value = settings.serviceArea;
+      settingsForm.facebookUrl.value = settings.facebookUrl;
+      settingsForm.whatsappNumber.value = settings.whatsappNumber;
+      settingsForm.socialButtonText.value = settings.socialButtonText;
+      settingsForm.emailButtonText.value = settings.emailButtonText;
+      settingsForm.planningTip.value = settings.planningTip;
+      settingsForm.inventoryChairs.value = settings.inventory.chairs;
+      settingsForm.inventoryTables.value = settings.inventory.tables;
+      settingsForm.inventoryDecorations.value = settings.inventory.decorations;
+      settingsForm.thresholdChairs.value = settings.lowStockThresholds.chairs;
+      settingsForm.thresholdTables.value = settings.lowStockThresholds.tables;
+      settingsForm.thresholdDecorations.value = settings.lowStockThresholds.decorations;
+      settingsForm.extrasJson.value = JSON.stringify(settings.extras, null, 2);
+    }
+
+    function saveSettingsForm(){
+      let extras;
+      try{
+        const parsed = JSON.parse(settingsForm.extrasJson.value || "[]");
+        if(!Array.isArray(parsed)) throw new Error("Builder extras must be an array.");
+        extras = parsed.map((item) => ({
+          name: String(item?.name || "").trim(),
+          price: Number(item?.price || 0)
+        })).filter((item) => item.name);
+      }catch(err){
+        showToast("Builder extras JSON is invalid.");
+        return;
+      }
+      const currentInventory = getInventory();
+      const oldDefaults = getSettings().inventory;
+      const settings = {
+        businessName: settingsForm.businessName.value.trim() || DEFAULT_SETTINGS.businessName,
+        phone: settingsForm.phone.value.trim() || DEFAULT_SETTINGS.phone,
+        email: settingsForm.email.value.trim() || DEFAULT_SETTINGS.email,
+        location: settingsForm.location.value.trim() || DEFAULT_SETTINGS.location,
+        serviceArea: settingsForm.serviceArea.value.trim() || DEFAULT_SETTINGS.serviceArea,
+        facebookUrl: settingsForm.facebookUrl.value.trim() || DEFAULT_SETTINGS.facebookUrl,
+        whatsappNumber: settingsForm.whatsappNumber.value.trim() || DEFAULT_SETTINGS.whatsappNumber,
+        socialButtonText: settingsForm.socialButtonText.value.trim() || DEFAULT_SETTINGS.socialButtonText,
+        emailButtonText: settingsForm.emailButtonText.value.trim() || DEFAULT_SETTINGS.emailButtonText,
+        planningTip: settingsForm.planningTip.value.trim() || DEFAULT_SETTINGS.planningTip,
+        inventory: {
+          chairs: Number(settingsForm.inventoryChairs.value || DEFAULT_SETTINGS.inventory.chairs),
+          tables: Number(settingsForm.inventoryTables.value || DEFAULT_SETTINGS.inventory.tables),
+          decorations: Number(settingsForm.inventoryDecorations.value || DEFAULT_SETTINGS.inventory.decorations)
+        },
+        lowStockThresholds: {
+          chairs: Number(settingsForm.thresholdChairs.value || DEFAULT_SETTINGS.lowStockThresholds.chairs),
+          tables: Number(settingsForm.thresholdTables.value || DEFAULT_SETTINGS.lowStockThresholds.tables),
+          decorations: Number(settingsForm.thresholdDecorations.value || DEFAULT_SETTINGS.lowStockThresholds.decorations)
+        },
+        extras
+      };
+      setSettings(settings);
+      const unchangedInventory = currentInventory.chairs === Number(oldDefaults.chairs) && currentInventory.tables === Number(oldDefaults.tables) && currentInventory.decorations === Number(oldDefaults.decorations);
+      if(unchangedInventory){
+        setInventory(settings.inventory);
+      }
+      populateSettingsForm();
+      renderPublicContent();
+      renderAnalytics();
+      renderOverviewPanel();
+      showToast("Settings updated.");
+    }
+
+    function composeBackup(){
+      return {
+        version: 2,
+        exportedAt: new Date().toISOString(),
+        bookings: getBookings(),
+        inventory: getInventory(),
+        cms: getCms(),
+        gallery: getGalleryItems(),
+        packages: getPackageItems(),
+        testimonials: getTestimonials(),
+        settings: getSettings(),
+        latest: latestBookingDraft()
+      };
+    }
+
+    function importBackupObject(data){
+      if(!data || typeof data !== "object"){
+        showToast("Backup file is invalid.");
+        return;
+      }
+      if(Array.isArray(data.bookings)) setBookings(data.bookings);
+      if(data.inventory && typeof data.inventory === "object") setInventory(data.inventory);
+      if(data.cms && typeof data.cms === "object") setCms(data.cms);
+      if(Array.isArray(data.gallery)) setGalleryItems(data.gallery);
+      if(Array.isArray(data.packages)) setPackageItems(data.packages);
+      if(Array.isArray(data.testimonials)) setTestimonials(data.testimonials);
+      if(data.settings && typeof data.settings === "object") setSettings(data.settings);
+      if(data.latest && typeof data.latest === "object"){
+        setLatestBookingDraft(data.latest);
+      }else{
+        localStorage.removeItem(STORAGE_KEYS.latest);
+      }
+      populateCmsForm();
+      populateSettingsForm();
+      renderPublicContent();
+      renderAdminAll();
+      const latest = latestBookingDraft();
+      if(latest) renderInvoice(latest);
+      showToast("Backup imported successfully.");
+    }
+
+    function openLightboxFromCard(card){
+      lightboxImage.src = card.dataset.image || "";
+      lightboxTitle.textContent = card.dataset.title || "Gallery Preview";
+      lightboxCategory.textContent = (card.dataset.category || "gallery").replace(/-/g, " ");
+      lightboxDescription.textContent = card.dataset.description || "Event styling preview.";
+      lightboxLocation.textContent = card.dataset.location || "Location not provided";
+      lightbox.classList.add("active");
+      syncBodyLockState();
+    }
+
+    function setAdminTab(tabName){
+      activeAdminTab = tabName;
+      adminTabRow.querySelectorAll("[data-admin-tab]").forEach((button) => {
+        button.classList.toggle("active", button.dataset.adminTab === tabName);
+      });
+      adminPanels.forEach((panel) => {
+        panel.classList.toggle("active", panel.dataset.adminPanel === tabName);
+      });
+    }
+
+    function renderAdminAll(){
       updateAdminSessionUI();
-      syncBodyLockState();
-    }
-    function closeAdminPanel(){
-      adminModal.classList.remove('active');
-      adminModal.setAttribute('aria-hidden', 'true');
-      syncBodyLockState();
-    }
-    function requireAdminAccess(){
-      if(isAdminAuthenticated()) return true;
-      handleAdminAccessRequest();
-      showToast('Admin verification required.');
-      return false;
-    }
-    function scrollFieldIntoView(target){
-      if(!target) return;
-      setTimeout(() => {
-        try{ target.scrollIntoView({ behavior:'smooth', block:'center' }); }catch(err){}
-      }, 250);
+      renderAnalytics();
+      renderOverviewPanel();
+      renderBookingsManager();
+      populateCmsForm();
+      renderGalleryManager();
+      renderPackageManager();
+      renderTestimonialManager();
+      populateSettingsForm();
+      setAdminTab(activeAdminTab);
     }
 
     const savedTheme = localStorage.getItem(STORAGE_KEYS.theme);
-    if(savedTheme === 'light'){
-      body.setAttribute('data-theme', 'light');
-      themeToggle.textContent = '☀';
+    if(savedTheme === "light"){
+      body.setAttribute("data-theme", "light");
+      themeToggle.textContent = "☀";
     }
 
-    themeToggle.addEventListener('click', () => {
-      const isLight = body.getAttribute('data-theme') === 'light';
+    themeToggle.addEventListener("click", () => {
+      const isLight = body.getAttribute("data-theme") === "light";
       if(isLight){
-        body.removeAttribute('data-theme');
-        localStorage.setItem(STORAGE_KEYS.theme, 'dark');
-        themeToggle.textContent = '☾';
+        body.removeAttribute("data-theme");
+        localStorage.setItem(STORAGE_KEYS.theme, "dark");
+        themeToggle.textContent = "☾";
       }else{
-        body.setAttribute('data-theme', 'light');
-        localStorage.setItem(STORAGE_KEYS.theme, 'light');
-        themeToggle.textContent = '☀';
+        body.setAttribute("data-theme", "light");
+        localStorage.setItem(STORAGE_KEYS.theme, "light");
+        themeToggle.textContent = "☀";
       }
     });
-    menuToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
-    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('open')));
 
-    const sections = [...document.querySelectorAll('section[id]')];
+    menuToggle.addEventListener("click", () => navLinks.classList.toggle("open"));
+    navLinks.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => navLinks.classList.remove("open")));
+
+    const sections = [...document.querySelectorAll("section[id]")];
     const navAnchors = [...navLinks.querySelectorAll('a[href^="#"]')];
     function updateActiveNav(){
       const scrollPos = window.scrollY + 140;
-      let currentId = '';
-      sections.forEach(section => {
-        if(scrollPos >= section.offsetTop){ currentId = section.id; }
+      let currentId = "";
+      sections.forEach((section) => {
+        if(scrollPos >= section.offsetTop) currentId = section.id;
       });
-      navAnchors.forEach(link => link.classList.toggle('active', link.getAttribute('href') === '#' + currentId));
+      navAnchors.forEach((link) => link.classList.toggle("active", link.getAttribute("href") === `#${currentId}`));
     }
-    window.addEventListener('scroll', updateActiveNav, { passive:true });
+    window.addEventListener("scroll", updateActiveNav, { passive: true });
     updateActiveNav();
-    document.addEventListener('click', (e) => {
-      const clickedInsideNav = navLinks.contains(e.target) || menuToggle.contains(e.target);
-      if(!clickedInsideNav) navLinks.classList.remove('open');
+    document.addEventListener("click", (event) => {
+      const clickedInsideNav = navLinks.contains(event.target) || menuToggle.contains(event.target);
+      if(!clickedInsideNav) navLinks.classList.remove("open");
     });
 
-    openBooking?.addEventListener('click', openModal);
-    closeBooking?.addEventListener('click', closeModal);
-    closeAdminLogin?.addEventListener('click', closeAdminLoginModal);
-    closeAdmin?.addEventListener('click', closeAdminPanel);
-    bookingModal?.addEventListener('click', (e) => {
-      if(e.target === bookingModal) closeModal();
-    });
-    adminLoginModal?.addEventListener('click', (e) => {
-      if(e.target === adminLoginModal) closeAdminLoginModal();
-    });
-    adminModal?.addEventListener('click', (e) => {
-      if(e.target === adminModal) closeAdminPanel();
+    openBooking?.addEventListener("click", openModal);
+    closeBooking?.addEventListener("click", closeModal);
+    closeAdminLogin?.addEventListener("click", closeAdminLoginModal);
+    closeAdmin?.addEventListener("click", closeAdminPanel);
+
+    bookingModal?.addEventListener("click", (event) => {
+      if(event.target === bookingModal) closeModal();
     });
 
-    packageButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const pkg = btn.dataset.package || '';
-        quickPackage.value = pkg;
-        [...packageSelect.options].forEach(option => {
-          if(option.value === pkg){ packageSelect.value = option.value; }
-        });
-        updateQuoteUI();
-        openModal();
-      });
+    adminLoginModal?.addEventListener("click", (event) => {
+      if(event.target === adminLoginModal) closeAdminLoginModal();
     });
 
-    galleryCards.forEach(card => {
-      card.addEventListener('click', () => {
-        lightboxImage.src = card.getAttribute('data-image');
-        lightbox.classList.add('active');
-        syncBodyLockState();
-      });
+    adminModal?.addEventListener("click", (event) => {
+      if(event.target === adminModal) closeAdminPanel();
     });
-    closeLightbox.addEventListener('click', () => {
-      lightbox.classList.remove('active');
-      lightboxImage.src = '';
+
+    galleryFilterRow.addEventListener("click", (event) => {
+      const button = event.target.closest(".filter-btn");
+      if(!button) return;
+      activeGalleryFilter = button.dataset.filter || "all";
+      applyGalleryFilter();
+    });
+
+    galleryGrid.addEventListener("click", (event) => {
+      const card = event.target.closest(".gallery-card");
+      if(!card) return;
+      openLightboxFromCard(card);
+    });
+
+    closeLightbox.addEventListener("click", () => {
+      lightbox.classList.remove("active");
+      lightboxImage.src = "";
       syncBodyLockState();
     });
-    lightbox.addEventListener('click', (e) => {
-      if(e.target === lightbox){
-        lightbox.classList.remove('active');
-        lightboxImage.src = '';
+
+    lightbox.addEventListener("click", (event) => {
+      if(event.target === lightbox){
+        lightbox.classList.remove("active");
+        lightboxImage.src = "";
         syncBodyLockState();
       }
     });
-    galleryFilters.forEach(btn => {
-      btn.addEventListener('click', () => {
-        galleryFilters.forEach(item => item.classList.remove('active'));
-        btn.classList.add('active');
-        const filter = btn.dataset.filter;
-        galleryCards.forEach(card => {
-          const visible = filter === 'all' || card.dataset.category === filter;
-          card.classList.toggle('hidden', !visible);
-        });
-      });
+
+    packageGrid.addEventListener("click", (event) => {
+      const button = event.target.closest(".open-package");
+      if(!button) return;
+      const pkg = button.dataset.package || "";
+      quickPackage.value = pkg;
+      packageSelect.value = pkg;
+      updateQuoteUI();
+      openModal();
     });
 
-    chipToggles.forEach(btn => btn.addEventListener('click', () => {
-      btn.classList.toggle('active');
+    builderOptions.addEventListener("click", (event) => {
+      const button = event.target.closest(".chip-toggle");
+      if(!button) return;
+      button.classList.toggle("active");
       updateQuoteUI();
-    }));
-    [packageSelect, guestCount, setupHours, eventType, eventDate].forEach(el => el.addEventListener('input', () => {
+    });
+
+    [packageSelect, guestCount, setupHours, eventType, eventDate].forEach((el) => el.addEventListener("input", () => {
       updateQuoteUI();
       updateSuggestions();
     }));
-    venueInput.addEventListener('input', updateQuoteUI);
+    venueInput.addEventListener("input", updateQuoteUI);
 
-    bookingForm.addEventListener('submit', (e) => {
-      e.preventDefault();
+    bookingForm.addEventListener("submit", (event) => {
+      event.preventDefault();
       const booking = collectBookingFromForm();
       if(!booking) return;
-      submitBookingBtn.classList.add('loading-state');
+      submitBookingBtn.classList.add("loading-state");
       submitBookingBtn.disabled = true;
-      submitBookingBtn.textContent = 'Saving...';
+      submitBookingBtn.textContent = "Saving...";
       setTimeout(() => {
         saveBooking(booking);
-        submitBookingBtn.classList.remove('loading-state');
+        submitBookingBtn.classList.remove("loading-state");
         submitBookingBtn.disabled = false;
-        submitBookingBtn.textContent = 'Save Booking';
-        showToast('Booking saved and invoice generated.');
-      }, 550);
+        submitBookingBtn.textContent = "Save Booking";
+        showToast("Booking saved and invoice generated.");
+      }, 420);
     });
 
-    openWhatsappQuote.addEventListener('click', () => {
+    openWhatsappQuote.addEventListener("click", () => {
       const booking = collectBookingFromForm() || latestBookingDraft();
       if(!booking){
-        showToast('Complete the booking form first.');
+        showToast("Complete the booking form first.");
         return;
       }
       renderInvoice(booking);
-      window.open(buildWhatsappLink(booking), '_blank', 'noopener');
+      window.open(buildWhatsappLink(booking), "_blank", "noopener");
     });
 
-    quickForm.addEventListener('submit', (e) => {
-      e.preventDefault();
+    quickForm.addEventListener("submit", (event) => {
+      event.preventDefault();
       const data = {
-        name: document.getElementById('quickName').value.trim(),
-        package: document.getElementById('quickPackage').value,
-        details: document.getElementById('quickDetails').value.trim(),
+        name: document.getElementById("quickName").value.trim(),
+        package: document.getElementById("quickPackage").value,
+        details: document.getElementById("quickDetails").value.trim(),
         createdAt: new Date().toISOString()
       };
       localStorage.setItem(STORAGE_KEYS.quick, JSON.stringify(data));
-      if(data.package){ packageSelect.value = data.package; }
-      if(data.name && !document.getElementById('name').value){ document.getElementById('name').value = data.name; }
+      if(data.package) packageSelect.value = data.package;
+      if(data.name && !document.getElementById("name").value) document.getElementById("name").value = data.name;
       updateQuoteUI();
-      showToast('Quick inquiry saved locally.');
+      showToast("Quick inquiry saved locally.");
       quickForm.reset();
       closeModal();
-      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+      document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
     });
 
-    adminLoginForm.addEventListener('submit', (e) => {
-      e.preventDefault();
+    adminLoginForm.addEventListener("submit", (event) => {
+      event.preventDefault();
       const password = adminPassword.value;
       const confirmPassword = adminPasswordConfirm.value;
-      if(adminLoginMode === 'setup'){
+      if(adminLoginMode === "setup"){
         if(password.trim().length < 6){
-          setAdminLoginError('Use at least 6 characters for the admin password.');
+          setAdminLoginError("Use at least 6 characters for the admin password.");
           return;
         }
         if(password !== confirmPassword){
-          setAdminLoginError('Passwords do not match.');
+          setAdminLoginError("Passwords do not match.");
           return;
         }
         setAdminPasswordValue(password);
         startAdminSession();
         closeAdminLoginModal();
         openAdmin();
-        showToast('Admin password created and session unlocked.');
+        showToast("Admin password created and session unlocked.");
         return;
       }
       if(password !== getAdminPassword()){
-        setAdminLoginError('Incorrect admin password. Please try again.');
+        setAdminLoginError("Incorrect admin password. Please try again.");
         return;
       }
       startAdminSession();
       closeAdminLoginModal();
       openAdmin();
-      showToast(adminLoginMode === 'unlock' ? 'Admin session unlocked.' : 'Admin login successful.');
+      showToast(adminLoginMode === "unlock" ? "Admin session unlocked." : "Admin login successful.");
     });
 
-    adminBookingsTableBody.addEventListener('click', (e) => {
-      if(!requireAdminAccess()) return;
-      const btn = e.target.closest('[data-delete-booking]');
-      if(!btn) return;
-      deleteBooking(btn.dataset.deleteBooking);
+    adminTabRow.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-admin-tab]");
+      if(!button) return;
+      setAdminTab(button.dataset.adminTab);
     });
-    exportAdminJson.addEventListener('click', () => {
+
+    adminBookingsTableBody.addEventListener("click", (event) => {
       if(!requireAdminAccess()) return;
-      downloadJson('fiesta-bookings.json', getBookings());
+      const editBtn = event.target.closest("[data-edit-booking]");
+      if(editBtn){
+        const booking = getBookings().find((item) => item.id === editBtn.dataset.editBooking);
+        populateBookingEditor(booking || null);
+        return;
+      }
+      const deleteBtn = event.target.closest("[data-delete-booking]");
+      if(deleteBtn){
+        if(window.confirm("Delete this booking?")) deleteBooking(deleteBtn.dataset.deleteBooking);
+      }
     });
-    downloadBookingsBtn.addEventListener('click', () => downloadJson('fiesta-bookings.json', getBookings()));
-    resetInventoryBtn.addEventListener('click', () => {
+
+    [adminBookingSearch, adminBookingStatusFilter, adminBookingPaidFilter].forEach((el) => {
+      el.addEventListener("input", renderBookingsManager);
+      el.addEventListener("change", renderBookingsManager);
+    });
+
+    bookingEditorForm.addEventListener("submit", (event) => {
+      event.preventDefault();
       if(!requireAdminAccess()) return;
-      setInventory({ ...DEFAULT_INVENTORY });
+      const id = bookingEditorId.value;
+      if(!id){
+        showToast("Choose a booking first.");
+        return;
+      }
+      updateBooking(id, {
+        status: adminEditStatus.value,
+        paymentStatus: adminEditPaymentStatus.value,
+        quoteAmount: Number(adminEditQuoteAmount.value || 0),
+        adminNotes: adminEditNotes.value.trim()
+      });
+      const current = getBookings().find((item) => item.id === id);
+      populateBookingEditor(current || null);
+      showToast("Booking workflow updated.");
+    });
+
+    clearBookingEditorBtn.addEventListener("click", clearBookingEditor);
+    deleteSelectedBookingBtn.addEventListener("click", () => {
+      if(!requireAdminAccess()) return;
+      const id = bookingEditorId.value;
+      if(id) deleteBooking(id);
+    });
+
+    cmsForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if(!requireAdminAccess()) return;
+      saveCmsForm();
+    });
+
+    addServiceBtn.addEventListener("click", () => {
+      const items = collectServicesFromEditor();
+      items.push({ icon: "✨", title: "New Service", description: "Describe the service here." });
+      renderCmsServicesEditor(items);
+    });
+
+    cmsServicesEditor.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-service-action]");
+      if(!button) return;
+      const row = button.closest(".admin-row-card");
+      const index = Number(row.dataset.serviceIndex);
+      const items = collectServicesFromEditor();
+      const action = button.dataset.serviceAction;
+      if(action === "delete"){
+        if(!window.confirm("Delete this gallery item?")) return;
+        if(!window.confirm("Delete this package?")) return;
+        if(!window.confirm("Delete this testimonial?")) return;
+        items.splice(index, 1);
+      }else if(action === "up"){
+        if(index === 0) return;
+        items.splice(index - 1, 0, items.splice(index, 1)[0]);
+      }else if(action === "down"){
+        if(index >= items.length - 1) return;
+        items.splice(index + 1, 0, items.splice(index, 1)[0]);
+      }
+      renderCmsServicesEditor(items);
+    });
+
+    resetCmsBtn.addEventListener("click", () => {
+      if(!requireAdminAccess()) return;
+      if(!window.confirm("Reset all public CMS content, gallery, packages, and testimonials to default?")) return;
+      setCms(clone(DEFAULT_CMS));
+      populateCmsForm();
+      renderPublicContent();
+      renderAdminAll();
+      showToast("CMS content reset to default.");
+    });
+
+    galleryItemForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if(!requireAdminAccess()) return;
+      saveGalleryForm();
+    });
+    cancelGalleryEdit.addEventListener("click", resetGalleryForm);
+
+    galleryManagerList.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-gallery-action]");
+      if(!button || !requireAdminAccess()) return;
+      const index = Number(button.dataset.index);
+      const items = getGalleryItems();
+      const action = button.dataset.galleryAction;
+      if(action === "edit"){
+        populateGalleryForm(index);
+        return;
+      }
+      if(action === "toggle"){
+        items[index].visible = !items[index].visible;
+      }else if(action === "delete"){
+        items.splice(index, 1);
+      }else if(action === "up"){
+        setGalleryItems(moveItem(items, index, -1));
+        renderPublicContent();
+        renderGalleryManager();
+        return;
+      }else if(action === "down"){
+        setGalleryItems(moveItem(items, index, 1));
+        renderPublicContent();
+        renderGalleryManager();
+        return;
+      }
+      setGalleryItems(items);
+      renderPublicContent();
+      renderGalleryManager();
+    });
+
+    packageItemForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if(!requireAdminAccess()) return;
+      savePackageForm();
+    });
+    cancelPackageEdit.addEventListener("click", resetPackageForm);
+
+    packageManagerList.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-package-action]");
+      if(!button || !requireAdminAccess()) return;
+      const index = Number(button.dataset.index);
+      const items = getPackageItems();
+      const action = button.dataset.packageAction;
+      if(action === "edit"){
+        populatePackageForm(index);
+        return;
+      }
+      if(action === "toggle"){
+        items[index].visible = !items[index].visible;
+      }else if(action === "delete"){
+        items.splice(index, 1);
+      }else if(action === "up"){
+        setPackageItems(moveItem(items, index, -1));
+        renderPublicContent();
+        renderPackageManager();
+        return;
+      }else if(action === "down"){
+        setPackageItems(moveItem(items, index, 1));
+        renderPublicContent();
+        renderPackageManager();
+        return;
+      }
+      setPackageItems(items);
+      renderPublicContent();
+      renderPackageManager();
+    });
+
+    testimonialItemForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if(!requireAdminAccess()) return;
+      saveTestimonialForm();
+    });
+    cancelTestimonialEdit.addEventListener("click", resetTestimonialForm);
+
+    testimonialManagerList.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-testimonial-action]");
+      if(!button || !requireAdminAccess()) return;
+      const index = Number(button.dataset.index);
+      const items = getTestimonials();
+      const action = button.dataset.testimonialAction;
+      if(action === "edit"){
+        populateTestimonialForm(index);
+        return;
+      }
+      if(action === "toggle"){
+        items[index].visible = !items[index].visible;
+      }else if(action === "delete"){
+        items.splice(index, 1);
+      }else if(action === "up"){
+        setTestimonials(moveItem(items, index, -1));
+        renderPublicContent();
+        renderTestimonialManager();
+        return;
+      }else if(action === "down"){
+        setTestimonials(moveItem(items, index, 1));
+        renderPublicContent();
+        renderTestimonialManager();
+        return;
+      }
+      setTestimonials(items);
+      renderPublicContent();
+      renderTestimonialManager();
+    });
+
+    exportAdminJson.addEventListener("click", () => {
+      if(!requireAdminAccess()) return;
+      downloadJson("fiesta-bookings.json", getBookings());
+    });
+
+    exportAdminCsv.addEventListener("click", () => {
+      if(!requireAdminAccess()) return;
+      const rows = [
+        ["Name", "Phone", "Email", "Date", "Event Type", "Package", "Status", "Payment Status", "Quote Amount", "Venue", "Extras", "Notes"]
+      ];
+      getBookings().forEach((item) => {
+        rows.push([
+          item.name,
+          item.phone,
+          item.email,
+          item.eventDate,
+          item.eventType,
+          item.package,
+          item.status,
+          item.paymentStatus,
+          item.quoteAmount || item.total,
+          item.venue,
+          item.extras.map((extra) => extra.name).join(" | "),
+          item.adminNotes
+        ]);
+      });
+      downloadCsv("fiesta-bookings.csv", rows);
+    });
+
+    downloadBookingsBtn.addEventListener("click", () => downloadJson("fiesta-bookings.json", getBookings()));
+
+    resetInventoryBtn.addEventListener("click", () => {
+      if(!requireAdminAccess()) return;
+      setInventory(getSettings().inventory);
       renderAnalytics();
+      renderOverviewPanel();
       updateQuoteUI();
-      showToast('Inventory reset to default stock.');
+      showToast("Inventory reset to saved default stock.");
     });
-    clearBookingsBtn.addEventListener('click', () => {
+
+    clearBookingsBtn.addEventListener("click", () => {
       if(!requireAdminAccess()) return;
+      if(!window.confirm("Delete all locally saved bookings and reset inventory?")) return;
       setBookings([]);
-      setInventory({ ...DEFAULT_INVENTORY });
+      setInventory(getSettings().inventory);
+      localStorage.removeItem(STORAGE_KEYS.latest);
+      invoicePreview.classList.remove("visible");
+      clearBookingEditor();
       renderAnalytics();
-      renderAdminTable();
+      renderBookingsManager();
+      renderOverviewPanel();
       updateQuoteUI();
-      invoicePreview.classList.remove('visible');
-      showToast('All locally saved bookings deleted.');
+      showToast("All locally saved bookings deleted.");
     });
-    lockAdminBtn.addEventListener('click', () => {
+
+    lockAdminBtn.addEventListener("click", () => {
       if(!requireAdminAccess()) return;
       lockAdminSession();
       closeAdminPanel();
-      showToast('Admin session locked.');
+      showToast("Admin session locked.");
     });
-    logoutAdminBtn.addEventListener('click', () => {
+
+    logoutAdminBtn.addEventListener("click", () => {
       logoutAdminSession();
       closeAdminPanel();
-      showToast('Admin logged out.');
+      showToast("Admin logged out.");
     });
-    printInvoiceBtn.addEventListener('click', () => {
-      if(!invoicePreview.classList.contains('visible')){
-        showToast('Save a booking first to generate the invoice.');
+
+    printInvoiceBtn.addEventListener("click", () => {
+      if(!invoicePreview.classList.contains("visible")){
+        showToast("Save a booking first to generate the invoice.");
         return;
       }
       window.print();
     });
 
-    document.addEventListener('keydown', (e) => {
-      if(e.key === 'Escape'){
+    exportBackupBtn.addEventListener("click", () => {
+      if(!requireAdminAccess()) return;
+      downloadJson("fiesta-backup.json", composeBackup());
+    });
+
+    exportCmsBtn.addEventListener("click", () => {
+      if(!requireAdminAccess()) return;
+      downloadJson("fiesta-cms-content.json", getCms());
+    });
+
+    exportGalleryBtn.addEventListener("click", () => {
+      if(!requireAdminAccess()) return;
+      downloadJson("fiesta-gallery.json", getGalleryItems());
+    });
+
+    exportPackagesBtn.addEventListener("click", () => {
+      if(!requireAdminAccess()) return;
+      downloadJson("fiesta-packages.json", getPackageItems());
+    });
+
+    exportTestimonialsBtn.addEventListener("click", () => {
+      if(!requireAdminAccess()) return;
+      downloadJson("fiesta-testimonials.json", getTestimonials());
+    });
+
+    exportSettingsBtn.addEventListener("click", () => {
+      if(!requireAdminAccess()) return;
+      downloadJson("fiesta-settings.json", getSettings());
+    });
+
+    importBackupBtn.addEventListener("click", () => {
+      if(!requireAdminAccess()) return;
+      backupImportInput.click();
+    });
+
+    backupImportInput.addEventListener("change", async () => {
+      const file = backupImportInput.files && backupImportInput.files[0];
+      if(!file) return;
+      try{
+        const text = await file.text();
+        const data = JSON.parse(text);
+        importBackupObject(data);
+      }catch(err){
+        showToast("Unable to import backup file.");
+      }finally{
+        backupImportInput.value = "";
+      }
+    });
+
+    resetPublicContentBtn.addEventListener("click", () => {
+      if(!requireAdminAccess()) return;
+      setCms(clone(DEFAULT_CMS));
+      setGalleryItems(clone(DEFAULT_GALLERY));
+      setPackageItems(clone(DEFAULT_PACKAGES));
+      setTestimonials(clone(DEFAULT_TESTIMONIALS));
+      populateCmsForm();
+      resetGalleryForm();
+      resetPackageForm();
+      resetTestimonialForm();
+      renderPublicContent();
+      renderAdminAll();
+      showToast("Public site content reset to default.");
+    });
+
+    settingsForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if(!requireAdminAccess()) return;
+      saveSettingsForm();
+    });
+
+    resetSettingsBtn.addEventListener("click", () => {
+      if(!requireAdminAccess()) return;
+      if(!window.confirm("Reset settings to default values?")) return;
+      setSettings(clone(DEFAULT_SETTINGS));
+      populateSettingsForm();
+      renderPublicContent();
+      renderAdminAll();
+      showToast("Settings reset to default.");
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if(event.key === "Escape"){
         closeModal();
         closeAdminLoginModal();
         closeAdminPanel();
-        lightbox.classList.remove('active');
-        lightboxImage.src = '';
+        lightbox.classList.remove("active");
+        lightboxImage.src = "";
         syncBodyLockState();
       }
-      if(e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'a'){
-        e.preventDefault();
+      if(event.ctrlKey && event.shiftKey && event.key.toLowerCase() === "a"){
+        event.preventDefault();
         handleAdminAccessRequest();
       }
     });
-    document.querySelectorAll('input, textarea, select').forEach(el => el.addEventListener('focus', () => scrollFieldIntoView(el)));
 
-    window.addEventListener('load', () => {
-      const splash = document.getElementById('appReadySplash');
+    document.querySelectorAll("input, textarea, select").forEach((el) => el.addEventListener("focus", () => scrollFieldIntoView(el)));
+
+    window.addEventListener("load", () => {
+      syncFixedAdminPassword();
+      revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if(entry.isIntersecting){
+            entry.target.classList.add("visible");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.14 });
+
+      if(!localStorage.getItem(STORAGE_KEYS.cms)) setCms(clone(DEFAULT_CMS));
+      if(!localStorage.getItem(STORAGE_KEYS.gallery)) setGalleryItems(clone(DEFAULT_GALLERY));
+      if(!localStorage.getItem(STORAGE_KEYS.packages)) setPackageItems(clone(DEFAULT_PACKAGES));
+      if(!localStorage.getItem(STORAGE_KEYS.testimonials)) setTestimonials(clone(DEFAULT_TESTIMONIALS));
+      if(!localStorage.getItem(STORAGE_KEYS.settings)) setSettings(clone(DEFAULT_SETTINGS));
+      if(!localStorage.getItem(STORAGE_KEYS.inventory)) setInventory(getSettings().inventory);
+
       const latest = latestBookingDraft();
-      if(latest){ renderInvoice(latest); }
-      renderAnalytics();
-      renderAdminTable();
-      updateAdminSessionUI();
-      updateSuggestions();
-      updateQuoteUI();
+      renderPublicContent();
+      renderAdminAll();
+      clearBookingEditor();
+      if(latest) renderInvoice(latest);
       setTimeout(() => {
         if(splash){
-          splash.style.opacity = '0';
-          splash.style.visibility = 'hidden';
+          splash.style.opacity = "0";
+          splash.style.visibility = "hidden";
           setTimeout(() => splash.remove(), 400);
         }
       }, 450);
     });
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.14 });
-    revealEls.forEach(el => observer.observe(el));
+  
   </script>
 </body>
 </html>
