@@ -1782,6 +1782,222 @@
       }
     }
 
+  
+    .faq-grid{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0,1fr));
+      gap:18px;
+      margin-top:36px;
+    }
+    .faq-card{
+      border-radius:24px;
+      padding:22px;
+    }
+    .faq-question{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:14px;
+      width:100%;
+      background:none;
+      border:0;
+      color:var(--text);
+      text-align:left;
+      padding:0;
+      cursor:pointer;
+      font-weight:800;
+      font-size:1.02rem;
+    }
+    .faq-answer{
+      color:var(--muted);
+      line-height:1.8;
+      margin-top:14px;
+      display:none;
+    }
+    .faq-card.active .faq-answer{display:block}
+    .faq-question span:last-child{
+      width:28px;height:28px;flex:0 0 28px;border-radius:50%;
+      display:grid;place-items:center;
+      background:rgba(255,255,255,0.08);
+      border:1px solid var(--line);
+      font-weight:700;
+    }
+    .admin-calendar-grid,
+    .inventory-manager-grid{
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:18px;
+    }
+    .calendar-toolbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-bottom:16px;
+    }
+    .calendar-grid{
+      display:grid;
+      grid-template-columns:repeat(7, minmax(0,1fr));
+      gap:10px;
+    }
+    .calendar-head{
+      text-align:center;
+      font-size:.84rem;
+      color:var(--muted);
+      padding:8px 0;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+    }
+    .calendar-day{
+      min-height:112px;
+      border-radius:18px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,0.04);
+      padding:12px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+      cursor:pointer;
+      transition:.25s ease;
+    }
+    .calendar-day:hover{
+      transform:translateY(-2px);
+      border-color:rgba(255,255,255,0.18);
+    }
+    .calendar-day.is-outside{
+      opacity:.42;
+    }
+    .calendar-day.is-today{
+      box-shadow:0 0 0 1px rgba(255,95,162,0.45) inset;
+    }
+    .calendar-day.is-blocked{
+      background:rgba(255,95,162,0.12);
+      border-color:rgba(255,95,162,0.3);
+    }
+    .calendar-day.is-booked{
+      background:rgba(255,200,87,0.1);
+      border-color:rgba(255,200,87,0.26);
+    }
+    .calendar-day strong{
+      font-size:1rem;
+    }
+    .calendar-count{
+      font-size:.82rem;
+      color:var(--muted);
+      line-height:1.5;
+    }
+    .calendar-selected-events,
+    .blocked-date-list,
+    .inventory-manager-list{
+      display:grid;
+      gap:12px;
+    }
+    .booking-conflict{
+      display:none;
+      margin-top:14px;
+      padding:14px 16px;
+      border-radius:16px;
+      border:1px solid rgba(255,95,162,0.28);
+      background:rgba(255,95,162,0.12);
+      color:#ffd9e8;
+    }
+    .booking-conflict.visible{display:block}
+    [data-theme="light"] .booking-conflict{
+      color:#7d1849;
+    }
+    .lightbox-cta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:16px;
+    }
+    .inventory-chip-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:12px;
+    }
+    .inventory-chip{
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,0.06);
+      color:var(--muted);
+      font-size:.86rem;
+    }
+    .ops-grid{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0,1fr));
+      gap:12px;
+    }
+    .check-chip{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      padding:12px 14px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,0.05);
+      color:var(--muted);
+    }
+    .check-chip input{width:18px;height:18px}
+    .inline-stack{
+      display:grid;
+      gap:12px;
+    }
+    .role-pill{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,0.08);
+      color:var(--text);
+      font-size:.82rem;
+      font-weight:700;
+    }
+    .photo-chip{
+      width:40px;height:40px;border-radius:50%;
+      background:linear-gradient(135deg,var(--primary),var(--secondary));
+      color:#fff;
+      display:grid;place-items:center;
+      font-size:.9rem;
+      font-weight:800;
+      flex:0 0 40px;
+      overflow:hidden;
+    }
+    .photo-chip img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+    .invoice-notes{
+      margin-top:16px;
+      padding-top:14px;
+      border-top:1px dashed var(--line);
+      color:var(--muted);
+      line-height:1.75;
+      font-size:.94rem;
+    }
+    @media (max-width: 1024px){
+      .faq-grid,
+      .admin-calendar-grid,
+      .inventory-manager-grid{
+        grid-template-columns:1fr;
+      }
+      .ops-grid{
+        grid-template-columns:1fr 1fr;
+      }
+    }
+    @media (max-width: 760px){
+      .faq-grid{grid-template-columns:1fr}
+      .calendar-grid{grid-template-columns:repeat(2, minmax(0,1fr))}
+      .ops-grid{grid-template-columns:1fr}
+      .calendar-day{min-height:90px}
+    }
+
   </style>
 </head>
 <body>
@@ -1800,6 +2016,7 @@
         <a href="#services">Services</a>
         <a href="#gallery">Gallery</a>
         <a href="#packages">Packages</a>
+        <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
       </nav>
 
@@ -2145,6 +2362,46 @@
               </div>
             </div>
 
+
+            <div class="form-grid">
+              <div class="field">
+                <label for="eventTime">Preferred Time</label>
+                <input id="eventTime" name="eventTime" type="time">
+              </div>
+              <div class="field">
+                <label for="budgetRange">Budget Range</label>
+                <select id="budgetRange" name="budgetRange">
+                  <option value="">Select budget range</option>
+                  <option>Under $150 AUD</option>
+                  <option>$150 - $300 AUD</option>
+                  <option>$300 - $600 AUD</option>
+                  <option>$600+ AUD</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-grid">
+              <div class="field">
+                <label for="venueType">Indoor / Outdoor</label>
+                <select id="venueType" name="venueType">
+                  <option value="">Select venue style</option>
+                  <option>Indoor</option>
+                  <option>Outdoor</option>
+                  <option>Mixed</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="leadSourceInput">How did you find us?</label>
+                <select id="leadSourceInput" name="leadSource">
+                  <option>Website</option>
+                  <option>Facebook</option>
+                  <option>Referral</option>
+                  <option>Walk-in</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+
             <div class="toolbar-row">
               <div class="field">
                 <label for="guestCount">Estimated Guests</label>
@@ -2154,9 +2411,27 @@
                 <label for="setupHours">Setup Hours</label>
                 <input id="setupHours" name="setupHours" type="number" min="1" max="16" value="4" required>
               </div>
+
               <div class="field">
                 <label for="venue">Venue / Area</label>
                 <input id="venue" name="venue" type="text" placeholder="Yeppoon / nearby area" required>
+              </div>
+            </div>
+
+            <div class="form-grid">
+              <div class="field">
+                <label for="deliveryRequired">Delivery Required</label>
+                <select id="deliveryRequired" name="deliveryRequired">
+                  <option>Yes</option>
+                  <option>No</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="setupRequired">Setup Required</label>
+                <select id="setupRequired" name="setupRequired">
+                  <option>Yes</option>
+                  <option>No</option>
+                </select>
               </div>
             </div>
 
@@ -2207,6 +2482,7 @@
               </div>
             </div>
             <div class="inventory-warning" id="inventoryWarning">Selected package exceeds available inventory for the chosen setup. Please lower guest count, change package, or adjust extras.</div>
+            <div class="booking-conflict" id="bookingConflictWarning">Selected date is blocked or already heavily booked. Please review availability before saving.</div>
 
             <div class="field">
               <label for="message">Details</label>
@@ -2235,12 +2511,24 @@
               <div class="status-pill ok" id="invoiceStatus">Draft saved locally</div>
             </div>
             <div class="invoice-line"><span>Client</span><strong id="invoiceClient">—</strong></div>
+            <div class="invoice-line"><span>Quote Number</span><strong id="invoiceQuoteNumber">—</strong></div>
+            <div class="invoice-line"><span>Invoice Number</span><strong id="invoiceInvoiceNumber">—</strong></div>
+            <div class="invoice-line"><span>Quote Expiry</span><strong id="invoiceExpiry">—</strong></div>
             <div class="invoice-line"><span>Event Date</span><strong id="invoiceDate">—</strong></div>
             <div class="invoice-line"><span>Package</span><strong id="invoicePackage">—</strong></div>
             <div class="invoice-line"><span>Extras</span><strong id="invoiceExtras">None</strong></div>
             <div class="invoice-line"><span>Venue</span><strong id="invoiceVenue">—</strong></div>
             <div class="invoice-line"><span>Inventory Allocation</span><strong id="invoiceInventory">—</strong></div>
+            <div class="invoice-line"><span>Event Summary</span><strong id="invoiceEventSummary">—</strong></div>
+            <div class="invoice-line"><span>Line Items</span><strong id="invoiceLineItems">—</strong></div>
+            <div class="invoice-line"><span>Subtotal</span><strong id="invoiceSubtotal">$0 AUD</strong></div>
+            <div class="invoice-line"><span>Discount</span><strong id="invoiceDiscount">$0 AUD</strong></div>
+            <div class="invoice-line"><span>Delivery Fee</span><strong id="invoiceDeliveryFee">$0 AUD</strong></div>
+            <div class="invoice-line"><span>Setup Fee</span><strong id="invoiceSetupFee">$0 AUD</strong></div>
+            <div class="invoice-line"><span>Deposit</span><strong id="invoiceDeposit">$0 AUD</strong></div>
+            <div class="invoice-line"><span>Balance Due</span><strong id="invoiceBalanceDue">$0 AUD</strong></div>
             <div class="invoice-line"><span>Total</span><strong id="invoiceTotal">$0 AUD</strong></div>
+            <div class="invoice-notes" id="invoiceNotes">Operations notes and payment terms will appear here.</div>
             <div class="invoice-actions">
               <button class="btn btn-primary" id="printInvoiceBtn" type="button">Print Invoice</button>
               <button class="btn btn-secondary" id="downloadBookingsBtn" type="button">Export Bookings JSON</button>
@@ -2340,6 +2628,19 @@
           <div class="person">Happy Client<span class="role">Review</span></div>
         </article>
       </div>
+    </div>
+  </section>
+
+
+  <section class="section" id="faq" style="padding-top:0;">
+    <div class="container">
+      <div style="text-align:center;" class="reveal">
+        <h2 class="section-title" id="faqTitle">Frequently Asked Questions</h2>
+        <p class="section-subtitle" id="faqSubtitle">
+          Helpful answers about bookings, setup timing, delivery, and date availability.
+        </p>
+      </div>
+      <div class="faq-grid" id="faqGrid"></div>
     </div>
   </section>
 
@@ -2485,6 +2786,8 @@
       <div class="admin-tab-row" id="adminTabRow">
         <button class="admin-tab-btn active" type="button" data-admin-tab="overview">Overview</button>
         <button class="admin-tab-btn" type="button" data-admin-tab="bookings">Bookings</button>
+        <button class="admin-tab-btn" type="button" data-admin-tab="calendar">Calendar</button>
+        <button class="admin-tab-btn" type="button" data-admin-tab="inventory">Inventory</button>
         <button class="admin-tab-btn" type="button" data-admin-tab="cms">CMS Content</button>
         <button class="admin-tab-btn" type="button" data-admin-tab="gallery">Gallery Manager</button>
         <button class="admin-tab-btn" type="button" data-admin-tab="packages">Packages Manager</button>
@@ -2522,6 +2825,7 @@
       <section class="admin-tab-panel" data-admin-panel="bookings">
         <div class="admin-booking-grid">
           <div class="admin-panel-card">
+
             <div class="settings-grid">
               <div class="field">
                 <label for="adminBookingSearch">Search</label>
@@ -2532,8 +2836,11 @@
                 <select id="adminBookingStatusFilter">
                   <option value="">All statuses</option>
                   <option>New</option>
-                  <option>Pending</option>
+                  <option>Contacted</option>
+                  <option>Quoted</option>
+                  <option>Awaiting Deposit</option>
                   <option>Confirmed</option>
+                  <option>Scheduled</option>
                   <option>Completed</option>
                   <option>Cancelled</option>
                 </select>
@@ -2545,6 +2852,29 @@
                   <option>Unpaid</option>
                   <option>Paid</option>
                   <option>Partial</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="adminBookingSourceFilter">Lead Source</label>
+                <select id="adminBookingSourceFilter">
+                  <option value="">All sources</option>
+                  <option>Website</option>
+                  <option>Facebook</option>
+                  <option>Referral</option>
+                  <option>Walk-in</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="adminBookingDateFilter">Event Date</label>
+                <input id="adminBookingDateFilter" type="date">
+              </div>
+              <div class="field">
+                <label for="adminBookingSort">Sort</label>
+                <select id="adminBookingSort">
+                  <option value="newest">Newest first</option>
+                  <option value="oldest">Oldest first</option>
+                  <option value="upcoming">Upcoming events</option>
                 </select>
               </div>
             </div>
@@ -2574,17 +2904,39 @@
             </div>
             <div id="bookingEditorSummary" class="admin-empty" style="margin-top:14px;">Choose a booking from the table to manage its workflow.</div>
 
-            <form id="bookingEditorForm" style="display:grid; gap:14px; margin-top:18px;">
+            
+<form id="bookingEditorForm" style="display:grid; gap:14px; margin-top:18px;">
               <input type="hidden" id="bookingEditorId">
               <div class="settings-grid">
                 <div class="field">
                   <label for="adminEditStatus">Booking Status</label>
                   <select id="adminEditStatus" required>
                     <option>New</option>
-                    <option>Pending</option>
+                    <option>Contacted</option>
+                    <option>Quoted</option>
+                    <option>Awaiting Deposit</option>
                     <option>Confirmed</option>
+                    <option>Scheduled</option>
                     <option>Completed</option>
                     <option>Cancelled</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="adminEditPriority">Priority</label>
+                  <select id="adminEditPriority">
+                    <option>Medium</option>
+                    <option>Low</option>
+                    <option>High</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="adminEditSource">Lead Source</label>
+                  <select id="adminEditSource">
+                    <option>Website</option>
+                    <option>Facebook</option>
+                    <option>Referral</option>
+                    <option>Walk-in</option>
+                    <option>Other</option>
                   </select>
                 </div>
                 <div class="field">
@@ -2599,15 +2951,148 @@
                   <label for="adminEditQuoteAmount">Quote Amount</label>
                   <input id="adminEditQuoteAmount" type="number" min="0" step="1" placeholder="0">
                 </div>
+                <div class="field">
+                  <label for="adminEditDepositAmount">Deposit Amount</label>
+                  <input id="adminEditDepositAmount" type="number" min="0" step="1" placeholder="0">
+                </div>
+                <div class="field">
+                  <label for="adminEditPaidAmount">Paid Amount</label>
+                  <input id="adminEditPaidAmount" type="number" min="0" step="1" placeholder="0">
+                </div>
+                <div class="field">
+                  <label for="adminEditBalanceDue">Balance Due</label>
+                  <input id="adminEditBalanceDue" type="number" min="0" step="1" placeholder="0">
+                </div>
+                <div class="field">
+                  <label for="adminEditFollowUpDate">Follow-up Date</label>
+                  <input id="adminEditFollowUpDate" type="date">
+                </div>
+                <div class="field">
+                  <label for="adminEditQuoteExpiry">Quote Expiry</label>
+                  <input id="adminEditQuoteExpiry" type="date">
+                </div>
+                <div class="field">
+                  <label for="adminEditAssignedStaff">Assigned Staff</label>
+                  <input id="adminEditAssignedStaff" type="text" placeholder="Assign staff member">
+                </div>
+                <div class="field">
+                  <label for="adminEditEventTime">Event Time</label>
+                  <input id="adminEditEventTime" type="time">
+                </div>
                 <div class="field full">
                   <label for="adminEditNotes">Admin Notes</label>
                   <textarea id="adminEditNotes" placeholder="Add internal admin notes for this booking"></textarea>
+                </div>
+                <div class="field full">
+                  <label for="adminEditEventNotes">Event Notes</label>
+                  <textarea id="adminEditEventNotes" placeholder="Notes for delivery, venue access, setup timing, or client requests"></textarea>
+                </div>
+                <div class="field full">
+                  <label for="adminEditIssueReport">Issue / Damage Report</label>
+                  <textarea id="adminEditIssueReport" placeholder="Record issues, damages, or client concerns"></textarea>
+                </div>
+                <div class="field full">
+                  <label for="adminEditMissingItems">Missing Item Log</label>
+                  <textarea id="adminEditMissingItems" placeholder="Record missing items or return follow-up needs"></textarea>
+                </div>
+                <div class="field full">
+                  <label>Operations Checklists</label>
+                  <div class="ops-grid">
+                    <label class="check-chip"><input id="adminEditDeliveryDone" type="checkbox"> Delivery complete</label>
+                    <label class="check-chip"><input id="adminEditSetupDone" type="checkbox"> Setup complete</label>
+                    <label class="check-chip"><input id="adminEditPickupDone" type="checkbox"> Pickup complete</label>
+                  </div>
                 </div>
               </div>
               <div class="inline-actions">
                 <button class="btn btn-primary" type="submit">Save Booking Update</button>
                 <button class="btn btn-secondary" type="button" id="clearBookingEditorBtn">Clear Editor</button>
                 <button class="btn btn-secondary" type="button" id="deleteSelectedBookingBtn" disabled>Delete Selected</button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      
+</section>
+
+      <section class="admin-tab-panel" data-admin-panel="calendar">
+        <div class="admin-calendar-grid">
+          <div class="admin-panel-card">
+            <div class="calendar-toolbar">
+              <h4 style="margin:0;">Booking Calendar</h4>
+              <div class="inline-actions">
+                <button class="btn btn-secondary" type="button" id="calendarPrevMonth">← Prev</button>
+                <button class="btn btn-secondary" type="button" id="calendarTodayBtn">Today</button>
+                <button class="btn btn-secondary" type="button" id="calendarNextMonth">Next →</button>
+              </div>
+            </div>
+            <div class="admin-inline-meta" style="margin-bottom:16px;">
+              <span id="calendarMonthLabel">Month</span>
+              <span id="calendarSelectedLabel">Select a date</span>
+            </div>
+            <div class="calendar-grid" id="calendarGrid"></div>
+          </div>
+          <div class="inline-stack">
+            <div class="admin-panel-card">
+              <h4 style="margin:0 0 12px;">Block / Unblock Date</h4>
+              <form id="calendarBlockForm" style="display:grid; gap:12px;">
+                <div class="field"><label for="calendarBlockDate">Date</label><input id="calendarBlockDate" type="date" required></div>
+                <div class="field"><label for="calendarBlockNote">Note</label><textarea id="calendarBlockNote" placeholder="Reason for blocking this date"></textarea></div>
+                <div class="inline-actions">
+                  <button class="btn btn-primary" type="submit">Save Blocked Date</button>
+                  <button class="btn btn-secondary" type="button" id="calendarClearSelectedBtn">Clear Date</button>
+                </div>
+              </form>
+            </div>
+            <div class="admin-panel-card">
+              <h4 style="margin:0 0 12px;">Selected Date Activity</h4>
+              <div class="calendar-selected-events" id="calendarSelectedEvents"></div>
+              <div class="admin-empty" id="calendarSelectedEmpty">Select a date to review bookings and blocked notes.</div>
+            </div>
+            <div class="admin-panel-card">
+              <h4 style="margin:0 0 12px;">Blocked Dates</h4>
+              <div class="blocked-date-list" id="blockedDatesList"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="admin-tab-panel" data-admin-panel="inventory">
+        <div class="inventory-manager-grid">
+          <div class="admin-panel-card">
+            <div style="display:flex; justify-content:space-between; gap:12px; align-items:center; flex-wrap:wrap;">
+              <h4 style="margin:0;">Inventory Reservations</h4>
+              <div class="field" style="min-width:220px; margin:0;">
+                <label for="inventoryDateFilter">Check availability for date</label>
+                <input id="inventoryDateFilter" type="date">
+              </div>
+            </div>
+            <div class="inventory-chip-row" id="inventoryReservationSummary"></div>
+            <div class="inventory-manager-list" id="inventoryManagerList" style="margin-top:16px;"></div>
+          </div>
+          <div class="admin-panel-card">
+            <h4 style="margin:0 0 12px;">Add / Edit Inventory Item</h4>
+            <form id="inventoryItemForm" style="display:grid; gap:14px;">
+              <input type="hidden" id="inventoryEditIndex">
+              <div class="field"><label for="inventoryItemName">Item Name</label><input id="inventoryItemName" type="text" required></div>
+              <div class="field"><label for="inventoryItemCategory">Category</label><input id="inventoryItemCategory" type="text" placeholder="Seating, Decor, Equipment"></div>
+              <div class="field">
+                <label for="inventoryItemResourceType">Linked Resource</label>
+                <select id="inventoryItemResourceType">
+                  <option value="">Standalone item</option>
+                  <option value="chairs">Chairs</option>
+                  <option value="tables">Tables</option>
+                  <option value="decorations">Decorations</option>
+                </select>
+              </div>
+              <div class="field"><label for="inventoryItemTotal">Total Stock</label><input id="inventoryItemTotal" type="number" min="0" step="1" required></div>
+              <div class="field"><label for="inventoryItemDamaged">Damaged / Unavailable</label><input id="inventoryItemDamaged" type="number" min="0" step="1" value="0"></div>
+              <div class="field"><label for="inventoryItemThreshold">Low Stock Threshold</label><input id="inventoryItemThreshold" type="number" min="0" step="1" value="0"></div>
+              <div class="field full"><label for="inventoryItemNotes">Notes</label><textarea id="inventoryItemNotes"></textarea></div>
+              <div class="inline-actions">
+                <button class="btn btn-primary" type="submit">Save Inventory Item</button>
+                <button class="btn btn-secondary" type="button" id="cancelInventoryEdit">Clear Form</button>
               </div>
             </form>
           </div>
@@ -2621,12 +3106,15 @@
             <div class="cms-grid">
               <div class="field"><label for="brandName">Brand Name</label><input id="brandName" name="brandName" type="text"></div>
               <div class="field"><label for="brandTagline">Brand Tagline</label><input id="brandTagline" name="brandTagline" type="text"></div>
+              <div class="field"><label for="brandBadgeText">Logo / Badge Text</label><input id="brandBadgeText" name="brandBadgeText" type="text" maxlength="3"></div>
               <div class="field full"><label for="heroEyebrow">Hero Eyebrow</label><input id="heroEyebrow" name="heroEyebrow" type="text"></div>
               <div class="field"><label for="heroTitle">Hero Title</label><input id="heroTitle" name="heroTitle" type="text"></div>
               <div class="field"><label for="heroAccent">Hero Accent</label><input id="heroAccent" name="heroAccent" type="text"></div>
               <div class="field full"><label for="heroSubtitle">Hero Subtitle</label><textarea id="heroSubtitle" name="heroSubtitle"></textarea></div>
               <div class="field"><label for="heroPrimaryCtaText">Primary CTA Text</label><input id="heroPrimaryCtaText" name="heroPrimaryCtaText" type="text"></div>
+              <div class="field"><label for="heroPrimaryCtaLink">Primary CTA Link</label><input id="heroPrimaryCtaLink" name="heroPrimaryCtaLink" type="text" placeholder="#contact or https://..."></div>
               <div class="field"><label for="heroSecondaryCtaText">Secondary CTA Text</label><input id="heroSecondaryCtaText" name="heroSecondaryCtaText" type="text"></div>
+              <div class="field"><label for="heroSecondaryCtaLink">Secondary CTA Action</label><input id="heroSecondaryCtaLink" name="heroSecondaryCtaLink" type="text" placeholder="modal:booking or #packages"></div>
               <div class="field full"><label for="heroBadges">Hero Badges (one per line)</label><textarea id="heroBadges" name="heroBadges"></textarea></div>
               <div class="field full"><label for="heroStats">Hero Stats (one per line, format: value | label)</label><textarea id="heroStats" name="heroStats"></textarea></div>
               <div class="field"><label for="heroPanelTitle">Hero Panel Title</label><input id="heroPanelTitle" name="heroPanelTitle" type="text"></div>
@@ -2660,6 +3148,9 @@
               <div class="field"><label for="testimonialsTitle">Testimonials Title</label><input id="testimonialsTitle" name="testimonialsTitle" type="text"></div>
               <div class="field full"><label for="testimonialsSubtitle">Testimonials Subtitle</label><textarea id="testimonialsSubtitle" name="testimonialsSubtitle"></textarea></div>
               <div class="field full"><label for="footerSummary">Footer Summary</label><textarea id="footerSummary" name="footerSummary"></textarea></div>
+              <div class="field"><label for="faqTitleInput">FAQ Title</label><input id="faqTitleInput" name="faqTitleInput" type="text"></div>
+              <div class="field full"><label for="faqSubtitleInput">FAQ Subtitle</label><textarea id="faqSubtitleInput" name="faqSubtitleInput"></textarea></div>
+              <div class="field full"><label for="faqItemsInput">FAQ Items (one per line, format: question | answer)</label><textarea id="faqItemsInput" name="faqItemsInput"></textarea></div>
             </div>
           </div>
 
@@ -2693,6 +3184,8 @@
               <div class="field"><label for="galleryItemImage">Full Image URL</label><input id="galleryItemImage" name="galleryImage" type="url" required></div>
               <div class="field"><label for="galleryItemThumb">Thumbnail URL</label><input id="galleryItemThumb" name="galleryThumb" type="url"></div>
               <div class="field"><label for="galleryItemLocation">Location</label><input id="galleryItemLocation" name="galleryLocation" type="text"></div>
+              <div class="field"><label for="galleryItemRelatedPackage">Related Package</label><input id="galleryItemRelatedPackage" name="galleryRelatedPackage" type="text" placeholder="Optional package title"></div>
+              <div class="field"><label for="galleryItemCtaText">CTA Button Text</label><input id="galleryItemCtaText" name="galleryCtaText" type="text" placeholder="Book this setup"></div>
               <div class="field"><label style="display:flex; align-items:center; gap:10px;"><input id="galleryItemVisible" name="galleryVisible" type="checkbox" checked> Visible on public site</label></div>
               <div class="field"><label for="galleryItemDescription">Description</label><textarea id="galleryItemDescription" name="galleryDescription"></textarea></div>
               <div class="inline-actions">
@@ -2718,6 +3211,12 @@
               <div class="field"><label for="packageTitle">Title</label><input id="packageTitle" name="packageTitle" type="text" required></div>
               <div class="field"><label for="packagePrice">Price</label><input id="packagePrice" name="packagePrice" type="number" min="0" step="1" required></div>
               <div class="field"><label for="packageButtonText">Button Text</label><input id="packageButtonText" name="packageButtonText" type="text"></div>
+              <div class="field"><label for="packageImage">Image URL</label><input id="packageImage" name="packageImage" type="url"></div>
+              <div class="field"><label for="packageDeliveryFee">Delivery Fee</label><input id="packageDeliveryFee" name="packageDeliveryFee" type="number" min="0" step="1"></div>
+              <div class="field"><label for="packageSetupFee">Setup Fee</label><input id="packageSetupFee" name="packageSetupFee" type="number" min="0" step="1"></div>
+              <div class="field"><label for="packageDiscount">Discount</label><input id="packageDiscount" name="packageDiscount" type="number" min="0" step="1"></div>
+              <div class="field"><label for="packageDeposit">Deposit</label><input id="packageDeposit" name="packageDeposit" type="number" min="0" step="1"></div>
+              <div class="field"><label for="packageAdjustment">Manual Adjustment</label><input id="packageAdjustment" name="packageAdjustment" type="number" step="1" value="0"></div>
               <div class="field"><label for="packageChairs">Chairs</label><input id="packageChairs" name="packageChairs" type="number" min="0" step="1"></div>
               <div class="field"><label for="packageTables">Tables</label><input id="packageTables" name="packageTables" type="number" min="0" step="1"></div>
               <div class="field"><label for="packageDecorations">Decorations</label><input id="packageDecorations" name="packageDecorations" type="number" min="0" step="1"></div>
@@ -2725,6 +3224,7 @@
               <div class="field"><label style="display:flex; align-items:center; gap:10px;"><input id="packageVisible" name="packageVisible" type="checkbox" checked> Visible on public site</label></div>
               <div class="field"><label for="packageDescription">Description</label><textarea id="packageDescription" name="packageDescription"></textarea></div>
               <div class="field"><label for="packageFeatures">Features (one per line)</label><textarea id="packageFeatures" name="packageFeatures"></textarea></div>
+              <div class="field"><label for="packageAddons">Optional Add-ons (one per line, format: name | price)</label><textarea id="packageAddons" name="packageAddons"></textarea></div>
               <div class="inline-actions">
                 <button class="btn btn-primary" type="submit">Save Package</button>
                 <button class="btn btn-secondary" type="button" id="cancelPackageEdit">Clear Form</button>
@@ -2748,6 +3248,7 @@
               <div class="field"><label for="testimonialStars">Stars</label><input id="testimonialStars" name="testimonialStars" type="number" min="1" max="5" step="1" value="5"></div>
               <div class="field"><label for="testimonialPerson">Person</label><input id="testimonialPerson" name="testimonialPerson" type="text"></div>
               <div class="field"><label for="testimonialRole">Role</label><input id="testimonialRole" name="testimonialRole" type="text"></div>
+              <div class="field"><label for="testimonialPhoto">Photo URL</label><input id="testimonialPhoto" name="testimonialPhoto" type="url"></div>
               <div class="field"><label style="display:flex; align-items:center; gap:10px;"><input id="testimonialVisible" name="testimonialVisible" type="checkbox" checked> Visible on public site</label></div>
               <div class="field"><label for="testimonialText">Testimonial Text</label><textarea id="testimonialText" name="testimonialText"></textarea></div>
               <div class="inline-actions">
@@ -2789,6 +3290,8 @@
             <button class="btn btn-secondary" id="exportPackagesBtn" type="button">Export Packages</button>
             <button class="btn btn-secondary" id="exportTestimonialsBtn" type="button">Export Testimonials</button>
             <button class="btn btn-secondary" id="exportSettingsBtn" type="button">Export Settings</button>
+            <button class="btn btn-secondary" id="exportInventoryBtn" type="button">Export Inventory</button>
+            <button class="btn btn-secondary" id="resetAllDataBtn" type="button">Reset All Data</button>
           </div>
           <input id="backupImportInput" type="file" accept="application/json,.json" hidden>
         </div>
@@ -2805,10 +3308,13 @@
               <div class="field"><label for="settingsLocation">Location</label><input id="settingsLocation" name="location" type="text"></div>
               <div class="field full"><label for="settingsServiceArea">Service Area</label><input id="settingsServiceArea" name="serviceArea" type="text"></div>
               <div class="field full"><label for="settingsFacebookUrl">Facebook URL</label><input id="settingsFacebookUrl" name="facebookUrl" type="url"></div>
+              <div class="field"><label for="settingsAccessRole">Current Access Role</label><select id="settingsAccessRole" name="accessRole"><option>Owner</option><option>Admin</option><option>Staff</option><option>Viewer</option></select></div>
+              <div class="field"><label for="settingsQuoteExpiryDays">Default Quote Expiry (days)</label><input id="settingsQuoteExpiryDays" name="quoteExpiryDays" type="number" min="1" step="1"></div>
               <div class="field"><label for="settingsWhatsappNumber">WhatsApp Number</label><input id="settingsWhatsappNumber" name="whatsappNumber" type="text"></div>
               <div class="field"><label for="settingsSocialButtonText">Social Button Text</label><input id="settingsSocialButtonText" name="socialButtonText" type="text"></div>
               <div class="field"><label for="settingsEmailButtonText">Email Button Text</label><input id="settingsEmailButtonText" name="emailButtonText" type="text"></div>
               <div class="field full"><label for="settingsPlanningTip">Planning Tip</label><textarea id="settingsPlanningTip" name="planningTip"></textarea></div>
+              <div class="field full"><label for="settingsStaffMembers">Staff Members (one per line)</label><textarea id="settingsStaffMembers" name="staffMembers"></textarea></div>
             </div>
           </div>
 
@@ -2852,6 +3358,10 @@
         <p id="lightboxDescription">Project details will appear here.</p>
         <div class="lightbox-meta">
           <span id="lightboxLocation">Location not provided</span>
+          <span id="lightboxRelatedPackage">Related package not set</span>
+        </div>
+        <div class="lightbox-cta">
+          <button class="btn btn-primary" id="lightboxBookBtn" type="button">Book this setup</button>
         </div>
       </div>
     </div>
@@ -3003,6 +3513,70 @@
     };
     const adminAnalyticsNotes = document.getElementById("adminAnalyticsNotes");
 
+    const bookingConflictWarning = document.getElementById("bookingConflictWarning");
+    const eventTimeInput = document.getElementById("eventTime");
+    const budgetRangeInput = document.getElementById("budgetRange");
+    const venueTypeInput = document.getElementById("venueType");
+    const leadSourceInput = document.getElementById("leadSourceInput");
+    const deliveryRequiredInput = document.getElementById("deliveryRequired");
+    const setupRequiredInput = document.getElementById("setupRequired");
+    const invoiceQuoteNumber = document.getElementById("invoiceQuoteNumber");
+    const invoiceInvoiceNumber = document.getElementById("invoiceInvoiceNumber");
+    const invoiceExpiry = document.getElementById("invoiceExpiry");
+    const invoiceEventSummary = document.getElementById("invoiceEventSummary");
+    const invoiceLineItems = document.getElementById("invoiceLineItems");
+    const invoiceSubtotal = document.getElementById("invoiceSubtotal");
+    const invoiceDiscount = document.getElementById("invoiceDiscount");
+    const invoiceDeliveryFee = document.getElementById("invoiceDeliveryFee");
+    const invoiceSetupFee = document.getElementById("invoiceSetupFee");
+    const invoiceDeposit = document.getElementById("invoiceDeposit");
+    const invoiceBalanceDue = document.getElementById("invoiceBalanceDue");
+    const invoiceNotes = document.getElementById("invoiceNotes");
+    const faqTitleEl = document.getElementById("faqTitle");
+    const faqSubtitleEl = document.getElementById("faqSubtitle");
+    const faqGrid = document.getElementById("faqGrid");
+    const lightboxRelatedPackage = document.getElementById("lightboxRelatedPackage");
+    const lightboxBookBtn = document.getElementById("lightboxBookBtn");
+    const adminBookingSourceFilter = document.getElementById("adminBookingSourceFilter");
+    const adminBookingDateFilter = document.getElementById("adminBookingDateFilter");
+    const adminBookingSort = document.getElementById("adminBookingSort");
+    const adminEditPriority = document.getElementById("adminEditPriority");
+    const adminEditSource = document.getElementById("adminEditSource");
+    const adminEditDepositAmount = document.getElementById("adminEditDepositAmount");
+    const adminEditPaidAmount = document.getElementById("adminEditPaidAmount");
+    const adminEditBalanceDue = document.getElementById("adminEditBalanceDue");
+    const adminEditFollowUpDate = document.getElementById("adminEditFollowUpDate");
+    const adminEditQuoteExpiry = document.getElementById("adminEditQuoteExpiry");
+    const adminEditAssignedStaff = document.getElementById("adminEditAssignedStaff");
+    const adminEditEventTime = document.getElementById("adminEditEventTime");
+    const adminEditEventNotes = document.getElementById("adminEditEventNotes");
+    const adminEditIssueReport = document.getElementById("adminEditIssueReport");
+    const adminEditMissingItems = document.getElementById("adminEditMissingItems");
+    const adminEditDeliveryDone = document.getElementById("adminEditDeliveryDone");
+    const adminEditSetupDone = document.getElementById("adminEditSetupDone");
+    const adminEditPickupDone = document.getElementById("adminEditPickupDone");
+    const calendarGrid = document.getElementById("calendarGrid");
+    const calendarMonthLabel = document.getElementById("calendarMonthLabel");
+    const calendarSelectedLabel = document.getElementById("calendarSelectedLabel");
+    const calendarPrevMonth = document.getElementById("calendarPrevMonth");
+    const calendarTodayBtn = document.getElementById("calendarTodayBtn");
+    const calendarNextMonth = document.getElementById("calendarNextMonth");
+    const calendarBlockForm = document.getElementById("calendarBlockForm");
+    const calendarBlockDate = document.getElementById("calendarBlockDate");
+    const calendarBlockNote = document.getElementById("calendarBlockNote");
+    const calendarClearSelectedBtn = document.getElementById("calendarClearSelectedBtn");
+    const blockedDatesList = document.getElementById("blockedDatesList");
+    const calendarSelectedEvents = document.getElementById("calendarSelectedEvents");
+    const calendarSelectedEmpty = document.getElementById("calendarSelectedEmpty");
+    const inventoryDateFilter = document.getElementById("inventoryDateFilter");
+    const inventoryReservationSummary = document.getElementById("inventoryReservationSummary");
+    const inventoryManagerList = document.getElementById("inventoryManagerList");
+    const inventoryItemForm = document.getElementById("inventoryItemForm");
+    const inventoryEditIndex = document.getElementById("inventoryEditIndex");
+    const cancelInventoryEdit = document.getElementById("cancelInventoryEdit");
+    const exportInventoryBtn = document.getElementById("exportInventoryBtn");
+    const resetAllDataBtn = document.getElementById("resetAllDataBtn");
+
     const brandNameEl = document.querySelector(".brand-text strong");
     const brandTaglineEl = document.querySelector(".brand-text span");
     const brandBadgeEl = document.querySelector(".brand-badge");
@@ -3070,10 +3644,13 @@
     const splash = document.getElementById("appReadySplash");
     const splashBrandName = splash ? splash.querySelector("div > div:nth-child(2)") : null;
 
+
     const STORAGE_KEYS = {
       theme: "fiesta-theme",
       bookings: "fiesta-bookings",
       inventory: "fiesta-inventory",
+      inventoryItems: "fiesta-inventory-items",
+      inventoryMeta: "fiesta-inventory-meta",
       quick: "fiesta-quick-inquiry",
       latest: "fiesta-booking-last",
       adminPassword: "fiesta-admin-password",
@@ -3082,13 +3659,16 @@
       gallery: "fiesta-gallery-items",
       packages: "fiesta-package-items",
       testimonials: "fiesta-testimonials",
-      settings: "fiesta-settings"
+      settings: "fiesta-settings",
+      calendar: "fiesta-calendar-data"
     };
 
     const FIXED_ADMIN_PASSWORD = "FiestaAdmin2026!";
     const DEFAULT_INVENTORY = { chairs: 120, tables: 30, decorations: 24 };
-    const BOOKING_STATUSES = ["New", "Pending", "Confirmed", "Completed", "Cancelled"];
+    const BOOKING_STATUSES = ["New", "Contacted", "Quoted", "Awaiting Deposit", "Confirmed", "Scheduled", "Completed", "Cancelled"];
     const PAYMENT_STATUSES = ["Unpaid", "Paid", "Partial"];
+    const PRIORITY_LEVELS = ["Low", "Medium", "High"];
+    const ACCESS_ROLES = ["Owner", "Admin", "Staff", "Viewer"];
     const EVENT_SUGGESTIONS = {
       Birthday: ["Add a balloon arch for a photo-ready focal point.", "Fairy lights work well for evening birthday setups.", "Backdrop + cake stand creates a stronger celebration area."],
       Wedding: ["Consider a backdrop and fairy lights for a more elegant reception look.", "Premium package pairs well with extra chairs for family seating.", "Swap bright balloons for softer styling touches if you want a classic reception feel."],
@@ -3100,12 +3680,15 @@
     const DEFAULT_CMS = {
       brandName: "Fiesta Party Hire Yeppoon",
       brandTagline: "Marquees, Decorations & Party Hire",
-      heroEyebrow: "Celebrate in style with Fiesta Party Hire Yeppoon Yeppoon",
+      brandBadgeText: "F",
+      heroEyebrow: "Celebrate in style with Fiesta Party Hire Yeppoon",
       heroTitle: "Make Every Gathering",
       heroAccent: "Beautiful",
       heroSubtitle: "Based in Yeppoon, Queensland, Australia, Fiesta Party Hire Yeppoon offers marquees, tables and chairs, party decorations, keepsakes, and balloons for all types of gatherings. Party hire packages and individual hire items are available for events of any size.",
       heroPrimaryCtaText: "Book Now",
+      heroPrimaryCtaLink: "#contact",
       heroSecondaryCtaText: "Get a Quick Quote",
+      heroSecondaryCtaLink: "modal:booking",
       heroBadges: ["Trusted in Yeppoon", "Stylish Party Hire", "Mobile Friendly"],
       heroStats: [
         { value: "0427", label: "944 574" },
@@ -3122,18 +3705,18 @@
       ],
       heroChips: ["Birthdays", "Family Events", "Corporate Setups", "Custom Themes"],
       aboutTitle: "About Fiesta Party Hire Yeppoon",
-      aboutSubtitle: "We bring party spaces to life with reliable hire essentials, decorative details, and friendly staff who help make every setup smooth and memorable. Whether you are planning a birthday, Mermaid Party, baby shower, wedding reception, or private gathering, we help make the entire setup stress-free and memorable.",
+      aboutSubtitle: "We bring party spaces to life with reliable hire essentials, decorative details, and friendly staff who help make every setup smooth and memorable. Whether you are planning a birthday, baby shower, wedding reception, or private gathering, we help make the entire setup stress-free and memorable.",
       aboutCardTitle: "Why clients choose us",
       aboutCardText: "Our focus is simple: provide clean, attractive, and practical party hire services that suit your needs, supported by friendly staff and dependable service. We combine convenience, festive styling, and dependable service so your event looks polished and feels special from start to finish.",
       aboutList: [
         "Complete hire support for marquees, table settings, glassware, cutlery, and event essentials.",
-        "Decor-friendly setup options for Mermaid Party themes, baby showers, and other styled gatherings.",
+        "Decor-friendly setup options for themed parties, baby showers, and styled gatherings.",
         "Flexible party hire options for casual parties, wedding receptions, formal celebrations, and custom events.",
         "Easy booking process with fast communication and personalized assistance."
       ],
       aboutImage: "https://images.unsplash.com/photo-1464349153735-7db50ed83c84?auto=format&fit=crop&w=1200&q=80",
       aboutNoteTitle: "Styled for celebrations",
-      aboutNoteText: "This includes the hire of the wedding reception venue as well as equipment needed for decorations. Our offerings encompass plates, glassware, wine glasses, cutlery, table settings, marquees and other related items.",
+      aboutNoteText: "This includes the hire of the venue essentials as well as equipment needed for decorations. Our offerings encompass plates, glassware, cutlery, table settings, marquees and other related items.",
       servicesTitle: "Our Services",
       servicesSubtitle: "Everything you need for party hire, marquees, decorations, and gathering setups across Yeppoon and surrounding areas.",
       serviceItems: [
@@ -3154,7 +3737,15 @@
       contactInfoTitle: "Contact Information",
       testimonialsTitle: "What Clients Say",
       testimonialsSubtitle: "Sample feedback inspired by a friendly, professional event service experience.",
-      footerSummary: "Marquees, tables and chairs, party decorations, keepsakes, and balloons for all types of gatherings."
+      footerSummary: "Marquees, tables and chairs, party decorations, keepsakes, and balloons for all types of gatherings.",
+      faqTitle: "Frequently Asked Questions",
+      faqSubtitle: "Helpful answers about bookings, delivery, setup, payments, and availability.",
+      faqItems: [
+        { question: "How far ahead should I book?", answer: "For weekends, peak dates, and larger events, booking early is best so stock and staff can be reserved properly." },
+        { question: "Can you deliver and set up?", answer: "Yes. Delivery and setup can be added when available. Exact fees depend on location, timing, and package size." },
+        { question: "Do you require a deposit?", answer: "Deposits can be requested for larger or custom setups. The dashboard can track deposit, balance due, and payment status locally." },
+        { question: "Can I request a custom package?", answer: "Yes. Use the inquiry form, choose the nearest package, and include your extra notes so a custom quote can be prepared." }
+      ]
     };
 
     const DEFAULT_GALLERY = [
@@ -3165,6 +3756,8 @@
         thumb: "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=900&q=80",
         description: "Colourful under-the-sea styling with balloon accents, feature tables, and celebration focal points.",
         location: "Yeppoon, QLD",
+        relatedPackage: "Standard Party Hire Package",
+        ctaText: "Book this setup",
         visible: true
       },
       {
@@ -3174,6 +3767,8 @@
         thumb: "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=900&q=80",
         description: "A bright birthday setup with balloons, layered styling, and a polished event table presentation.",
         location: "Yeppoon, QLD",
+        relatedPackage: "Basic Party Hire Package",
+        ctaText: "Book this setup",
         visible: true
       },
       {
@@ -3183,6 +3778,8 @@
         thumb: "https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=900&q=80",
         description: "Outdoor marquee coverage and seating layout for structured gatherings and business events.",
         location: "Yeppoon, QLD",
+        relatedPackage: "Premium Party Hire Package",
+        ctaText: "Book this setup",
         visible: true
       },
       {
@@ -3192,6 +3789,8 @@
         thumb: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=900&q=80",
         description: "Elegant reception styling with layered table details and focal dessert presentation.",
         location: "Yeppoon, QLD",
+        relatedPackage: "Premium Party Hire Package",
+        ctaText: "Book this setup",
         visible: true
       },
       {
@@ -3201,6 +3800,8 @@
         thumb: "https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&w=900&q=80",
         description: "Soft colour palettes, lights, and styling details designed for intimate celebrations.",
         location: "Yeppoon, QLD",
+        relatedPackage: "Standard Party Hire Package",
+        ctaText: "Book this setup",
         visible: true
       },
       {
@@ -3210,6 +3811,8 @@
         thumb: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=900&q=80",
         description: "Flexible hire layout suited to family functions, community events, and general party setups.",
         location: "Yeppoon, QLD",
+        relatedPackage: "Standard Party Hire Package",
+        ctaText: "Book this setup",
         visible: true
       }
     ];
@@ -3219,7 +3822,7 @@
         badge: "Basic",
         title: "Basic Party Hire Package",
         price: 99,
-        description: "Perfect for simple family gatherings, Mermaid Party themes, and smaller event hire needs.",
+        description: "Perfect for simple family gatherings, smaller event hire needs, and quick local setups.",
         features: [
           "Tables and chairs for small group gatherings",
           "Basic balloon accent styling",
@@ -3231,7 +3834,14 @@
         decorations: 1,
         buttonText: "Choose Basic",
         popular: false,
-        visible: true
+        visible: true,
+        image: "",
+        addons: [{ name: "Fairy Lights", price: 25 }, { name: "Cake Stand", price: 20 }],
+        deliveryFee: 0,
+        setupFee: 0,
+        discount: 0,
+        deposit: 30,
+        adjustment: 0
       },
       {
         badge: "Most Popular",
@@ -3249,7 +3859,14 @@
         decorations: 2,
         buttonText: "Choose Standard",
         popular: true,
-        visible: true
+        visible: true,
+        image: "",
+        addons: [{ name: "Backdrop", price: 35 }, { name: "Balloon Arch", price: 45 }],
+        deliveryFee: 15,
+        setupFee: 20,
+        discount: 0,
+        deposit: 60,
+        adjustment: 0
       },
       {
         badge: "Premium",
@@ -3267,7 +3884,14 @@
         decorations: 3,
         buttonText: "Choose Premium",
         popular: false,
-        visible: true
+        visible: true,
+        image: "",
+        addons: [{ name: "Backdrop", price: 35 }, { name: "Fairy Lights", price: 25 }],
+        deliveryFee: 25,
+        setupFee: 35,
+        discount: 0,
+        deposit: 90,
+        adjustment: 0
       }
     ];
 
@@ -3278,6 +3902,7 @@
         person: "Verified Customer",
         role: "Party Hire Review",
         stars: 5,
+        photo: "",
         visible: true
       },
       {
@@ -3286,6 +3911,7 @@
         person: "Local Customer",
         role: "Service Feedback",
         stars: 5,
+        photo: "",
         visible: true
       },
       {
@@ -3294,6 +3920,7 @@
         person: "Happy Client",
         role: "Review",
         stars: 5,
+        photo: "",
         visible: true
       }
     ];
@@ -3317,10 +3944,28 @@
         { name: "Backdrop", price: 35 },
         { name: "Extra Chairs", price: 30 }
       ],
-      lowStockThresholds: { chairs: 18, tables: 6, decorations: 5 }
+      lowStockThresholds: { chairs: 18, tables: 6, decorations: 5 },
+      accessRole: "Owner",
+      quoteExpiryDays: 7,
+      staffMembers: ["Owner", "Admin", "Setup Crew"]
+    };
+
+    const DEFAULT_INVENTORY_ITEMS = [
+      { name: "Chairs", category: "Seating", resourceType: "chairs", totalStock: 120, damagedQty: 0, lowStockThreshold: 18, notes: "Main seating stock." },
+      { name: "Tables", category: "Tables", resourceType: "tables", totalStock: 30, damagedQty: 0, lowStockThreshold: 6, notes: "Folding event tables." },
+      { name: "Decorations", category: "Decor", resourceType: "decorations", totalStock: 24, damagedQty: 0, lowStockThreshold: 5, notes: "Backdrop and décor allocation units." },
+      { name: "Balloon Arch Kits", category: "Decor", resourceType: "", totalStock: 8, damagedQty: 0, lowStockThreshold: 2, notes: "Used for upgraded styled setups." },
+      { name: "Backdrop Frames", category: "Equipment", resourceType: "", totalStock: 6, damagedQty: 0, lowStockThreshold: 2, notes: "Adjustable backdrop support frames." }
+    ];
+
+    const DEFAULT_CALENDAR = {
+      blockedDates: [],
+      selectedDate: "",
+      currentMonth: ""
     };
 
     let activeGalleryFilter = "all";
+
     let activeAdminTab = "overview";
     let adminLoginMode = "login";
     let revealObserver = null;
@@ -3464,6 +4109,7 @@
       writeJSON(STORAGE_KEYS.cms, deepMerge(DEFAULT_CMS, data));
     }
 
+
     function normalizeGalleryItem(item, fallbackIndex){
       return {
         title: String(item?.title || `Gallery Item ${fallbackIndex + 1}`),
@@ -3472,6 +4118,8 @@
         thumb: String(item?.thumb || item?.image || ""),
         description: String(item?.description || "Event styling preview."),
         location: String(item?.location || DEFAULT_SETTINGS.location),
+        relatedPackage: String(item?.relatedPackage || ""),
+        ctaText: String(item?.ctaText || "Book this setup"),
         visible: item?.visible !== false
       };
     }
@@ -3487,6 +4135,10 @@
 
     function normalizePackageItem(item, fallbackIndex){
       const features = Array.isArray(item?.features) ? item.features.map((feature) => String(feature || "").trim()).filter(Boolean) : [];
+      const addons = Array.isArray(item?.addons) ? item.addons.map((addon, index) => ({
+        name: String(addon?.name || `Addon ${index + 1}`).trim(),
+        price: Number(addon?.price || 0)
+      })).filter((addon) => addon.name) : [];
       return {
         badge: String(item?.badge || "Package"),
         title: String(item?.title || `Package ${fallbackIndex + 1}`),
@@ -3498,7 +4150,14 @@
         decorations: Number(item?.decorations || 0),
         buttonText: String(item?.buttonText || "Choose Package"),
         popular: item?.popular === true,
-        visible: item?.visible !== false
+        visible: item?.visible !== false,
+        image: String(item?.image || ""),
+        addons,
+        deliveryFee: Number(item?.deliveryFee || 0),
+        setupFee: Number(item?.setupFee || 0),
+        discount: Number(item?.discount || 0),
+        deposit: Number(item?.deposit || 0),
+        adjustment: Number(item?.adjustment || 0)
       };
     }
 
@@ -3519,6 +4178,7 @@
         person: String(item?.person || "Customer"),
         role: String(item?.role || "Review"),
         stars,
+        photo: String(item?.photo || ""),
         visible: item?.visible !== false
       };
     }
@@ -3540,13 +4200,83 @@
         name: String(item?.name || `Extra ${index + 1}`),
         price: Number(item?.price || 0)
       })).filter((item) => item.name);
+      merged.staffMembers = (Array.isArray(merged.staffMembers) ? merged.staffMembers : DEFAULT_SETTINGS.staffMembers).map((name) => String(name || "").trim()).filter(Boolean);
+      merged.accessRole = ACCESS_ROLES.includes(merged.accessRole) ? merged.accessRole : DEFAULT_SETTINGS.accessRole;
+      merged.quoteExpiryDays = Math.max(1, Number(merged.quoteExpiryDays || DEFAULT_SETTINGS.quoteExpiryDays));
       return merged;
     }
 
     function setSettings(data){
       const merged = deepMerge(DEFAULT_SETTINGS, data);
       merged.whatsappNumber = sanitizeWhatsappNumber(merged.whatsappNumber);
+      merged.staffMembers = (Array.isArray(merged.staffMembers) ? merged.staffMembers : DEFAULT_SETTINGS.staffMembers).map((name) => String(name || "").trim()).filter(Boolean);
+      merged.accessRole = ACCESS_ROLES.includes(merged.accessRole) ? merged.accessRole : DEFAULT_SETTINGS.accessRole;
+      merged.quoteExpiryDays = Math.max(1, Number(merged.quoteExpiryDays || DEFAULT_SETTINGS.quoteExpiryDays));
       writeJSON(STORAGE_KEYS.settings, merged);
+    }
+
+    function normalizeInventoryItem(item, fallbackIndex){
+      return {
+        name: String(item?.name || `Inventory Item ${fallbackIndex + 1}`),
+        category: String(item?.category || "General"),
+        resourceType: ["chairs", "tables", "decorations"].includes(item?.resourceType) ? item.resourceType : "",
+        totalStock: Math.max(0, Number(item?.totalStock ?? item?.total ?? 0)),
+        damagedQty: Math.max(0, Number(item?.damagedQty ?? item?.damaged ?? 0)),
+        lowStockThreshold: Math.max(0, Number(item?.lowStockThreshold ?? item?.threshold ?? 0)),
+        notes: String(item?.notes || "")
+      };
+    }
+
+    function getInventoryItems(){
+      const stored = readJSON(STORAGE_KEYS.inventoryItems, DEFAULT_INVENTORY_ITEMS);
+      let items = (Array.isArray(stored) ? stored : DEFAULT_INVENTORY_ITEMS).map(normalizeInventoryItem);
+      const resourceMap = new Set(items.map((item) => item.resourceType).filter(Boolean));
+      [["chairs","Chairs","Seating"],["tables","Tables","Tables"],["decorations","Decorations","Decor"]].forEach(([resourceType, name, category]) => {
+        if(!resourceMap.has(resourceType)){
+          items.unshift(normalizeInventoryItem({
+            name,
+            category,
+            resourceType,
+            totalStock: getInventory()[resourceType],
+            damagedQty: 0,
+            lowStockThreshold: getSettings().lowStockThresholds[resourceType],
+            notes: ""
+          }, items.length));
+        }
+      });
+      return items;
+    }
+
+    function setInventoryItems(items){
+      const normalized = items.map(normalizeInventoryItem);
+      writeJSON(STORAGE_KEYS.inventoryItems, normalized);
+      const summary = { ...getInventory() };
+      normalized.forEach((item) => {
+        if(item.resourceType){
+          summary[item.resourceType] = item.totalStock;
+        }
+      });
+      setInventory(summary);
+    }
+
+    function getCalendarData(){
+      const stored = readJSON(STORAGE_KEYS.calendar, DEFAULT_CALENDAR);
+      return {
+        blockedDates: Array.isArray(stored.blockedDates) ? stored.blockedDates.map((item) => ({
+          date: String(item?.date || ""),
+          note: String(item?.note || "")
+        })).filter((item) => item.date) : [],
+        selectedDate: String(stored.selectedDate || ""),
+        currentMonth: String(stored.currentMonth || "")
+      };
+    }
+
+    function setCalendarData(data){
+      writeJSON(STORAGE_KEYS.calendar, {
+        blockedDates: Array.isArray(data?.blockedDates) ? data.blockedDates : [],
+        selectedDate: data?.selectedDate || "",
+        currentMonth: data?.currentMonth || ""
+      });
     }
 
     function normalizeBooking(raw){
@@ -3555,34 +4285,73 @@
         name: String(item?.name || ""),
         price: Number(item?.price || 0)
       })).filter((item) => item.name) : [];
+      const lineItems = Array.isArray(raw?.lineItems) ? raw.lineItems.map((item) => ({
+        label: String(item?.label || ""),
+        amount: Number(item?.amount || 0)
+      })).filter((item) => item.label) : [];
       const inventory = {
         chairs: Number(raw?.inventory?.chairs || 0),
         tables: Number(raw?.inventory?.tables || 0),
         decorations: Number(raw?.inventory?.decorations || 0)
       };
       const total = Number(raw?.total ?? raw?.quoteAmount ?? 0);
+      const paidAmount = Number(raw?.paidAmount ?? (raw?.paymentStatus === "Paid" ? total : 0));
+      const depositAmount = Number(raw?.depositAmount ?? 0);
       const statusValue = String(raw?.status || "").trim();
-      const normalizedStatus = BOOKING_STATUSES.includes(statusValue) ? statusValue : (statusValue === "Draft saved locally" ? "New" : "New");
-      const paymentStatus = PAYMENT_STATUSES.includes(raw?.paymentStatus) ? raw.paymentStatus : (raw?.paid === true ? "Paid" : "Unpaid");
+      const normalizedStatus = BOOKING_STATUSES.includes(statusValue) ? statusValue : (["Pending","Draft saved locally"].includes(statusValue) ? "New" : "New");
+      const paymentStatus = PAYMENT_STATUSES.includes(raw?.paymentStatus) ? raw.paymentStatus : (raw?.paid === true ? "Paid" : (paidAmount > 0 ? "Partial" : "Unpaid"));
+      const balanceDue = Number(raw?.balanceDue ?? Math.max(0, total - Math.max(paidAmount, depositAmount)));
+      const quoteCreated = raw?.quoteCreatedAt || raw?.createdAt || new Date().toISOString();
       return {
         id: String(raw?.id || fallbackId),
         name: String(raw?.name || ""),
         phone: String(raw?.phone || ""),
         email: String(raw?.email || ""),
         eventDate: String(raw?.eventDate || ""),
+        eventTime: String(raw?.eventTime || ""),
         eventType: String(raw?.eventType || ""),
         package: String(raw?.package || ""),
         guestCount: Number(raw?.guestCount || 0),
         setupHours: Number(raw?.setupHours || 0),
         venue: String(raw?.venue || ""),
-        message: String(raw?.message || ""),
+        venueType: String(raw?.venueType || ""),
+        leadSource: String(raw?.leadSource || "Website"),
+        priority: PRIORITY_LEVELS.includes(raw?.priority) ? raw.priority : "Medium",
+        deliveryRequired: String(raw?.deliveryRequired || "Yes"),
+        setupRequired: String(raw?.setupRequired || "Yes"),
+        budgetRange: String(raw?.budgetRange || ""),
+        message: String(raw?.message || raw?.extraNotes || ""),
+        extraNotes: String(raw?.extraNotes || raw?.message || ""),
         extras,
+        lineItems,
         inventory,
+        subtotal: Number(raw?.subtotal ?? total),
+        discount: Number(raw?.discount || 0),
+        deliveryFee: Number(raw?.deliveryFee || 0),
+        setupFee: Number(raw?.setupFee || 0),
+        adjustment: Number(raw?.adjustment || 0),
         total,
         quoteAmount: Number(raw?.quoteAmount ?? total),
+        depositAmount,
+        paidAmount,
+        balanceDue,
         status: normalizedStatus,
         paymentStatus,
+        assignedStaff: String(raw?.assignedStaff || ""),
+        followUpDate: String(raw?.followUpDate || ""),
         adminNotes: String(raw?.adminNotes || ""),
+        eventNotes: String(raw?.eventNotes || ""),
+        issueReport: String(raw?.issueReport || ""),
+        missingItems: String(raw?.missingItems || ""),
+        operations: {
+          deliveryDone: !!(raw?.operations?.deliveryDone || raw?.deliveryDone),
+          setupDone: !!(raw?.operations?.setupDone || raw?.setupDone),
+          pickupDone: !!(raw?.operations?.pickupDone || raw?.pickupDone)
+        },
+        quoteNumber: String(raw?.quoteNumber || `Q-${String(quoteCreated).replace(/\D/g, "").slice(-8)}-${String(fallbackId).slice(-4).toUpperCase()}`),
+        invoiceNumber: String(raw?.invoiceNumber || `INV-${String(quoteCreated).replace(/\D/g, "").slice(-8)}-${String(fallbackId).slice(-4).toUpperCase()}`),
+        quoteCreatedAt: quoteCreated,
+        quoteExpiryDate: String(raw?.quoteExpiryDate || ""),
         createdAt: raw?.createdAt || new Date().toISOString(),
         updatedAt: raw?.updatedAt || raw?.createdAt || new Date().toISOString()
       };
@@ -3616,6 +4385,7 @@
     }
 
     function latestBookingDraft(){
+
       try{
         const raw = localStorage.getItem(STORAGE_KEYS.latest);
         return raw ? normalizeBooking(JSON.parse(raw)) : null;
@@ -3828,17 +4598,31 @@
       });
     }
 
+
+    function applyCtaBehavior(target, value, fallbackText){
+      if(!target) return;
+      const linkValue = String(value || "").trim();
+      if(target.tagName === "A"){
+        target.setAttribute("href", linkValue && !linkValue.startsWith("modal:") ? linkValue : "#contact");
+      }else{
+        target.dataset.actionLink = linkValue || "modal:booking";
+      }
+      if(fallbackText) target.textContent = fallbackText;
+    }
+
     function renderBrandAndHero(){
       const cms = getCms();
       brandNameEl.textContent = cms.brandName;
       brandTaglineEl.textContent = cms.brandTagline;
-      brandBadgeEl.textContent = (cms.brandName || "F").trim().charAt(0).toUpperCase() || "F";
+      brandBadgeEl.textContent = (cms.brandBadgeText || cms.brandName || "F").trim().slice(0, 3).toUpperCase() || "F";
       if(splashBrandName) splashBrandName.textContent = cms.brandName;
       heroEyebrowEl.textContent = cms.heroEyebrow;
       heroTitleEl.innerHTML = `${escapeHtml(cms.heroTitle)} <span style="color:var(--secondary)">${escapeHtml(cms.heroAccent)}</span>, Styled, and Stress-Free.`;
       heroSubtitleEl.textContent = cms.heroSubtitle;
       heroPrimaryCtaEl.textContent = cms.heroPrimaryCtaText;
       heroSecondaryCtaEl.textContent = cms.heroSecondaryCtaText;
+      applyCtaBehavior(heroPrimaryCtaEl, cms.heroPrimaryCtaLink, cms.heroPrimaryCtaText);
+      applyCtaBehavior(heroSecondaryCtaEl, cms.heroSecondaryCtaLink, cms.heroSecondaryCtaText);
       heroBadgesWrap.innerHTML = cms.heroBadges.map((badge) => `<span class="premium-badge">${escapeHtml(badge)}</span>`).join("");
       heroStatsWrap.innerHTML = cms.heroStats.map((stat) => `<div class="stat-card glass"><strong>${escapeHtml(stat.value)}</strong><span>${escapeHtml(stat.label)}</span></div>`).join("");
       heroPanelTitleEl.textContent = cms.heroPanelTitle;
@@ -3903,7 +4687,7 @@
         ${categories.map((category) => `<button class="filter-btn ${activeGalleryFilter === category ? "active" : ""}" type="button" data-filter="${escapeHtml(category)}">${escapeHtml(category.charAt(0).toUpperCase() + category.slice(1))}</button>`).join("")}
       `;
       galleryGrid.innerHTML = visibleItems.map((item, index) => `
-        <div class="gallery-card reveal visible" data-category="${escapeHtml(item.category)}" data-gallery-index="${index}" data-image="${escapeHtml(item.image)}" data-title="${escapeHtml(item.title)}" data-description="${escapeHtml(item.description)}" data-location="${escapeHtml(item.location)}">
+        <div class="gallery-card reveal visible" data-category="${escapeHtml(item.category)}" data-gallery-index="${index}" data-image="${escapeHtml(item.image)}" data-title="${escapeHtml(item.title)}" data-description="${escapeHtml(item.description)}" data-location="${escapeHtml(item.location)}" data-related-package="${escapeHtml(item.relatedPackage || "")}" data-cta-text="${escapeHtml(item.ctaText || "Book this setup")}">
           <img src="${escapeHtml(item.thumb || item.image)}" alt="${escapeHtml(item.title)}">
           <div class="overlay">
             <strong>${escapeHtml(item.title)}</strong>
@@ -3918,7 +4702,7 @@
       const visiblePackages = getPackageItems().filter((item) => item.visible !== false);
       const currentValue = selectedValue || optionsTarget.value;
       optionsTarget.innerHTML = `<option value="">Select package</option>${visiblePackages.map((item) => `
-        <option value="${escapeHtml(item.title)}" data-price="${item.price}" data-chairs="${item.chairs}" data-tables="${item.tables}" data-decorations="${item.decorations}">
+        <option value="${escapeHtml(item.title)}" data-price="${item.price}" data-chairs="${item.chairs}" data-tables="${item.tables}" data-decorations="${item.decorations}" data-delivery-fee="${item.deliveryFee}" data-setup-fee="${item.setupFee}" data-discount="${item.discount}" data-deposit="${item.deposit}" data-adjustment="${item.adjustment}">
           ${escapeHtml(item.title)} — ${formatMoney(item.price)}
         </option>
       `).join("")}${includeCustom ? `<option value="Custom Quote">Custom Quote</option>` : ""}`;
@@ -3943,6 +4727,9 @@
           <ul class="package-list">
             ${item.features.map((feature) => `<li>${escapeHtml(feature)}</li>`).join("")}
           </ul>
+          <div class="inventory-chip-row" style="margin:0 0 20px;">
+            ${(item.addons || []).slice(0, 3).map((addon) => `<span class="inventory-chip">${escapeHtml(addon.name)} ${formatMoney(addon.price)}</span>`).join("")}
+          </div>
           <button class="btn ${item.popular ? "btn-primary" : "btn-secondary"} open-package" type="button" data-package="${escapeHtml(item.title)}">${escapeHtml(item.buttonText)}</button>
         </article>
       `).join("");
@@ -3952,8 +4739,17 @@
 
     function renderBuilderExtras(){
       const settings = getSettings();
+      const pkg = getPackageItems().find((item) => item.title === packageSelect.value);
+      const mergedExtras = [...settings.extras, ...((pkg && Array.isArray(pkg.addons)) ? pkg.addons : [])]
+        .reduce((acc, item) => {
+          if(!item?.name) return acc;
+          if(!acc.some((saved) => saved.name.toLowerCase() === String(item.name).toLowerCase())){
+            acc.push({ name: String(item.name), price: Number(item.price || 0) });
+          }
+          return acc;
+        }, []);
       const selected = [...builderOptions.querySelectorAll(".chip-toggle.active")].map((button) => button.dataset.builder);
-      builderOptions.innerHTML = settings.extras.map((item) => `
+      builderOptions.innerHTML = mergedExtras.map((item) => `
         <button type="button" class="chip-toggle ${selected.includes(item.name) ? "active" : ""}" data-builder="${escapeHtml(item.name)}" data-price="${item.price}">
           ${escapeHtml(item.name)} +$${Number(item.price || 0)}
         </button>
@@ -3992,24 +4788,38 @@
       testimonialsSubtitleEl.textContent = cms.testimonialsSubtitle;
       testimonialsGrid.innerHTML = testimonials.map((item) => `
         <article class="testimonial-card card glass reveal visible">
-          <div class="stars">${"★".repeat(Math.max(1, Math.min(5, Number(item.stars || 5))))}</div>
+          <div class="stars">${"★".repeat(item.stars)}</div>
           <h3>${escapeHtml(item.title)}</h3>
           <p>${escapeHtml(item.text)}</p>
-          <div class="person">${escapeHtml(item.person)}<span class="role">${escapeHtml(item.role)}</span></div>
+          <div class="person" style="display:flex; align-items:center; gap:12px;">
+            <span class="photo-chip">${item.photo ? `<img src="${escapeHtml(item.photo)}" alt="${escapeHtml(item.person)}">` : escapeHtml((item.person || "C").trim().charAt(0).toUpperCase())}</span>
+            <span>${escapeHtml(item.person)}<span class="role">${escapeHtml(item.role)}</span></span>
+          </div>
         </article>
+      `).join("");
+    }
+
+    function renderFaq(){
+      const cms = getCms();
+      if(!faqGrid) return;
+      faqTitleEl.textContent = cms.faqTitle || "Frequently Asked Questions";
+      faqSubtitleEl.textContent = cms.faqSubtitle || "Helpful answers about bookings and setup.";
+      const items = Array.isArray(cms.faqItems) ? cms.faqItems : DEFAULT_CMS.faqItems;
+      faqGrid.innerHTML = items.map((item, index) => `
+        <div class="faq-card card glass reveal visible ${index === 0 ? "active" : ""}">
+          <button class="faq-question" type="button">
+            <span>${escapeHtml(item.question)}</span>
+            <span>${index === 0 ? "−" : "+"}</span>
+          </button>
+          <div class="faq-answer" style="${index === 0 ? "display:block;" : ""}">${escapeHtml(item.answer)}</div>
+        </div>
       `).join("");
     }
 
     function renderFooter(){
       const cms = getCms();
       const settings = getSettings();
-      footerSummaryEl.innerHTML = `<strong>${escapeHtml(cms.brandName)}</strong><br>${escapeHtml(cms.footerSummary)}`;
-      footerLinksEl.innerHTML = `
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#packages">Packages</a>
-        <a href="${escapeHtml(settings.facebookUrl)}" target="_blank" rel="noopener">Facebook</a>
-      `;
+      footerSummaryEl.innerHTML = `<strong>${escapeHtml(settings.businessName)}</strong><br>${escapeHtml(cms.footerSummary)}`;
     }
 
     function renderPublicContent(){
@@ -4021,21 +4831,30 @@
       renderBuilderExtras();
       renderContact();
       renderTestimonials();
+      renderFaq();
       renderFooter();
       updateSuggestions();
       updateQuoteUI();
       hydrateRevealElements();
     }
 
+
     function selectedPackageMeta(){
       const option = packageSelect.selectedOptions[0];
       if(!option || !option.value) return null;
+      const packageItem = getPackageItems().find((item) => item.title === option.value);
       return {
         name: option.value,
-        price: Number(option.dataset.price || 0),
-        chairs: Number(option.dataset.chairs || 0),
-        tables: Number(option.dataset.tables || 0),
-        decorations: Number(option.dataset.decorations || 0)
+        price: Number(option.dataset.price || packageItem?.price || 0),
+        chairs: Number(option.dataset.chairs || packageItem?.chairs || 0),
+        tables: Number(option.dataset.tables || packageItem?.tables || 0),
+        decorations: Number(option.dataset.decorations || packageItem?.decorations || 0),
+        deliveryFee: Number(option.dataset.deliveryFee || packageItem?.deliveryFee || 0),
+        setupFee: Number(option.dataset.setupFee || packageItem?.setupFee || 0),
+        discount: Number(option.dataset.discount || packageItem?.discount || 0),
+        deposit: Number(option.dataset.deposit || packageItem?.deposit || 0),
+        adjustment: Number(option.dataset.adjustment || packageItem?.adjustment || 0),
+        addons: packageItem?.addons || []
       };
     }
 
@@ -4044,6 +4863,48 @@
         name: button.dataset.builder,
         price: Number(button.dataset.price || 0)
       }));
+    }
+
+    function blockedDateFor(dateValue){
+      return getCalendarData().blockedDates.find((item) => item.date === dateValue) || null;
+    }
+
+    function isFutureOrToday(dateValue){
+      if(!dateValue) return false;
+      const today = new Date();
+      today.setHours(0,0,0,0);
+      const dt = new Date(`${dateValue}T00:00:00`);
+      if(Number.isNaN(dt.getTime())) return false;
+      return dt >= today;
+    }
+
+    function getActiveBookings(dateValue = ""){
+      return getBookings().filter((booking) => booking.status !== "Cancelled" && (!dateValue || booking.eventDate === dateValue));
+    }
+
+    function computeReservationsByDate(dateValue){
+      const bookings = getActiveBookings(dateValue);
+      return bookings.reduce((acc, booking) => {
+        acc.chairs += Number(booking.inventory?.chairs || 0);
+        acc.tables += Number(booking.inventory?.tables || 0);
+        acc.decorations += Number(booking.inventory?.decorations || 0);
+        return acc;
+      }, { chairs: 0, tables: 0, decorations: 0, bookings });
+    }
+
+    function availabilityForDate(dateValue){
+      const stock = getInventory();
+      const reserved = dateValue ? computeReservationsByDate(dateValue) : { chairs: 0, tables: 0, decorations: 0, bookings: [] };
+      return {
+        stock,
+        reserved,
+        available: {
+          chairs: Math.max(0, stock.chairs - reserved.chairs),
+          tables: Math.max(0, stock.tables - reserved.tables),
+          decorations: Math.max(0, stock.decorations - reserved.decorations)
+        },
+        blocked: dateValue ? blockedDateFor(dateValue) : null
+      };
     }
 
     function calculateNeeds(){
@@ -4055,13 +4916,24 @@
       const decorBonus = extras.some((item) => item.name === "Backdrop") ? 1 : 0;
       const extraChairBonus = extras.some((item) => item.name === "Extra Chairs") ? 12 : 0;
       if(!meta){
-        return { meta: null, total: 0, extras, builderTotal: extras.reduce((sum, item) => sum + item.price, 0), chairs: 0, tables: 0, decorations: 0, ok: true };
+        return { meta: null, subtotal: 0, total: 0, extras, builderTotal: extras.reduce((sum, item) => sum + item.price, 0), chairs: 0, tables: 0, decorations: 0, ok: true, deliveryFee: 0, setupFee: 0, discount: 0, adjustment: 0, deposit: 0, lineItems: [] };
       }
       const builderTotalAmount = extras.reduce((sum, item) => sum + item.price, 0);
       const overtime = Math.max(0, Number(setupHours.value || 0) - 4) * 18;
       const chairs = meta.chairs + chairsExtra + extraChairBonus;
       const tables = meta.tables + Math.max(0, tablesExtra);
       const decorations = meta.decorations + decorBonus + (extras.some((item) => item.name === "Balloon Arch") ? 1 : 0) + (extras.some((item) => item.name === "Fairy Lights") ? 1 : 0);
+      const deliveryFee = deliveryRequiredInput?.value === "No" ? 0 : Number(meta.deliveryFee || 0);
+      const setupFee = setupRequiredInput?.value === "No" ? 0 : Number(meta.setupFee || 0);
+      const subtotal = Number(meta.price || 0) + builderTotalAmount + overtime + Number(meta.adjustment || 0);
+      const discount = Number(meta.discount || 0);
+      const total = Math.max(0, subtotal + deliveryFee + setupFee - discount);
+      const lineItems = [
+        { label: `${meta.name} base package`, amount: Number(meta.price || 0) },
+        ...extras.map((item) => ({ label: item.name, amount: item.price })),
+        ...(overtime ? [{ label: "Additional setup hours", amount: overtime }] : []),
+        ...(meta.adjustment ? [{ label: "Manual adjustment", amount: Number(meta.adjustment || 0) }] : [])
+      ];
       return {
         meta,
         extras,
@@ -4069,17 +4941,25 @@
         chairs,
         tables,
         decorations,
-        total: meta.price + builderTotalAmount + overtime,
+        subtotal,
+        deliveryFee,
+        setupFee,
+        discount,
+        adjustment: Number(meta.adjustment || 0),
+        deposit: Number(meta.deposit || 0),
+        total,
+        lineItems,
         ok: true
       };
     }
 
     function evaluateAvailability(){
       const calc = calculateNeeds();
-      const stock = getInventory();
-      const ok = calc.chairs <= stock.chairs && calc.tables <= stock.tables && calc.decorations <= stock.decorations && !!calc.meta;
+      const dateValue = eventDate.value;
+      const dateState = availabilityForDate(dateValue);
+      const ok = calc.chairs <= dateState.available.chairs && calc.tables <= dateState.available.tables && calc.decorations <= dateState.available.decorations && !!calc.meta && !dateState.blocked;
       calc.ok = ok;
-      return { ...calc, stock };
+      return { ...calc, stock: dateState.available, reserved: dateState.reserved, blocked: dateState.blocked, dateBookings: dateState.reserved.bookings || [] };
     }
 
     function updateSuggestions(){
@@ -4109,53 +4989,108 @@
       chairsNeed.textContent = state.chairs;
       tablesNeed.textContent = state.tables;
       decorNeed.textContent = state.decorations;
-      chairsStock.textContent = `Stock: ${state.stock.chairs}`;
-      tablesStock.textContent = `Stock: ${state.stock.tables}`;
-      decorStock.textContent = `Stock: ${state.stock.decorations}`;
-      availabilityStatus.textContent = state.meta ? (state.ok ? "Available locally" : "Low inventory warning") : "Ready to quote";
-      availabilityText.textContent = state.meta ? (state.ok ? "Light inventory check passed for this browser." : "Inventory is low for the selected package/extras combination.") : "Pick a date and package to check light inventory.";
-      inventoryWarning.classList.toggle("visible", !!state.meta && !state.ok);
+      chairsStock.textContent = `Available: ${state.stock.chairs}${state.reserved.chairs ? ` • Reserved ${state.reserved.chairs}` : ""}`;
+      tablesStock.textContent = `Available: ${state.stock.tables}${state.reserved.tables ? ` • Reserved ${state.reserved.tables}` : ""}`;
+      decorStock.textContent = `Available: ${state.stock.decorations}${state.reserved.decorations ? ` • Reserved ${state.reserved.decorations}` : ""}`;
+      if(state.blocked){
+        availabilityStatus.textContent = "Date blocked";
+        availabilityText.textContent = state.blocked.note || "This date is marked unavailable.";
+      }else if(state.meta){
+        availabilityStatus.textContent = state.ok ? "Available locally" : "Low inventory warning";
+        availabilityText.textContent = state.ok
+          ? `${state.dateBookings.length} existing booking(s) on this date.`
+          : "Inventory is low or the date is blocked for the selected package/extras combination.";
+      }else{
+        availabilityStatus.textContent = "Ready to quote";
+        availabilityText.textContent = "Pick a date and package to check date-based availability.";
+      }
+      inventoryWarning.classList.toggle("visible", !!state.meta && !state.ok && !state.blocked);
+      if(bookingConflictWarning){
+        const showConflict = !!state.blocked || (state.dateBookings?.length || 0) >= 2;
+        bookingConflictWarning.classList.toggle("visible", showConflict);
+        bookingConflictWarning.textContent = state.blocked
+          ? `Blocked date: ${state.blocked.note || "Unavailable for new bookings."}`
+          : showConflict
+            ? `Heads up: ${state.dateBookings.length} booking(s) are already saved for this date. Please confirm staffing, travel time, and stock before saving.`
+            : "";
+      }
       syncPackageCardHighlight();
       return state;
     }
 
     function computeAnalytics(){
       const bookings = getBookings();
-      const activeBookings = bookings.filter((item) => item.status !== "Cancelled");
-      const totalRevenue = activeBookings.reduce((sum, item) => sum + Number(item.quoteAmount || item.total || 0), 0);
-      const paidCollected = bookings.filter((item) => item.paymentStatus === "Paid").reduce((sum, item) => sum + Number(item.quoteAmount || item.total || 0), 0);
+      const nonCancelled = bookings.filter((item) => item.status !== "Cancelled");
+      const quoteBookings = bookings.filter((item) => ["Quoted", "Awaiting Deposit", "Confirmed", "Scheduled", "Completed"].includes(item.status));
+      const confirmed = bookings.filter((item) => ["Confirmed", "Scheduled", "Completed"].includes(item.status)).length;
+      const completed = bookings.filter((item) => item.status === "Completed").length;
+      const cancelled = bookings.filter((item) => item.status === "Cancelled").length;
+      const totalRevenue = nonCancelled.reduce((sum, item) => sum + Number(item.quoteAmount || item.total || 0), 0);
+      const paidCollected = bookings.reduce((sum, item) => sum + Number(item.paidAmount || (item.paymentStatus === "Paid" ? (item.quoteAmount || item.total || 0) : 0)), 0);
+      const outstanding = nonCancelled.reduce((sum, item) => sum + Number(item.balanceDue ?? Math.max(0, (item.quoteAmount || item.total || 0) - (item.paidAmount || 0))), 0);
       const packageCounts = bookings.reduce((acc, item) => {
-        if(item.package){
-          acc[item.package] = (acc[item.package] || 0) + 1;
-        }
+        if(item.package) acc[item.package] = (acc[item.package] || 0) + 1;
+        return acc;
+      }, {});
+      const addonCounts = bookings.reduce((acc, item) => {
+        (item.extras || []).forEach((extra) => {
+          acc[extra.name] = (acc[extra.name] || 0) + 1;
+        });
         return acc;
       }, {});
       const eventCounts = bookings.reduce((acc, item) => {
-        if(item.eventType){
-          acc[item.eventType] = (acc[item.eventType] || 0) + 1;
+        if(item.eventType) acc[item.eventType] = (acc[item.eventType] || 0) + 1;
+        return acc;
+      }, {});
+      const monthCounts = bookings.reduce((acc, item) => {
+        if(item.eventDate){
+          const key = item.eventDate.slice(0, 7);
+          acc[key] = (acc[key] || 0) + 1;
         }
         return acc;
       }, {});
+      const customerCounts = bookings.reduce((acc, item) => {
+        const key = (item.email || item.phone || item.name).toLowerCase();
+        if(key) acc[key] = (acc[key] || 0) + 1;
+        return acc;
+      }, {});
       const topPackage = Object.entries(packageCounts).sort((a, b) => b[1] - a[1])[0]?.[0] || "—";
+      const topAddon = Object.entries(addonCounts).sort((a, b) => b[1] - a[1])[0]?.[0] || "—";
       const topEventType = Object.entries(eventCounts).sort((a, b) => b[1] - a[1])[0]?.[0] || "—";
-      const confirmed = bookings.filter((item) => item.status === "Confirmed").length;
-      const cancelled = bookings.filter((item) => item.status === "Cancelled").length;
-      const inventory = getInventory();
-      const settings = getSettings();
+      const busiestMonth = Object.entries(monthCounts).sort((a, b) => b[1] - a[1])[0]?.[0] || "—";
+      const repeatCustomerCount = Object.values(customerCounts).filter((count) => count > 1).length;
+      const inventoryItems = getInventoryItems();
       const lowStockWarnings = [];
-      if(inventory.chairs <= Number(settings.lowStockThresholds.chairs || 0)) lowStockWarnings.push(`Chairs low (${inventory.chairs} left)`);
-      if(inventory.tables <= Number(settings.lowStockThresholds.tables || 0)) lowStockWarnings.push(`Tables low (${inventory.tables} left)`);
-      if(inventory.decorations <= Number(settings.lowStockThresholds.decorations || 0)) lowStockWarnings.push(`Decor low (${inventory.decorations} left)`);
+      inventoryItems.forEach((item) => {
+        const availableNow = Math.max(0, item.totalStock - item.damagedQty);
+        if(availableNow <= Number(item.lowStockThreshold || 0)){
+          lowStockWarnings.push(`${item.name} low (${availableNow} available)`);
+        }
+      });
+      const today = new Date();
+      const todayKey = today.toISOString().slice(0, 10);
+      const upcomingEvents = nonCancelled.filter((item) => item.eventDate && item.eventDate >= todayKey).length;
+      const conversionRate = bookings.length ? Math.round((confirmed / bookings.length) * 100) : 0;
+      const averageBookingValue = nonCancelled.length ? Math.round(totalRevenue / nonCancelled.length) : 0;
       return {
         totalBookings: bookings.length,
+        totalQuotes: quoteBookings.length,
+        confirmed,
+        completed,
+        cancelled,
         totalRevenue,
         paidCollected,
+        outstanding,
         topPackage,
-        confirmed,
-        cancelled,
+        topAddon,
         topEventType,
+        busiestMonth,
+        repeatCustomerCount,
         lowStockWarnings,
-        inventory
+        inventory: getInventory(),
+        upcomingEvents,
+        conversionRate,
+        averageBookingValue
       };
     }
 
@@ -4178,22 +5113,43 @@
       analyticsAdminCards.collected.textContent = formatMoney(metrics.paidCollected);
       analyticsAdminCards.stock.textContent = metrics.lowStockWarnings.length ? metrics.lowStockWarnings.join(" • ") : "Inventory healthy";
       analyticsAdminCards.eventType.textContent = metrics.topEventType;
-      adminAnalyticsNotes.innerHTML = metrics.lowStockWarnings.length
-        ? metrics.lowStockWarnings.map((item) => `<li>${escapeHtml(item)}</li>`).join("")
-        : "<li>No low-stock warnings right now.</li>";
+      adminAnalyticsNotes.innerHTML = [
+        `<li>Total quotes: ${metrics.totalQuotes}</li>`,
+        `<li>Completed events: ${metrics.completed}</li>`,
+        `<li>Inquiry to booking conversion: ${metrics.conversionRate}%</li>`,
+        `<li>Outstanding balances: ${formatMoney(metrics.outstanding)}</li>`,
+        `<li>Average booking value: ${formatMoney(metrics.averageBookingValue)}</li>`,
+        `<li>Top add-on: ${escapeHtml(metrics.topAddon)}</li>`,
+        `<li>Busiest month: ${escapeHtml(metrics.busiestMonth)}</li>`,
+        `<li>Upcoming events: ${metrics.upcomingEvents}</li>`,
+        `<li>Repeat customers: ${metrics.repeatCustomerCount}</li>`,
+        ...(metrics.lowStockWarnings.length ? metrics.lowStockWarnings.map((item) => `<li>${escapeHtml(item)}</li>`) : [])
+      ].join("");
     }
 
     function renderInvoice(booking){
       if(!booking) return;
       invoicePreview.classList.add("visible");
       invoiceClient.textContent = `${booking.name} • ${booking.phone}`;
-      invoiceDate.textContent = formatDate(booking.eventDate);
+      invoiceQuoteNumber.textContent = booking.quoteNumber || "—";
+      invoiceInvoiceNumber.textContent = booking.invoiceNumber || "—";
+      invoiceExpiry.textContent = booking.quoteExpiryDate ? formatDate(booking.quoteExpiryDate) : "—";
+      invoiceDate.textContent = `${formatDate(booking.eventDate)}${booking.eventTime ? ` • ${booking.eventTime}` : ""}`;
       invoicePackage.textContent = booking.package;
       invoiceExtras.textContent = booking.extras.length ? booking.extras.map((item) => `${item.name} (${formatMoney(item.price)})`).join(", ") : "None";
       invoiceVenue.textContent = booking.venue;
       invoiceInventory.textContent = `${booking.inventory.chairs} chairs • ${booking.inventory.tables} tables • ${booking.inventory.decorations} decorations`;
+      invoiceEventSummary.textContent = [booking.eventType, booking.guestCount ? `${booking.guestCount} guests` : "", booking.venueType || "", booking.deliveryRequired === "No" ? "No delivery" : "Delivery", booking.setupRequired === "No" ? "No setup" : "Setup"].filter(Boolean).join(" • ");
+      invoiceLineItems.textContent = (booking.lineItems || []).length ? booking.lineItems.map((item) => `${item.label} (${formatMoney(item.amount)})`).join(", ") : booking.package;
+      invoiceSubtotal.textContent = formatMoney(booking.subtotal || booking.quoteAmount || booking.total);
+      invoiceDiscount.textContent = formatMoney(booking.discount || 0);
+      invoiceDeliveryFee.textContent = formatMoney(booking.deliveryFee || 0);
+      invoiceSetupFee.textContent = formatMoney(booking.setupFee || 0);
+      invoiceDeposit.textContent = formatMoney(booking.depositAmount || 0);
+      invoiceBalanceDue.textContent = formatMoney(booking.balanceDue ?? Math.max(0, (booking.quoteAmount || booking.total || 0) - (booking.paidAmount || 0)));
       invoiceTotal.textContent = formatMoney(booking.quoteAmount || booking.total);
       invoiceStatus.textContent = `${booking.status} • ${booking.paymentStatus}`;
+      invoiceNotes.textContent = [booking.adminNotes, booking.eventNotes, booking.extraNotes].filter(Boolean).join(" • ") || "Operations notes and payment terms will appear here.";
     }
 
     function buildWhatsappLink(booking){
@@ -4201,16 +5157,21 @@
       const lines = [
         `Hi ${settings.businessName}!`,
         "I would like to book / confirm this event:",
+        `Quote Number: ${booking.quoteNumber || "Draft"}`,
         `Name: ${booking.name}`,
         `Phone: ${booking.phone}`,
         `Email: ${booking.email}`,
         `Date: ${formatDate(booking.eventDate)}`,
+        `Time: ${booking.eventTime || "TBC"}`,
         `Event Type: ${booking.eventType}`,
         `Package: ${booking.package}`,
         `Extras: ${booking.extras.length ? booking.extras.map((item) => item.name).join(", ") : "None"}`,
         `Venue: ${booking.venue}`,
+        `Budget: ${booking.budgetRange || "Not specified"}`,
         `Quote: ${formatMoney(booking.quoteAmount || booking.total)}`,
-        `Notes: ${booking.message || "N/A"}`
+        `Deposit: ${formatMoney(booking.depositAmount || 0)}`,
+        `Balance Due: ${formatMoney(booking.balanceDue || 0)}`,
+        `Notes: ${booking.extraNotes || booking.message || "N/A"}`
       ];
       return `https://wa.me/${sanitizeWhatsappNumber(settings.whatsappNumber)}?text=${encodeURIComponent(lines.join("\n"))}`;
     }
@@ -4229,39 +5190,71 @@
         showToast("Please choose a valid future event date.");
         return null;
       }
+      if(blockedDateFor(formData.eventDate)){
+        showToast("That date is blocked. Please choose another date.");
+        return null;
+      }
       if(!state.meta){
         showToast("Please choose a package first.");
         return null;
       }
       if(!state.ok){
-        showToast("Inventory is too low for this booking.");
+        showToast("Inventory is too low for this booking date.");
         return null;
       }
+      const settings = getSettings();
+      const createdAt = new Date().toISOString();
+      const expiryDate = new Date(Date.now() + (Number(settings.quoteExpiryDays || 7) * 24 * 60 * 60 * 1000)).toISOString().slice(0, 10);
       return normalizeBooking({
         id: `${Date.now()}-${Math.random().toString(16).slice(2, 8)}`,
         name: formData.name.trim(),
         phone: formData.phone.trim(),
         email: formData.email.trim(),
         eventDate: formData.eventDate,
+        eventTime: formData.eventTime || "",
         eventType: formData.eventType,
         package: formData.package,
         guestCount: Number(formData.guestCount || 0),
         setupHours: Number(formData.setupHours || 0),
         venue: formData.venue.trim(),
+        venueType: formData.venueType || "",
+        leadSource: formData.leadSource || "Website",
+        priority: "Medium",
+        deliveryRequired: formData.deliveryRequired || "Yes",
+        setupRequired: formData.setupRequired || "Yes",
+        budgetRange: formData.budgetRange || "",
         message: (formData.message || "").trim(),
+        extraNotes: (formData.message || "").trim(),
         extras: state.extras,
+        lineItems: state.lineItems,
         inventory: {
           chairs: state.chairs,
           tables: state.tables,
           decorations: state.decorations
         },
+        subtotal: state.subtotal,
+        discount: state.discount,
+        deliveryFee: state.deliveryFee,
+        setupFee: state.setupFee,
+        adjustment: state.adjustment,
         total: state.total,
         quoteAmount: state.total,
+        depositAmount: state.deposit,
+        paidAmount: 0,
+        balanceDue: Math.max(0, state.total - state.deposit),
         status: "New",
         paymentStatus: "Unpaid",
         adminNotes: "",
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString()
+        eventNotes: "",
+        issueReport: "",
+        missingItems: "",
+        operations: { deliveryDone: false, setupDone: false, pickupDone: false },
+        assignedStaff: "",
+        followUpDate: "",
+        quoteExpiryDate: expiryDate,
+        quoteCreatedAt: createdAt,
+        createdAt,
+        updatedAt: createdAt
       });
     }
 
@@ -4269,16 +5262,13 @@
       const bookings = getBookings();
       bookings.unshift(booking);
       setBookings(bookings);
-      const inventory = getInventory();
-      inventory.chairs -= booking.inventory.chairs;
-      inventory.tables -= booking.inventory.tables;
-      inventory.decorations -= booking.inventory.decorations;
-      setInventory(inventory);
       setLatestBookingDraft(booking);
       renderInvoice(booking);
       renderAnalytics();
       renderBookingsManager();
       renderOverviewPanel();
+      renderCalendarPanel();
+      renderInventoryPanel();
       updateQuoteUI();
     }
 
@@ -4288,11 +5278,6 @@
       if(!booking) return;
       const next = bookings.filter((item) => item.id !== id);
       setBookings(next);
-      const inventory = getInventory();
-      inventory.chairs += Number(booking.inventory?.chairs || 0);
-      inventory.tables += Number(booking.inventory?.tables || 0);
-      inventory.decorations += Number(booking.inventory?.decorations || 0);
-      setInventory(inventory);
       const latest = latestBookingDraft();
       if(latest && latest.id === id){
         localStorage.removeItem(STORAGE_KEYS.latest);
@@ -4309,6 +5294,8 @@
       renderAnalytics();
       renderBookingsManager();
       renderOverviewPanel();
+      renderCalendarPanel();
+      renderInventoryPanel();
       updateQuoteUI();
       showToast("Booking deleted.");
     }
@@ -4331,6 +5318,8 @@
       renderAnalytics();
       renderBookingsManager();
       renderOverviewPanel();
+      renderCalendarPanel();
+      renderInventoryPanel();
       updateQuoteUI();
     }
 
@@ -4338,13 +5327,24 @@
       const searchValue = adminBookingSearch.value.trim().toLowerCase();
       const statusValue = adminBookingStatusFilter.value;
       const paidValue = adminBookingPaidFilter.value;
-      return getBookings().filter((booking) => {
-        const haystack = [booking.name, booking.phone, booking.email, booking.package, booking.eventType, booking.venue].join(" ").toLowerCase();
+      const sourceValue = adminBookingSourceFilter?.value || "";
+      const dateValue = adminBookingDateFilter?.value || "";
+      const sortValue = adminBookingSort?.value || "newest";
+      const bookings = getBookings().filter((booking) => {
+        const haystack = [booking.name, booking.phone, booking.email, booking.package, booking.eventType, booking.venue, booking.assignedStaff, booking.adminNotes].join(" ").toLowerCase();
         const matchesSearch = !searchValue || haystack.includes(searchValue);
         const matchesStatus = !statusValue || booking.status === statusValue;
         const matchesPaid = !paidValue || booking.paymentStatus === paidValue;
-        return matchesSearch && matchesStatus && matchesPaid;
+        const matchesSource = !sourceValue || booking.leadSource === sourceValue;
+        const matchesDate = !dateValue || booking.eventDate === dateValue;
+        return matchesSearch && matchesStatus && matchesPaid && matchesSource && matchesDate;
       });
+      bookings.sort((a, b) => {
+        if(sortValue === "oldest") return new Date(a.createdAt) - new Date(b.createdAt);
+        if(sortValue === "upcoming") return String(a.eventDate).localeCompare(String(b.eventDate));
+        return new Date(b.createdAt) - new Date(a.createdAt);
+      });
+      return bookings;
     }
 
     function populateBookingEditor(booking){
@@ -4353,9 +5353,24 @@
         bookingEditorSummary.innerHTML = "<span class='admin-empty'>Choose a booking from the table to manage its workflow.</span>";
         bookingEditorId.value = "";
         adminEditStatus.value = "New";
+        adminEditPriority.value = "Medium";
+        adminEditSource.value = "Website";
         adminEditPaymentStatus.value = "Unpaid";
         adminEditQuoteAmount.value = "";
+        adminEditDepositAmount.value = "";
+        adminEditPaidAmount.value = "";
+        adminEditBalanceDue.value = "";
+        adminEditFollowUpDate.value = "";
+        adminEditQuoteExpiry.value = "";
+        adminEditAssignedStaff.value = "";
+        adminEditEventTime.value = "";
         adminEditNotes.value = "";
+        adminEditEventNotes.value = "";
+        adminEditIssueReport.value = "";
+        adminEditMissingItems.value = "";
+        adminEditDeliveryDone.checked = false;
+        adminEditSetupDone.checked = false;
+        adminEditPickupDone.checked = false;
         deleteSelectedBookingBtn.disabled = true;
         return;
       }
@@ -4363,17 +5378,34 @@
       bookingEditorSummary.innerHTML = `
         <div class="admin-inline-meta">
           <span>${escapeHtml(formatDate(booking.eventDate))}</span>
+          <span>${escapeHtml(booking.eventTime || "Time TBC")}</span>
           <span>${escapeHtml(booking.eventType)}</span>
           <span>${escapeHtml(booking.venue)}</span>
           <span>${escapeHtml(booking.email)}</span>
+          <span>${escapeHtml(booking.leadSource || "Website")}</span>
         </div>
-        <p style="margin:12px 0 0; color:var(--muted); line-height:1.7;">Saved ${escapeHtml(formatDateTime(booking.createdAt))} • Updated ${escapeHtml(formatDateTime(booking.updatedAt))}</p>
+        <p style="margin:12px 0 0; color:var(--muted); line-height:1.7;">Saved ${escapeHtml(formatDateTime(booking.createdAt))} • Updated ${escapeHtml(formatDateTime(booking.updatedAt))} • Quote ${escapeHtml(booking.quoteNumber)}</p>
       `;
       bookingEditorId.value = booking.id;
       adminEditStatus.value = booking.status;
+      adminEditPriority.value = booking.priority || "Medium";
+      adminEditSource.value = booking.leadSource || "Website";
       adminEditPaymentStatus.value = booking.paymentStatus;
       adminEditQuoteAmount.value = Number(booking.quoteAmount || booking.total || 0);
+      adminEditDepositAmount.value = Number(booking.depositAmount || 0);
+      adminEditPaidAmount.value = Number(booking.paidAmount || 0);
+      adminEditBalanceDue.value = Number(booking.balanceDue || 0);
+      adminEditFollowUpDate.value = booking.followUpDate || "";
+      adminEditQuoteExpiry.value = booking.quoteExpiryDate || "";
+      adminEditAssignedStaff.value = booking.assignedStaff || "";
+      adminEditEventTime.value = booking.eventTime || "";
       adminEditNotes.value = booking.adminNotes || "";
+      adminEditEventNotes.value = booking.eventNotes || "";
+      adminEditIssueReport.value = booking.issueReport || "";
+      adminEditMissingItems.value = booking.missingItems || "";
+      adminEditDeliveryDone.checked = !!booking.operations?.deliveryDone;
+      adminEditSetupDone.checked = !!booking.operations?.setupDone;
+      adminEditPickupDone.checked = !!booking.operations?.pickupDone;
       deleteSelectedBookingBtn.disabled = false;
     }
 
@@ -4388,12 +5420,12 @@
       bookings.forEach((item) => {
         const row = document.createElement("tr");
         row.innerHTML = `
-          <td><strong style="color:var(--text)">${escapeHtml(item.name)}</strong><br>${escapeHtml(item.phone)}</td>
-          <td>${escapeHtml(formatDate(item.eventDate))}</td>
-          <td>${escapeHtml(item.package)}</td>
+          <td><strong style="color:var(--text)">${escapeHtml(item.name)}</strong><br>${escapeHtml(item.phone)}<br><span style="font-size:.82rem; color:var(--muted);">${escapeHtml(item.leadSource || "Website")} • ${escapeHtml(item.priority || "Medium")}</span></td>
+          <td>${escapeHtml(formatDate(item.eventDate))}${item.eventTime ? `<br><span style="font-size:.82rem; color:var(--muted);">${escapeHtml(item.eventTime)}</span>` : ""}</td>
+          <td>${escapeHtml(item.package)}<br><span style="font-size:.82rem; color:var(--muted);">${escapeHtml(item.eventType || "Event")}</span></td>
           <td><span class="status-pill ${item.status === "Cancelled" ? "warn" : "ok"}">${escapeHtml(item.status)}</span></td>
-          <td>${escapeHtml(item.paymentStatus)}</td>
-          <td>${escapeHtml(formatMoney(item.quoteAmount || item.total))}</td>
+          <td>${escapeHtml(item.paymentStatus)}<br><span style="font-size:.82rem; color:var(--muted);">${escapeHtml(formatMoney(item.paidAmount || 0))}</span></td>
+          <td>${escapeHtml(formatMoney(item.quoteAmount || item.total))}<br><span style="font-size:.82rem; color:var(--muted);">Bal ${escapeHtml(formatMoney(item.balanceDue || 0))}</span></td>
           <td>
             <div style="display:flex; gap:8px; flex-wrap:wrap;">
               <button class="icon-btn" type="button" data-edit-booking="${item.id}">Edit</button>
@@ -4418,6 +5450,8 @@
         <div class="mini-card"><h4 style="margin:0 0 6px;">Confirmed</h4><p style="margin:0;">${metrics.confirmed}</p></div>
         <div class="mini-card"><h4 style="margin:0 0 6px;">Collected</h4><p style="margin:0;">${formatMoney(metrics.paidCollected)}</p></div>
         <div class="mini-card"><h4 style="margin:0 0 6px;">Top Event Type</h4><p style="margin:0;">${escapeHtml(metrics.topEventType)}</p></div>
+        <div class="mini-card"><h4 style="margin:0 0 6px;">Outstanding</h4><p style="margin:0;">${formatMoney(metrics.outstanding)}</p></div>
+        <div class="mini-card"><h4 style="margin:0 0 6px;">Upcoming Events</h4><p style="margin:0;">${metrics.upcomingEvents}</p></div>
       `;
       overviewLatestBooking.innerHTML = latest ? `
         <strong style="display:block; margin-bottom:10px;">${escapeHtml(latest.name)} • ${escapeHtml(latest.package)}</strong>
@@ -4426,6 +5460,7 @@
           <span>${escapeHtml(latest.status)}</span>
           <span>${escapeHtml(latest.paymentStatus)}</span>
           <span>${escapeHtml(formatMoney(latest.quoteAmount || latest.total))}</span>
+          <span>${escapeHtml(latest.assignedStaff || "Unassigned")}</span>
         </div>
         <p style="margin:12px 0 0; color:var(--muted); line-height:1.7;">${escapeHtml(latest.venue)}</p>
       ` : "<div class='admin-empty'>No bookings saved yet.</div>";
@@ -4434,7 +5469,8 @@
         : "<li>No low-stock warnings right now.</li>";
     }
 
-    function renderCmsServicesEditor(items){
+    function renderCmsServicesEditor(
+items){
       cmsServicesEditor.innerHTML = items.map((item, index) => `
         <div class="admin-row-card" data-service-index="${index}">
           <div class="field"><label>Icon</label><input type="text" data-service-field="icon" value="${escapeHtml(item.icon)}" maxlength="4"></div>
@@ -4457,16 +5493,20 @@
       }));
     }
 
+
     function populateCmsForm(){
       const cms = getCms();
       cmsForm.brandName.value = cms.brandName;
       cmsForm.brandTagline.value = cms.brandTagline;
+      cmsForm.brandBadgeText.value = cms.brandBadgeText || "";
       cmsForm.heroEyebrow.value = cms.heroEyebrow;
       cmsForm.heroTitle.value = cms.heroTitle;
       cmsForm.heroAccent.value = cms.heroAccent;
       cmsForm.heroSubtitle.value = cms.heroSubtitle;
       cmsForm.heroPrimaryCtaText.value = cms.heroPrimaryCtaText;
+      cmsForm.heroPrimaryCtaLink.value = cms.heroPrimaryCtaLink || "";
       cmsForm.heroSecondaryCtaText.value = cms.heroSecondaryCtaText;
+      cmsForm.heroSecondaryCtaLink.value = cms.heroSecondaryCtaLink || "";
       cmsForm.heroBadges.value = cms.heroBadges.join("\n");
       cmsForm.heroStats.value = formatLines(cms.heroStats, "value", "label");
       cmsForm.heroPanelTitle.value = cms.heroPanelTitle;
@@ -4494,6 +5534,9 @@
       cmsForm.testimonialsTitle.value = cms.testimonialsTitle;
       cmsForm.testimonialsSubtitle.value = cms.testimonialsSubtitle;
       cmsForm.footerSummary.value = cms.footerSummary;
+      cmsForm.faqTitleInput.value = cms.faqTitle || "";
+      cmsForm.faqSubtitleInput.value = cms.faqSubtitle || "";
+      cmsForm.faqItemsInput.value = formatLines(cms.faqItems || [], "question", "answer");
       renderCmsServicesEditor(cms.serviceItems);
     }
 
@@ -4501,12 +5544,15 @@
       const next = {
         brandName: cmsForm.brandName.value.trim() || DEFAULT_CMS.brandName,
         brandTagline: cmsForm.brandTagline.value.trim() || DEFAULT_CMS.brandTagline,
+        brandBadgeText: cmsForm.brandBadgeText.value.trim() || DEFAULT_CMS.brandBadgeText,
         heroEyebrow: cmsForm.heroEyebrow.value.trim() || DEFAULT_CMS.heroEyebrow,
         heroTitle: cmsForm.heroTitle.value.trim() || DEFAULT_CMS.heroTitle,
         heroAccent: cmsForm.heroAccent.value.trim() || DEFAULT_CMS.heroAccent,
         heroSubtitle: cmsForm.heroSubtitle.value.trim() || DEFAULT_CMS.heroSubtitle,
         heroPrimaryCtaText: cmsForm.heroPrimaryCtaText.value.trim() || DEFAULT_CMS.heroPrimaryCtaText,
+        heroPrimaryCtaLink: cmsForm.heroPrimaryCtaLink.value.trim() || DEFAULT_CMS.heroPrimaryCtaLink,
         heroSecondaryCtaText: cmsForm.heroSecondaryCtaText.value.trim() || DEFAULT_CMS.heroSecondaryCtaText,
+        heroSecondaryCtaLink: cmsForm.heroSecondaryCtaLink.value.trim() || DEFAULT_CMS.heroSecondaryCtaLink,
         heroBadges: parseLines(cmsForm.heroBadges.value),
         heroStats: parsePairLines(cmsForm.heroStats.value, "value", "label"),
         heroPanelTitle: cmsForm.heroPanelTitle.value.trim() || DEFAULT_CMS.heroPanelTitle,
@@ -4534,6 +5580,9 @@
         testimonialsTitle: cmsForm.testimonialsTitle.value.trim() || DEFAULT_CMS.testimonialsTitle,
         testimonialsSubtitle: cmsForm.testimonialsSubtitle.value.trim() || DEFAULT_CMS.testimonialsSubtitle,
         footerSummary: cmsForm.footerSummary.value.trim() || DEFAULT_CMS.footerSummary,
+        faqTitle: cmsForm.faqTitleInput.value.trim() || DEFAULT_CMS.faqTitle,
+        faqSubtitle: cmsForm.faqSubtitleInput.value.trim() || DEFAULT_CMS.faqSubtitle,
+        faqItems: parsePairLines(cmsForm.faqItemsInput.value, "question", "answer"),
         serviceItems: collectServicesFromEditor()
       };
       setCms(next);
@@ -4542,6 +5591,7 @@
       renderAdminAll();
       showToast("CMS content updated.");
     }
+
 
     function renderGalleryManager(){
       const items = getGalleryItems();
@@ -4552,6 +5602,7 @@
             <div class="admin-inline-meta">
               <span>${escapeHtml(item.category)}</span>
               <span>${escapeHtml(item.location)}</span>
+              <span>${escapeHtml(item.relatedPackage || "No related package")}</span>
               <span>${item.visible ? "Visible" : "Hidden"}</span>
             </div>
           </div>
@@ -4581,6 +5632,8 @@
       galleryItemForm.galleryImage.value = item.image;
       galleryItemForm.galleryThumb.value = item.thumb;
       galleryItemForm.galleryLocation.value = item.location;
+      galleryItemForm.galleryRelatedPackage.value = item.relatedPackage || "";
+      galleryItemForm.galleryCtaText.value = item.ctaText || "";
       galleryItemForm.galleryDescription.value = item.description;
       galleryItemForm.galleryVisible.checked = item.visible !== false;
     }
@@ -4594,6 +5647,8 @@
         image: galleryItemForm.galleryImage.value.trim(),
         thumb: galleryItemForm.galleryThumb.value.trim() || galleryItemForm.galleryImage.value.trim(),
         location: galleryItemForm.galleryLocation.value.trim(),
+        relatedPackage: galleryItemForm.galleryRelatedPackage.value.trim(),
+        ctaText: galleryItemForm.galleryCtaText.value.trim() || "Book this setup",
         description: galleryItemForm.galleryDescription.value.trim(),
         visible: galleryItemForm.galleryVisible.checked
       }, items.length);
@@ -4614,6 +5669,7 @@
     }
 
     function moveItem(list, fromIndex, direction){
+
       const toIndex = fromIndex + direction;
       if(toIndex < 0 || toIndex >= list.length) return list;
       const next = [...list];
@@ -4621,6 +5677,7 @@
       next.splice(toIndex, 0, item);
       return next;
     }
+
 
     function renderPackageManager(){
       const items = getPackageItems();
@@ -4631,6 +5688,8 @@
             <div class="admin-inline-meta">
               <span>${escapeHtml(item.badge)}</span>
               <span>${escapeHtml(formatMoney(item.price))}</span>
+              <span>${escapeHtml(formatMoney(item.deliveryFee || 0))} delivery</span>
+              <span>${escapeHtml(formatMoney(item.setupFee || 0))} setup</span>
               <span>${item.popular ? "Popular" : "Standard"}</span>
               <span>${item.visible ? "Visible" : "Hidden"}</span>
             </div>
@@ -4650,6 +5709,8 @@
       packageItemForm.reset();
       packageEditIndex.value = "";
       packageItemForm.packageVisible.checked = true;
+      packageItemForm.packagePopular.checked = false;
+      packageItemForm.packageAddons.value = "";
     }
 
     function populatePackageForm(index){
@@ -4660,14 +5721,21 @@
       packageItemForm.packageBadge.value = item.badge;
       packageItemForm.packageTitle.value = item.title;
       packageItemForm.packagePrice.value = item.price;
-      packageItemForm.packageDescription.value = item.description;
-      packageItemForm.packageFeatures.value = item.features.join("\n");
+      packageItemForm.packageButtonText.value = item.buttonText;
+      packageItemForm.packageImage.value = item.image || "";
+      packageItemForm.packageDeliveryFee.value = item.deliveryFee || 0;
+      packageItemForm.packageSetupFee.value = item.setupFee || 0;
+      packageItemForm.packageDiscount.value = item.discount || 0;
+      packageItemForm.packageDeposit.value = item.deposit || 0;
+      packageItemForm.packageAdjustment.value = item.adjustment || 0;
       packageItemForm.packageChairs.value = item.chairs;
       packageItemForm.packageTables.value = item.tables;
       packageItemForm.packageDecorations.value = item.decorations;
-      packageItemForm.packageButtonText.value = item.buttonText;
       packageItemForm.packagePopular.checked = item.popular === true;
       packageItemForm.packageVisible.checked = item.visible !== false;
+      packageItemForm.packageDescription.value = item.description;
+      packageItemForm.packageFeatures.value = item.features.join("\n");
+      packageItemForm.packageAddons.value = (item.addons || []).map((addon) => `${addon.name} | ${addon.price}`).join("\n");
     }
 
     function savePackageForm(){
@@ -4684,7 +5752,14 @@
         decorations: packageItemForm.packageDecorations.value,
         buttonText: packageItemForm.packageButtonText.value.trim(),
         popular: packageItemForm.packagePopular.checked,
-        visible: packageItemForm.packageVisible.checked
+        visible: packageItemForm.packageVisible.checked,
+        image: packageItemForm.packageImage.value.trim(),
+        addons: parsePairLines(packageItemForm.packageAddons.value, "name", "price").map((item) => ({ name: item.name, price: Number(item.price || 0) })),
+        deliveryFee: packageItemForm.packageDeliveryFee.value,
+        setupFee: packageItemForm.packageSetupFee.value,
+        discount: packageItemForm.packageDiscount.value,
+        deposit: packageItemForm.packageDeposit.value,
+        adjustment: packageItemForm.packageAdjustment.value
       }, items.length);
       if(!record.title){
         showToast("Package title is required.");
@@ -4702,16 +5777,20 @@
       showToast("Packages updated.");
     }
 
+
     function renderTestimonialManager(){
       const items = getTestimonials();
       testimonialManagerList.innerHTML = items.map((item, index) => `
         <div class="manager-card ${item.visible ? "" : "muted-card"}">
-          <div>
-            <strong>${escapeHtml(item.title)}</strong>
-            <div class="admin-inline-meta">
-              <span>${escapeHtml(item.person)}</span>
-              <span>${"★".repeat(item.stars)}</span>
-              <span>${item.visible ? "Visible" : "Hidden"}</span>
+          <div style="display:flex; gap:12px; align-items:center;">
+            <span class="photo-chip">${item.photo ? `<img src="${escapeHtml(item.photo)}" alt="${escapeHtml(item.person)}">` : escapeHtml((item.person || "C").trim().charAt(0).toUpperCase())}</span>
+            <div>
+              <strong>${escapeHtml(item.title)}</strong>
+              <div class="admin-inline-meta">
+                <span>${escapeHtml(item.person)}</span>
+                <span>${"★".repeat(item.stars)}</span>
+                <span>${item.visible ? "Visible" : "Hidden"}</span>
+              </div>
             </div>
           </div>
           <div class="inline-actions">
@@ -4742,6 +5821,7 @@
       testimonialItemForm.testimonialPerson.value = item.person;
       testimonialItemForm.testimonialRole.value = item.role;
       testimonialItemForm.testimonialStars.value = item.stars;
+      testimonialItemForm.testimonialPhoto.value = item.photo || "";
       testimonialItemForm.testimonialVisible.checked = item.visible !== false;
     }
 
@@ -4754,6 +5834,7 @@
         person: testimonialItemForm.testimonialPerson.value.trim(),
         role: testimonialItemForm.testimonialRole.value.trim(),
         stars: testimonialItemForm.testimonialStars.value,
+        photo: testimonialItemForm.testimonialPhoto.value.trim(),
         visible: testimonialItemForm.testimonialVisible.checked
       }, items.length);
       if(!record.title){
@@ -4772,6 +5853,7 @@
       showToast("Testimonials updated.");
     }
 
+
     function populateSettingsForm(){
       const settings = getSettings();
       settingsForm.businessName.value = settings.businessName;
@@ -4780,10 +5862,13 @@
       settingsForm.location.value = settings.location;
       settingsForm.serviceArea.value = settings.serviceArea;
       settingsForm.facebookUrl.value = settings.facebookUrl;
+      settingsForm.accessRole.value = settings.accessRole;
+      settingsForm.quoteExpiryDays.value = settings.quoteExpiryDays;
       settingsForm.whatsappNumber.value = settings.whatsappNumber;
       settingsForm.socialButtonText.value = settings.socialButtonText;
       settingsForm.emailButtonText.value = settings.emailButtonText;
       settingsForm.planningTip.value = settings.planningTip;
+      settingsForm.staffMembers.value = (settings.staffMembers || []).join("\n");
       settingsForm.inventoryChairs.value = settings.inventory.chairs;
       settingsForm.inventoryTables.value = settings.inventory.tables;
       settingsForm.inventoryDecorations.value = settings.inventory.decorations;
@@ -4819,6 +5904,9 @@
         socialButtonText: settingsForm.socialButtonText.value.trim() || DEFAULT_SETTINGS.socialButtonText,
         emailButtonText: settingsForm.emailButtonText.value.trim() || DEFAULT_SETTINGS.emailButtonText,
         planningTip: settingsForm.planningTip.value.trim() || DEFAULT_SETTINGS.planningTip,
+        accessRole: settingsForm.accessRole.value || DEFAULT_SETTINGS.accessRole,
+        quoteExpiryDays: Number(settingsForm.quoteExpiryDays.value || DEFAULT_SETTINGS.quoteExpiryDays),
+        staffMembers: parseLines(settingsForm.staffMembers.value),
         inventory: {
           chairs: Number(settingsForm.inventoryChairs.value || DEFAULT_SETTINGS.inventory.chairs),
           tables: Number(settingsForm.inventoryTables.value || DEFAULT_SETTINGS.inventory.tables),
@@ -4836,19 +5924,34 @@
       if(unchangedInventory){
         setInventory(settings.inventory);
       }
+      const items = getInventoryItems().map((item) => {
+        if(item.resourceType && settings.inventory[item.resourceType] != null){
+          return normalizeInventoryItem({
+            ...item,
+            totalStock: settings.inventory[item.resourceType],
+            lowStockThreshold: settings.lowStockThresholds[item.resourceType]
+          }, 0);
+        }
+        return item;
+      });
+      setInventoryItems(items);
       populateSettingsForm();
       renderPublicContent();
       renderAnalytics();
       renderOverviewPanel();
+      renderInventoryPanel();
       showToast("Settings updated.");
     }
 
+
     function composeBackup(){
       return {
-        version: 2,
+        version: 3,
         exportedAt: new Date().toISOString(),
         bookings: getBookings(),
         inventory: getInventory(),
+        inventoryItems: getInventoryItems(),
+        calendar: getCalendarData(),
         cms: getCms(),
         gallery: getGalleryItems(),
         packages: getPackageItems(),
@@ -4863,8 +5966,11 @@
         showToast("Backup file is invalid.");
         return;
       }
+      if(!window.confirm("Import this backup and overwrite the current local data?")) return;
       if(Array.isArray(data.bookings)) setBookings(data.bookings);
       if(data.inventory && typeof data.inventory === "object") setInventory(data.inventory);
+      if(Array.isArray(data.inventoryItems)) setInventoryItems(data.inventoryItems);
+      if(data.calendar && typeof data.calendar === "object") setCalendarData(data.calendar);
       if(data.cms && typeof data.cms === "object") setCms(data.cms);
       if(Array.isArray(data.gallery)) setGalleryItems(data.gallery);
       if(Array.isArray(data.packages)) setPackageItems(data.packages);
@@ -4890,9 +5996,13 @@
       lightboxCategory.textContent = (card.dataset.category || "gallery").replace(/-/g, " ");
       lightboxDescription.textContent = card.dataset.description || "Event styling preview.";
       lightboxLocation.textContent = card.dataset.location || "Location not provided";
+      lightboxRelatedPackage.textContent = card.dataset.relatedPackage ? `Related package: ${card.dataset.relatedPackage}` : "Related package not set";
+      lightboxBookBtn.textContent = card.dataset.ctaText || "Book this setup";
+      lightboxBookBtn.dataset.package = card.dataset.relatedPackage || "";
       lightbox.classList.add("active");
       syncBodyLockState();
     }
+
 
     function setAdminTab(tabName){
       activeAdminTab = tabName;
@@ -4904,18 +6014,242 @@
       });
     }
 
+    function getCurrentRole(){
+      return getSettings().accessRole || "Owner";
+    }
+
+    function hasManagerAccess(){
+      return ["Owner", "Admin"].includes(getCurrentRole());
+    }
+
+    function hasEditAccess(){
+      return ["Owner", "Admin", "Staff"].includes(getCurrentRole());
+    }
+
+    function applyRoleRestrictions(){
+      const role = getCurrentRole();
+      const readOnly = !hasEditAccess();
+      document.querySelectorAll("#adminModal input, #adminModal textarea, #adminModal select, #adminModal button").forEach((el) => {
+        if(el.closest(".admin-header-block") || el.id === "lockAdminBtn" || el.id === "logoutAdminBtn") return;
+        if(role === "Viewer"){
+          if(["BUTTON","INPUT","TEXTAREA","SELECT"].includes(el.tagName)){
+            if(el.dataset?.allowViewer !== "true"){
+              if(el.tagName === "BUTTON"){
+                el.disabled = true;
+              }else{
+                el.disabled = true;
+              }
+            }
+          }
+        }else if(role === "Staff"){
+          const fullOnly = ["cmsForm","galleryItemForm","packageItemForm","testimonialItemForm","settingsForm","inventoryItemForm","calendarBlockForm"];
+          const insideRestricted = fullOnly.some((id) => document.getElementById(id)?.contains(el));
+          if(insideRestricted || ["exportBackupBtn","importBackupBtn","resetPublicContentBtn","resetAllDataBtn","clearBookingsBtn","resetInventoryBtn"].includes(el.id)){
+            el.disabled = true;
+          }else{
+            el.disabled = false;
+          }
+        }else{
+          el.disabled = false;
+        }
+      });
+      const statusEl = document.getElementById("adminSessionStatus");
+      if(statusEl) statusEl.textContent = `${isAdminAuthenticated() ? "Authenticated" : "Locked"} • ${role}`;
+    }
+
+    function migrateLegacyInventoryIfNeeded(){
+      const meta = readJSON(STORAGE_KEYS.inventoryMeta, { version: 0 });
+      if(Number(meta.version || 0) >= 2) return;
+      const base = getInventory();
+      const bookings = getBookings().filter((item) => item.status !== "Cancelled");
+      const restored = bookings.reduce((acc, booking) => {
+        acc.chairs += Number(booking.inventory?.chairs || 0);
+        acc.tables += Number(booking.inventory?.tables || 0);
+        acc.decorations += Number(booking.inventory?.decorations || 0);
+        return acc;
+      }, { chairs: base.chairs, tables: base.tables, decorations: base.decorations });
+      setInventory(restored);
+      if(!localStorage.getItem(STORAGE_KEYS.inventoryItems)){
+        setInventoryItems(DEFAULT_INVENTORY_ITEMS.map((item) => {
+          const cloned = { ...item };
+          if(cloned.resourceType) cloned.totalStock = restored[cloned.resourceType];
+          return cloned;
+        }));
+      }
+      writeJSON(STORAGE_KEYS.inventoryMeta, { version: 2, migratedAt: new Date().toISOString() });
+    }
+
+    function currentCalendarMonth(){
+      const data = getCalendarData();
+      if(data.currentMonth) return data.currentMonth;
+      return new Date().toISOString().slice(0, 7);
+    }
+
+    function monthLabel(yyyyMm){
+      const [y,m] = yyyyMm.split("-").map(Number);
+      const dt = new Date(y, m - 1, 1);
+      return dt.toLocaleDateString(undefined, { month: "long", year: "numeric" });
+    }
+
+    function renderCalendarSelected(dateValue){
+      const blocked = blockedDateFor(dateValue);
+      const bookings = getActiveBookings(dateValue);
+      calendarSelectedLabel.textContent = dateValue ? formatDate(dateValue) : "Select a date";
+      calendarSelectedEvents.innerHTML = "";
+      const cards = [];
+      if(blocked){
+        cards.push(`<div class="manager-card"><strong>Blocked date</strong><div class="admin-inline-meta"><span>${escapeHtml(formatDate(dateValue))}</span><span>${escapeHtml(blocked.note || "Unavailable")}</span></div></div>`);
+      }
+      bookings.forEach((booking) => {
+        cards.push(`<div class="manager-card"><strong>${escapeHtml(booking.name)} • ${escapeHtml(booking.package)}</strong><div class="admin-inline-meta"><span>${escapeHtml(booking.status)}</span><span>${escapeHtml(booking.eventTime || "Time TBC")}</span><span>${escapeHtml(booking.assignedStaff || "Unassigned")}</span></div><p style="margin:10px 0 0; color:var(--muted); line-height:1.7;">${escapeHtml(booking.venue)}</p></div>`);
+      });
+      calendarSelectedEmpty.style.display = cards.length ? "none" : "block";
+      calendarSelectedEvents.innerHTML = cards.join("");
+    }
+
+    function renderCalendarPanel(){
+      if(!calendarGrid) return;
+      const cal = getCalendarData();
+      const month = currentCalendarMonth();
+      const [year, monthNumber] = month.split("-").map(Number);
+      const first = new Date(year, monthNumber - 1, 1);
+      const start = new Date(first);
+      start.setDate(first.getDate() - ((first.getDay() + 6) % 7));
+      const today = new Date().toISOString().slice(0, 10);
+      calendarMonthLabel.textContent = monthLabel(month);
+      let markup = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"].map((label) => `<div class="calendar-head">${label}</div>`).join("");
+      for(let i = 0; i < 42; i++){
+        const date = new Date(start);
+        date.setDate(start.getDate() + i);
+        const key = date.toISOString().slice(0, 10);
+        const sameMonth = key.slice(0, 7) === month;
+        const blocked = blockedDateFor(key);
+        const bookings = getActiveBookings(key);
+        markup += `
+          <button class="calendar-day ${sameMonth ? "" : "is-outside"} ${key === today ? "is-today" : ""} ${blocked ? "is-blocked" : ""} ${bookings.length ? "is-booked" : ""}" type="button" data-calendar-date="${key}">
+            <strong>${date.getDate()}</strong>
+            <span class="calendar-count">${blocked ? "Blocked" : bookings.length ? `${bookings.length} event(s)` : "Open"}</span>
+            <span class="calendar-count">${blocked?.note ? escapeHtml(blocked.note) : bookings[0]?.package ? escapeHtml(bookings[0].package) : ""}</span>
+          </button>
+        `;
+      }
+      calendarGrid.innerHTML = markup;
+      blockedDatesList.innerHTML = (cal.blockedDates || []).length
+        ? cal.blockedDates.sort((a,b) => a.date.localeCompare(b.date)).map((item) => `<div class="manager-card"><div><strong>${escapeHtml(formatDate(item.date))}</strong><div class="admin-inline-meta"><span>${escapeHtml(item.note || "No note")}</span></div></div><div class="inline-actions"><button class="icon-btn" type="button" data-delete-blocked="${item.date}">Remove</button></div></div>`).join("")
+        : `<div class="admin-empty">No blocked dates saved.</div>`;
+      renderCalendarSelected(cal.selectedDate || "");
+      if(calendarBlockDate) calendarBlockDate.value = cal.selectedDate || calendarBlockDate.value;
+    }
+
+    function reservationCountsForItem(item, dateValue){
+      if(item.resourceType){
+        const reserved = computeReservationsByDate(dateValue)[item.resourceType];
+        return { reserved, available: Math.max(0, item.totalStock - item.damagedQty - reserved) };
+      }
+      let reserved = 0;
+      getActiveBookings(dateValue).forEach((booking) => {
+        (booking.extras || []).forEach((extra) => {
+          if(extra.name.toLowerCase() === item.name.toLowerCase()) reserved += 1;
+        });
+      });
+      return { reserved, available: Math.max(0, item.totalStock - item.damagedQty - reserved) };
+    }
+
+    function renderInventoryPanel(){
+      if(!inventoryManagerList) return;
+      const dateValue = inventoryDateFilter?.value || eventDate?.value || new Date().toISOString().slice(0,10);
+      const items = getInventoryItems();
+      inventoryReservationSummary.innerHTML = [
+        `<span class="inventory-chip">Check date: ${escapeHtml(formatDate(dateValue))}</span>`,
+        `<span class="inventory-chip">Bookings: ${getActiveBookings(dateValue).length}</span>`,
+        `<span class="inventory-chip">Blocked: ${blockedDateFor(dateValue) ? "Yes" : "No"}</span>`
+      ].join("");
+      inventoryManagerList.innerHTML = items.map((item, index) => {
+        const counts = reservationCountsForItem(item, dateValue);
+        const low = counts.available <= Number(item.lowStockThreshold || 0);
+        return `
+          <div class="manager-card ${low ? "muted-card" : ""}">
+            <div>
+              <strong>${escapeHtml(item.name)}</strong>
+              <div class="admin-inline-meta">
+                <span>${escapeHtml(item.category)}</span>
+                <span>Total ${item.totalStock}</span>
+                <span>Reserved ${counts.reserved}</span>
+                <span>Available ${counts.available}</span>
+                <span>Damaged ${item.damagedQty}</span>
+              </div>
+              <p style="margin:10px 0 0; color:var(--muted); line-height:1.7;">${escapeHtml(item.notes || "No notes.")}</p>
+            </div>
+            <div class="inline-actions">
+              <button class="icon-btn" type="button" data-inventory-action="edit" data-index="${index}">Edit</button>
+              <button class="icon-btn" type="button" data-inventory-action="up" data-index="${index}">↑</button>
+              <button class="icon-btn" type="button" data-inventory-action="down" data-index="${index}">↓</button>
+              <button class="icon-btn" type="button" data-inventory-action="delete" data-index="${index}">Delete</button>
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    function resetInventoryItemForm(){
+      inventoryItemForm?.reset();
+      if(inventoryEditIndex) inventoryEditIndex.value = "";
+    }
+
+    function populateInventoryForm(index){
+      const item = getInventoryItems()[index];
+      if(!item) return;
+      inventoryEditIndex.value = String(index);
+      document.getElementById("inventoryItemName").value = item.name;
+      document.getElementById("inventoryItemCategory").value = item.category;
+      document.getElementById("inventoryItemResourceType").value = item.resourceType || "";
+      document.getElementById("inventoryItemTotal").value = item.totalStock;
+      document.getElementById("inventoryItemDamaged").value = item.damagedQty;
+      document.getElementById("inventoryItemThreshold").value = item.lowStockThreshold;
+      document.getElementById("inventoryItemNotes").value = item.notes || "";
+    }
+
+    function saveInventoryItemForm(){
+      const items = getInventoryItems();
+      const index = inventoryEditIndex.value === "" ? -1 : Number(inventoryEditIndex.value);
+      const record = normalizeInventoryItem({
+        name: document.getElementById("inventoryItemName").value.trim(),
+        category: document.getElementById("inventoryItemCategory").value.trim(),
+        resourceType: document.getElementById("inventoryItemResourceType").value,
+        totalStock: document.getElementById("inventoryItemTotal").value,
+        damagedQty: document.getElementById("inventoryItemDamaged").value,
+        lowStockThreshold: document.getElementById("inventoryItemThreshold").value,
+        notes: document.getElementById("inventoryItemNotes").value.trim()
+      }, items.length);
+      if(!record.name){
+        showToast("Inventory item name is required.");
+        return;
+      }
+      if(index >= 0) items[index] = record;
+      else items.push(record);
+      setInventoryItems(items);
+      resetInventoryItemForm();
+      renderInventoryPanel();
+      renderAnalytics();
+      updateQuoteUI();
+      showToast("Inventory item saved.");
+    }
+
     function renderAdminAll(){
       updateAdminSessionUI();
       renderAnalytics();
       renderOverviewPanel();
       renderBookingsManager();
+      renderCalendarPanel();
+      renderInventoryPanel();
       populateCmsForm();
       renderGalleryManager();
       renderPackageManager();
       renderTestimonialManager();
       populateSettingsForm();
-      setAdminTab(activeAdminTab);
+      applyRoleRestrictions();
     }
+
 
     const savedTheme = localStorage.getItem(STORAGE_KEYS.theme);
     if(savedTheme === "light"){
@@ -4961,6 +6295,17 @@
     closeAdminLogin?.addEventListener("click", closeAdminLoginModal);
     closeAdmin?.addEventListener("click", closeAdminPanel);
 
+    heroSecondaryCtaEl?.addEventListener("click", (event) => {
+      const action = heroSecondaryCtaEl.dataset.actionLink || "modal:booking";
+      if(action.startsWith("modal:")){
+        event.preventDefault();
+        openModal();
+      }else if(action.startsWith("#")){
+        event.preventDefault();
+        document.querySelector(action)?.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+
     bookingModal?.addEventListener("click", (event) => {
       if(event.target === bookingModal) closeModal();
     });
@@ -4984,6 +6329,15 @@
       const card = event.target.closest(".gallery-card");
       if(!card) return;
       openLightboxFromCard(card);
+    });
+
+    lightboxBookBtn?.addEventListener("click", () => {
+      const pkg = lightboxBookBtn.dataset.package || "";
+      if(pkg) packageSelect.value = pkg;
+      closeLightbox.click();
+      openModal();
+      document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+      updateQuoteUI();
     });
 
     closeLightbox.addEventListener("click", () => {
@@ -5017,7 +6371,7 @@
       updateQuoteUI();
     });
 
-    [packageSelect, guestCount, setupHours, eventType, eventDate].forEach((el) => el.addEventListener("input", () => {
+    [packageSelect, guestCount, setupHours, eventType, eventDate, eventTimeInput, budgetRangeInput, venueTypeInput, leadSourceInput, deliveryRequiredInput, setupRequiredInput].forEach((el) => el && el.addEventListener("input", () => {
       updateQuoteUI();
       updateSuggestions();
     }));
@@ -5035,7 +6389,7 @@
         submitBookingBtn.classList.remove("loading-state");
         submitBookingBtn.disabled = false;
         submitBookingBtn.textContent = "Save Booking";
-        showToast("Booking saved and invoice generated.");
+        showToast("Booking saved and quote generated.");
       }, 420);
     });
 
@@ -5113,28 +6467,58 @@
       }
       const deleteBtn = event.target.closest("[data-delete-booking]");
       if(deleteBtn){
+        if(!hasManagerAccess()){
+          showToast("Current role cannot delete bookings.");
+          return;
+        }
         if(window.confirm("Delete this booking?")) deleteBooking(deleteBtn.dataset.deleteBooking);
       }
     });
 
-    [adminBookingSearch, adminBookingStatusFilter, adminBookingPaidFilter].forEach((el) => {
-      el.addEventListener("input", renderBookingsManager);
-      el.addEventListener("change", renderBookingsManager);
+    [adminBookingSearch, adminBookingStatusFilter, adminBookingPaidFilter, adminBookingSourceFilter, adminBookingDateFilter, adminBookingSort].forEach((el) => {
+      el?.addEventListener("input", renderBookingsManager);
+      el?.addEventListener("change", renderBookingsManager);
     });
 
     bookingEditorForm.addEventListener("submit", (event) => {
       event.preventDefault();
       if(!requireAdminAccess()) return;
+      if(!hasEditAccess()){
+        showToast("Current role is view only.");
+        return;
+      }
       const id = bookingEditorId.value;
       if(!id){
         showToast("Choose a booking first.");
         return;
       }
+      const quoteAmount = Number(adminEditQuoteAmount.value || 0);
+      const depositAmount = Number(adminEditDepositAmount.value || 0);
+      const paidAmount = Number(adminEditPaidAmount.value || 0);
+      const balanceDue = Number(adminEditBalanceDue.value || Math.max(0, quoteAmount - paidAmount));
       updateBooking(id, {
         status: adminEditStatus.value,
+        priority: adminEditPriority.value,
+        leadSource: adminEditSource.value,
         paymentStatus: adminEditPaymentStatus.value,
-        quoteAmount: Number(adminEditQuoteAmount.value || 0),
-        adminNotes: adminEditNotes.value.trim()
+        quoteAmount,
+        total: quoteAmount,
+        depositAmount,
+        paidAmount,
+        balanceDue,
+        followUpDate: adminEditFollowUpDate.value,
+        quoteExpiryDate: adminEditQuoteExpiry.value,
+        assignedStaff: adminEditAssignedStaff.value.trim(),
+        eventTime: adminEditEventTime.value,
+        adminNotes: adminEditNotes.value.trim(),
+        eventNotes: adminEditEventNotes.value.trim(),
+        issueReport: adminEditIssueReport.value.trim(),
+        missingItems: adminEditMissingItems.value.trim(),
+        operations: {
+          deliveryDone: adminEditDeliveryDone.checked,
+          setupDone: adminEditSetupDone.checked,
+          pickupDone: adminEditPickupDone.checked
+        }
       });
       const current = getBookings().find((item) => item.id === id);
       populateBookingEditor(current || null);
@@ -5144,23 +6528,39 @@
     clearBookingEditorBtn.addEventListener("click", clearBookingEditor);
     deleteSelectedBookingBtn.addEventListener("click", () => {
       if(!requireAdminAccess()) return;
+      if(!hasManagerAccess()){
+        showToast("Current role cannot delete bookings.");
+        return;
+      }
       const id = bookingEditorId.value;
-      if(id) deleteBooking(id);
+      if(id && window.confirm("Delete this booking?")) deleteBooking(id);
     });
 
     cmsForm.addEventListener("submit", (event) => {
       event.preventDefault();
       if(!requireAdminAccess()) return;
+      if(!hasManagerAccess()){
+        showToast("Current role cannot edit CMS.");
+        return;
+      }
       saveCmsForm();
     });
 
     addServiceBtn.addEventListener("click", () => {
+      if(!hasManagerAccess()){
+        showToast("Current role cannot edit CMS.");
+        return;
+      }
       const items = collectServicesFromEditor();
       items.push({ icon: "✨", title: "New Service", description: "Describe the service here." });
       renderCmsServicesEditor(items);
     });
 
     cmsServicesEditor.addEventListener("click", (event) => {
+      if(!hasManagerAccess()){
+        showToast("Current role cannot edit CMS.");
+        return;
+      }
       const button = event.target.closest("[data-service-action]");
       if(!button) return;
       const row = button.closest(".admin-row-card");
@@ -5168,9 +6568,7 @@
       const items = collectServicesFromEditor();
       const action = button.dataset.serviceAction;
       if(action === "delete"){
-        if(!window.confirm("Delete this gallery item?")) return;
-        if(!window.confirm("Delete this package?")) return;
-        if(!window.confirm("Delete this testimonial?")) return;
+        if(!window.confirm("Delete this service?")) return;
         items.splice(index, 1);
       }else if(action === "up"){
         if(index === 0) return;
@@ -5184,7 +6582,11 @@
 
     resetCmsBtn.addEventListener("click", () => {
       if(!requireAdminAccess()) return;
-      if(!window.confirm("Reset all public CMS content, gallery, packages, and testimonials to default?")) return;
+      if(!hasManagerAccess()){
+        showToast("Current role cannot reset CMS.");
+        return;
+      }
+      if(!window.confirm("Reset all public CMS content, gallery, packages, testimonials, and FAQ to default?")) return;
       setCms(clone(DEFAULT_CMS));
       populateCmsForm();
       renderPublicContent();
@@ -5195,6 +6597,10 @@
     galleryItemForm.addEventListener("submit", (event) => {
       event.preventDefault();
       if(!requireAdminAccess()) return;
+      if(!hasManagerAccess()){
+        showToast("Current role cannot edit gallery.");
+        return;
+      }
       saveGalleryForm();
     });
     cancelGalleryEdit.addEventListener("click", resetGalleryForm);
@@ -5202,6 +6608,10 @@
     galleryManagerList.addEventListener("click", (event) => {
       const button = event.target.closest("[data-gallery-action]");
       if(!button || !requireAdminAccess()) return;
+      if(!hasManagerAccess()){
+        showToast("Current role cannot edit gallery.");
+        return;
+      }
       const index = Number(button.dataset.index);
       const items = getGalleryItems();
       const action = button.dataset.galleryAction;
@@ -5232,6 +6642,10 @@
     packageItemForm.addEventListener("submit", (event) => {
       event.preventDefault();
       if(!requireAdminAccess()) return;
+      if(!hasManagerAccess()){
+        showToast("Current role cannot edit packages.");
+        return;
+      }
       savePackageForm();
     });
     cancelPackageEdit.addEventListener("click", resetPackageForm);
@@ -5239,6 +6653,10 @@
     packageManagerList.addEventListener("click", (event) => {
       const button = event.target.closest("[data-package-action]");
       if(!button || !requireAdminAccess()) return;
+      if(!hasManagerAccess()){
+        showToast("Current role cannot edit packages.");
+        return;
+      }
       const index = Number(button.dataset.index);
       const items = getPackageItems();
       const action = button.dataset.packageAction;
@@ -5269,6 +6687,10 @@
     testimonialItemForm.addEventListener("submit", (event) => {
       event.preventDefault();
       if(!requireAdminAccess()) return;
+      if(!hasManagerAccess()){
+        showToast("Current role cannot edit testimonials.");
+        return;
+      }
       saveTestimonialForm();
     });
     cancelTestimonialEdit.addEventListener("click", resetTestimonialForm);
@@ -5276,6 +6698,10 @@
     testimonialManagerList.addEventListener("click", (event) => {
       const button = event.target.closest("[data-testimonial-action]");
       if(!button || !requireAdminAccess()) return;
+      if(!hasManagerAccess()){
+        showToast("Current role cannot edit testimonials.");
+        return;
+      }
       const index = Number(button.dataset.index);
       const items = getTestimonials();
       const action = button.dataset.testimonialAction;
@@ -5303,6 +6729,146 @@
       renderTestimonialManager();
     });
 
+    inventoryItemForm?.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if(!requireAdminAccess()) return;
+      if(!hasManagerAccess()){
+        showToast("Current role cannot edit inventory.");
+        return;
+      }
+      saveInventoryItemForm();
+    });
+    cancelInventoryEdit?.addEventListener("click", resetInventoryItemForm);
+
+    inventoryManagerList?.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-inventory-action]");
+      if(!button || !requireAdminAccess()) return;
+      if(!hasManagerAccess()){
+        showToast("Current role cannot edit inventory.");
+        return;
+      }
+      const index = Number(button.dataset.index);
+      const items = getInventoryItems();
+      const action = button.dataset.inventoryAction;
+      if(action === "edit"){
+        populateInventoryForm(index);
+        return;
+      }
+      if(action === "delete"){
+        items.splice(index, 1);
+      }else if(action === "up"){
+        setInventoryItems(moveItem(items, index, -1));
+        renderInventoryPanel();
+        renderAnalytics();
+        updateQuoteUI();
+        return;
+      }else if(action === "down"){
+        setInventoryItems(moveItem(items, index, 1));
+        renderInventoryPanel();
+        renderAnalytics();
+        updateQuoteUI();
+        return;
+      }
+      setInventoryItems(items);
+      renderInventoryPanel();
+      renderAnalytics();
+      updateQuoteUI();
+    });
+
+    inventoryDateFilter?.addEventListener("change", renderInventoryPanel);
+
+    calendarPrevMonth?.addEventListener("click", () => {
+      const [y,m] = currentCalendarMonth().split("-").map(Number);
+      const next = new Date(y, m - 2, 1);
+      const cal = getCalendarData();
+      cal.currentMonth = next.toISOString().slice(0,7);
+      setCalendarData(cal);
+      renderCalendarPanel();
+    });
+    calendarTodayBtn?.addEventListener("click", () => {
+      const cal = getCalendarData();
+      cal.currentMonth = new Date().toISOString().slice(0,7);
+      cal.selectedDate = new Date().toISOString().slice(0,10);
+      setCalendarData(cal);
+      renderCalendarPanel();
+    });
+    calendarNextMonth?.addEventListener("click", () => {
+      const [y,m] = currentCalendarMonth().split("-").map(Number);
+      const next = new Date(y, m, 1);
+      const cal = getCalendarData();
+      cal.currentMonth = next.toISOString().slice(0,7);
+      setCalendarData(cal);
+      renderCalendarPanel();
+    });
+
+    calendarGrid?.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-calendar-date]");
+      if(!button) return;
+      const cal = getCalendarData();
+      cal.selectedDate = button.dataset.calendarDate;
+      setCalendarData(cal);
+      calendarBlockDate.value = cal.selectedDate;
+      renderCalendarPanel();
+    });
+
+    blockedDatesList?.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-delete-blocked]");
+      if(!button || !requireAdminAccess()) return;
+      if(!hasManagerAccess()){
+        showToast("Current role cannot edit calendar.");
+        return;
+      }
+      const cal = getCalendarData();
+      cal.blockedDates = cal.blockedDates.filter((item) => item.date !== button.dataset.deleteBlocked);
+      if(cal.selectedDate === button.dataset.deleteBlocked) cal.selectedDate = "";
+      setCalendarData(cal);
+      renderCalendarPanel();
+      updateQuoteUI();
+    });
+
+    calendarBlockForm?.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if(!requireAdminAccess()) return;
+      if(!hasManagerAccess()){
+        showToast("Current role cannot edit calendar.");
+        return;
+      }
+      const date = calendarBlockDate.value;
+      if(!date){
+        showToast("Choose a date first.");
+        return;
+      }
+      const cal = getCalendarData();
+      const existing = cal.blockedDates.find((item) => item.date === date);
+      if(existing){
+        existing.note = calendarBlockNote.value.trim();
+      }else{
+        cal.blockedDates.push({ date, note: calendarBlockNote.value.trim() });
+      }
+      cal.selectedDate = date;
+      setCalendarData(cal);
+      renderCalendarPanel();
+      updateQuoteUI();
+      showToast("Blocked date saved.");
+    });
+
+    calendarClearSelectedBtn?.addEventListener("click", () => {
+      if(!requireAdminAccess()) return;
+      if(!hasManagerAccess()){
+        showToast("Current role cannot edit calendar.");
+        return;
+      }
+      const date = calendarBlockDate.value;
+      if(!date) return;
+      const cal = getCalendarData();
+      cal.blockedDates = cal.blockedDates.filter((item) => item.date !== date);
+      if(cal.selectedDate === date) cal.selectedDate = "";
+      setCalendarData(cal);
+      renderCalendarPanel();
+      updateQuoteUI();
+      showToast("Blocked date removed.");
+    });
+
     exportAdminJson.addEventListener("click", () => {
       if(!requireAdminAccess()) return;
       downloadJson("fiesta-bookings.json", getBookings());
@@ -5311,7 +6877,7 @@
     exportAdminCsv.addEventListener("click", () => {
       if(!requireAdminAccess()) return;
       const rows = [
-        ["Name", "Phone", "Email", "Date", "Event Type", "Package", "Status", "Payment Status", "Quote Amount", "Venue", "Extras", "Notes"]
+        ["Name", "Phone", "Email", "Date", "Time", "Event Type", "Package", "Status", "Priority", "Lead Source", "Payment Status", "Quote Amount", "Deposit", "Paid Amount", "Balance Due", "Venue", "Extras", "Assigned Staff", "Notes"]
       ];
       getBookings().forEach((item) => {
         rows.push([
@@ -5319,14 +6885,21 @@
           item.phone,
           item.email,
           item.eventDate,
+          item.eventTime,
           item.eventType,
           item.package,
           item.status,
+          item.priority,
+          item.leadSource,
           item.paymentStatus,
           item.quoteAmount || item.total,
+          item.depositAmount || 0,
+          item.paidAmount || 0,
+          item.balanceDue || 0,
           item.venue,
           item.extras.map((extra) => extra.name).join(" | "),
-          item.adminNotes
+          item.assignedStaff || "",
+          [item.adminNotes, item.eventNotes].filter(Boolean).join(" | ")
         ]);
       });
       downloadCsv("fiesta-bookings.csv", rows);
@@ -5334,28 +6907,90 @@
 
     downloadBookingsBtn.addEventListener("click", () => downloadJson("fiesta-bookings.json", getBookings()));
 
+    exportInventoryBtn?.addEventListener("click", () => {
+      if(!requireAdminAccess()) return;
+      downloadJson("fiesta-inventory.json", { inventory: getInventory(), items: getInventoryItems() });
+    });
+
     resetInventoryBtn.addEventListener("click", () => {
       if(!requireAdminAccess()) return;
+      if(!hasManagerAccess()){
+        showToast("Current role cannot reset inventory.");
+        return;
+      }
       setInventory(getSettings().inventory);
+      setInventoryItems(DEFAULT_INVENTORY_ITEMS.map((item) => {
+        const copy = { ...item };
+        if(copy.resourceType) copy.totalStock = getSettings().inventory[copy.resourceType];
+        return copy;
+      }));
       renderAnalytics();
       renderOverviewPanel();
+      renderInventoryPanel();
       updateQuoteUI();
       showToast("Inventory reset to saved default stock.");
     });
 
     clearBookingsBtn.addEventListener("click", () => {
       if(!requireAdminAccess()) return;
-      if(!window.confirm("Delete all locally saved bookings and reset inventory?")) return;
+      if(!hasManagerAccess()){
+        showToast("Current role cannot delete all bookings.");
+        return;
+      }
+      if(!window.confirm("Delete all locally saved bookings?")) return;
       setBookings([]);
-      setInventory(getSettings().inventory);
       localStorage.removeItem(STORAGE_KEYS.latest);
       invoicePreview.classList.remove("visible");
       clearBookingEditor();
       renderAnalytics();
       renderBookingsManager();
       renderOverviewPanel();
+      renderCalendarPanel();
+      renderInventoryPanel();
       updateQuoteUI();
       showToast("All locally saved bookings deleted.");
+    });
+
+    resetAllDataBtn?.addEventListener("click", () => {
+      if(!requireAdminAccess()) return;
+      if(!hasManagerAccess()){
+        showToast("Current role cannot reset all data.");
+        return;
+      }
+      if(!window.confirm("Reset all local business data, content, bookings, inventory, calendar, and settings?")) return;
+      [
+        STORAGE_KEYS.bookings,
+        STORAGE_KEYS.inventory,
+        STORAGE_KEYS.inventoryItems,
+        STORAGE_KEYS.inventoryMeta,
+        STORAGE_KEYS.quick,
+        STORAGE_KEYS.latest,
+        STORAGE_KEYS.cms,
+        STORAGE_KEYS.gallery,
+        STORAGE_KEYS.packages,
+        STORAGE_KEYS.testimonials,
+        STORAGE_KEYS.settings,
+        STORAGE_KEYS.calendar
+      ].forEach((key) => localStorage.removeItem(key));
+      setCms(clone(DEFAULT_CMS));
+      setGalleryItems(clone(DEFAULT_GALLERY));
+      setPackageItems(clone(DEFAULT_PACKAGES));
+      setTestimonials(clone(DEFAULT_TESTIMONIALS));
+      setSettings(clone(DEFAULT_SETTINGS));
+      setInventory(clone(DEFAULT_SETTINGS.inventory));
+      setInventoryItems(clone(DEFAULT_INVENTORY_ITEMS));
+      setCalendarData(clone(DEFAULT_CALENDAR));
+      populateCmsForm();
+      populateSettingsForm();
+      resetGalleryForm();
+      resetPackageForm();
+      resetTestimonialForm();
+      resetInventoryItemForm();
+      clearBookingEditor();
+      renderPublicContent();
+      renderAdminAll();
+      invoicePreview.classList.remove("visible");
+      showToast("All local data reset.");
     });
 
     lockAdminBtn.addEventListener("click", () => {
@@ -5430,6 +7065,10 @@
 
     resetPublicContentBtn.addEventListener("click", () => {
       if(!requireAdminAccess()) return;
+      if(!hasManagerAccess()){
+        showToast("Current role cannot reset public content.");
+        return;
+      }
       setCms(clone(DEFAULT_CMS));
       setGalleryItems(clone(DEFAULT_GALLERY));
       setPackageItems(clone(DEFAULT_PACKAGES));
@@ -5446,17 +7085,44 @@
     settingsForm.addEventListener("submit", (event) => {
       event.preventDefault();
       if(!requireAdminAccess()) return;
+      if(!hasManagerAccess()){
+        showToast("Current role cannot edit settings.");
+        return;
+      }
       saveSettingsForm();
     });
 
     resetSettingsBtn.addEventListener("click", () => {
       if(!requireAdminAccess()) return;
+      if(!hasManagerAccess()){
+        showToast("Current role cannot reset settings.");
+        return;
+      }
       if(!window.confirm("Reset settings to default values?")) return;
       setSettings(clone(DEFAULT_SETTINGS));
+      setInventory(clone(DEFAULT_SETTINGS.inventory));
       populateSettingsForm();
       renderPublicContent();
       renderAdminAll();
       showToast("Settings reset to default.");
+    });
+
+    faqGrid?.addEventListener("click", (event) => {
+      const trigger = event.target.closest(".faq-question");
+      if(!trigger) return;
+      const card = trigger.closest(".faq-card");
+      faqGrid.querySelectorAll(".faq-card").forEach((item) => {
+        item.classList.remove("active");
+        const icon = item.querySelector(".faq-question span:last-child");
+        const ans = item.querySelector(".faq-answer");
+        if(icon) icon.textContent = "+";
+        if(ans) ans.style.display = "none";
+      });
+      card.classList.add("active");
+      const icon = card.querySelector(".faq-question span:last-child");
+      const ans = card.querySelector(".faq-answer");
+      if(icon) icon.textContent = "−";
+      if(ans) ans.style.display = "block";
     });
 
     document.addEventListener("keydown", (event) => {
@@ -5493,11 +7159,16 @@
       if(!localStorage.getItem(STORAGE_KEYS.testimonials)) setTestimonials(clone(DEFAULT_TESTIMONIALS));
       if(!localStorage.getItem(STORAGE_KEYS.settings)) setSettings(clone(DEFAULT_SETTINGS));
       if(!localStorage.getItem(STORAGE_KEYS.inventory)) setInventory(getSettings().inventory);
+      if(!localStorage.getItem(STORAGE_KEYS.inventoryItems)) setInventoryItems(clone(DEFAULT_INVENTORY_ITEMS));
+      if(!localStorage.getItem(STORAGE_KEYS.calendar)) setCalendarData(clone(DEFAULT_CALENDAR));
+
+      migrateLegacyInventoryIfNeeded();
 
       const latest = latestBookingDraft();
       renderPublicContent();
       renderAdminAll();
       clearBookingEditor();
+      inventoryDateFilter.value = new Date().toISOString().slice(0,10);
       if(latest) renderInvoice(latest);
       setTimeout(() => {
         if(splash){
@@ -5507,7 +7178,7 @@
         }
       }, 450);
     });
-  
+
   </script>
 </body>
 </html>
